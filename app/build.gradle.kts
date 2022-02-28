@@ -41,7 +41,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.5"
+        kotlinCompilerExtensionVersion = Versions.JetpackCompose.compose
     }
 }
 
@@ -52,59 +52,59 @@ kapt {
 dependencies {
 
     //Lifecycle
-    implementation(Dependencies.Lifecycle.LIFECYCLE_VIEWMODEL_DEP)
-    implementation(Dependencies.Lifecycle.LIFECYCLE_RUNTIME_DEP)
-    implementation(Dependencies.Lifecycle.LIFECYCLE_LIVEDATA_DEP)
+    implementation(Dependencies.Lifecycle.viewModel)
+    implementation(Dependencies.Lifecycle.runTime)
+    implementation(Dependencies.Lifecycle.liveData)
 
     //Retrofit
-    implementation(Dependencies.Retrofit.RETROFIT_DEP)
-    implementation(Dependencies.Retrofit.RETROFIT_CONVERTER_DEP)
-    implementation(Dependencies.Retrofit.OKHTTP3_INTERCEPTOR_DEP)
+    implementation(Dependencies.Retrofit.retrofit)
+    implementation(Dependencies.Retrofit.converter)
+    implementation(Dependencies.Retrofit.interceptor)
 
     //Room
-    implementation(Dependencies.Room.ROOM_RUNTIME_DEP)
-    kapt(Dependencies.Room.ROOM_COMPILER_DEP)
-    implementation(Dependencies.Room.ROOM_KTX_DEP)
+    implementation(Dependencies.Room.runTime)
+    kapt(Dependencies.Room.compiler)
+    implementation(Dependencies.Room.ktx)
 
     //Coroutines
-    implementation(Dependencies.Coroutines.COROUTINES_CORE_DEP)
-    implementation(Dependencies.Coroutines.COROUTINES_ANDROID_DEP)
+    implementation(Dependencies.Coroutines.core)
+    implementation(Dependencies.Coroutines.android)
 
     //Jetpack Compose
-    implementation(Dependencies.JetpackCompose.COMPOSE_UI_DEP)
-    implementation(Dependencies.JetpackCompose.COMPOSE_UI_TOOLING_DEP)
-    implementation(Dependencies.JetpackCompose.COMPOSE_FOUNDATION_DEP)
-    implementation(Dependencies.JetpackCompose.COMPOSE_MATERIAL_DEP)
-    implementation(Dependencies.JetpackCompose.COMPOSE_MATERIAL_ICONS_CORE_DEP)
-    implementation(Dependencies.JetpackCompose.COMPOSE_MATERIAL_ICONS_EXTENDED_DEP)
-    implementation(Dependencies.JetpackCompose.COMPOSE_RUNTIME_LIVEDATA_DEP)
-    implementation(Dependencies.JetpackCompose.COMPOSE_THEME_ADAPTER_DEP)
-    implementation(Dependencies.JetpackCompose.ACCOMPANIST_APPCOMPAT_THEME_DEP)
-    implementation(Dependencies.JetpackCompose.COMPOSE_NAVIGATION_DEP)
+    implementation(Dependencies.JetpackCompose.ui)
+    implementation(Dependencies.JetpackCompose.uiTooling)
+    implementation(Dependencies.JetpackCompose.foundation)
+    implementation(Dependencies.JetpackCompose.material)
+    implementation(Dependencies.JetpackCompose.materialIconsCore)
+    implementation(Dependencies.JetpackCompose.materialIconsExtended)
+    implementation(Dependencies.JetpackCompose.runTimeLiveData)
+    implementation(Dependencies.JetpackCompose.themeAdapter)
+    implementation(Dependencies.JetpackCompose.accompanistAppcompatTheme)
+    implementation(Dependencies.JetpackCompose.navigation)
 
     //Glide
-    implementation(Dependencies.Glide.GLIDE_DEP)
-    kapt(Dependencies.Glide.GLIDE_COMPILER_DEP)
+    implementation(Dependencies.Glide.glide)
+    kapt(Dependencies.Glide.compiler)
 
     //Hilt
-    implementation(Dependencies.Hilt.HILT_ANDROID_DEP)
-    kapt(Dependencies.Hilt.HILT_ANDROID_COMPILER_DEP)
-    implementation(Dependencies.Hilt.HILT_NAVIGATION_FRAGMENT_DEP)
-    implementation(Dependencies.Hilt.HILT_WORK_DEP)
-    kapt(Dependencies.Hilt.HILT_COMPILER_DEP)
+    implementation(Dependencies.Hilt.android)
+    kapt(Dependencies.Hilt.androidCompiler)
+    implementation(Dependencies.Hilt.navigationFragment)
+    implementation(Dependencies.Hilt.work)
+    kapt(Dependencies.Hilt.compiler)
 
     //Jetpack Core
-    implementation(Dependencies.JetpackCore.CORE_KTX_DEP)
-    implementation(Dependencies.JetpackCore.COLLECTION_KTX_DEP)
-    implementation(Dependencies.JetpackCore.ACTIVITY_KTX_DEP)
-    implementation(Dependencies.JetpackCore.FRAGMENT_KTX_DEP)
-    implementation(Dependencies.JetpackCore.APPCOMPAT_DEP)
-    implementation(Dependencies.JetpackCore.MATERIAL_DEP)
-    implementation(Dependencies.JetpackCore.CONSTRAINT_LAYOUT_DEP)
+    implementation(Dependencies.JetpackCore.coreKtx)
+    implementation(Dependencies.JetpackCore.collectionKtx)
+    implementation(Dependencies.JetpackCore.activityKtx)
+    implementation(Dependencies.JetpackCore.fragmentKtx)
+    implementation(Dependencies.JetpackCore.appcompat)
+    implementation(Dependencies.JetpackCore.material)
+    implementation(Dependencies.JetpackCore.constraintLayout)
 
     //Tests
-    testImplementation(Dependencies.Tests.JUNIT_DEP)
-    androidTestImplementation(Dependencies.Tests.JUNIT_EXT_DEP)
-    androidTestImplementation(Dependencies.Tests.ESPRESSO_CORE_DEP)
-    androidTestImplementation(Dependencies.Tests.COMPOSE_UI_TESTS_DEP)
+    testImplementation(Dependencies.Tests.jUnit)
+    androidTestImplementation(Dependencies.Tests.jUnitExt)
+    androidTestImplementation(Dependencies.Tests.espressoCore)
+    androidTestImplementation(Dependencies.Tests.composeUiTests)
 }

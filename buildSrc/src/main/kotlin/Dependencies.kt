@@ -1,67 +1,67 @@
 object Dependencies {
     object Lifecycle {
-        const val LIFECYCLE_VIEWMODEL_DEP = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.Lifecycle.LIFECYCLE_VIEWMODEL_VERSION}"
-        const val LIFECYCLE_RUNTIME_DEP = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.Lifecycle.LIFECYCLE_RUNTIME_VERSION}"
-        const val LIFECYCLE_LIVEDATA_DEP = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.Lifecycle.LIFECYCLE_LIVEDATA_VERSION}"
+        const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.Lifecycle.lifeCycle}"
+        const val runTime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.Lifecycle.lifeCycle}"
+        const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.Lifecycle.lifeCycle}"
     }
 
     object Retrofit {
-        const val RETROFIT_DEP = "com.squareup.retrofit2:retrofit:${Versions.Retrofit.RETROFIT_VERSION}"
-        const val RETROFIT_CONVERTER_DEP = "com.squareup.retrofit2:converter-gson:${Versions.Retrofit.RETROFIT_CONVERTER_VERSION}"
-        const val OKHTTP3_INTERCEPTOR_DEP = "com.squareup.okhttp3:logging-interceptor:${Versions.Retrofit.OKHTTP3_INTERCEPTOR_VERSION}"
+        const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.Retrofit.retrofit}"
+        const val converter = "com.squareup.retrofit2:converter-gson:${Versions.Retrofit.retrofit}"
+        const val interceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.Retrofit.okhttp3}"
     }
 
     object Room {
-        const val ROOM_RUNTIME_DEP = "androidx.room:room-runtime:${Versions.Room.ROOM_RUNTIME_VERSION}"
-        const val ROOM_COMPILER_DEP = "androidx.room:room-compiler:${Versions.Room.ROOM_COMPILER_VERSION}"
-        const val ROOM_KTX_DEP = "androidx.room:room-ktx:${Versions.Room.ROOM_KTX_VERSION}"
+        const val runTime = "androidx.room:room-runtime:${Versions.Room.room}"
+        const val compiler = "androidx.room:room-compiler:${Versions.Room.room}"
+        const val ktx = "androidx.room:room-ktx:${Versions.Room.room}"
     }
 
     object Coroutines {
-        const val COROUTINES_CORE_DEP = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.Coroutines.COROUTINES_CORE_VERSION}"
-        const val COROUTINES_ANDROID_DEP = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.Coroutines.COROUTINES_ANDROID_VERSION}"
+        const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.Coroutines.coroutines}"
+        const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.Coroutines.coroutines}"
     }
 
     object JetpackCompose {
-        const val COMPOSE_UI_DEP = "androidx.compose.ui:ui:${Versions.JetpackCompose.COMPOSE_UI_VERSION}"
-        const val COMPOSE_UI_TOOLING_DEP = "androidx.compose.ui:ui-tooling:${Versions.JetpackCompose.COMPOSE_UI_TOOLING_VERSION}"
-        const val COMPOSE_FOUNDATION_DEP = "androidx.compose.foundation:foundation:${Versions.JetpackCompose.COMPOSE_FOUNDATION_VERSION}"
-        const val COMPOSE_MATERIAL_DEP = "androidx.compose.material:material:${Versions.JetpackCompose.COMPOSE_MATERIAL_VERSION}"
-        const val COMPOSE_MATERIAL_ICONS_CORE_DEP = "androidx.compose.material:material-icons-core:${Versions.JetpackCompose.COMPOSE_MATERIAL_ICONS_CORE_VERSION}"
-        const val COMPOSE_MATERIAL_ICONS_EXTENDED_DEP = "androidx.compose.material:material-icons-extended:${Versions.JetpackCompose.COMPOSE_MATERIAL_ICONS_EXTENDED_VERSION}"
-        const val COMPOSE_RUNTIME_LIVEDATA_DEP = "androidx.compose.runtime:runtime-livedata:${Versions.JetpackCompose.COMPOSE_RUNTIME_LIVEDATA_VERSION}"
-        const val COMPOSE_THEME_ADAPTER_DEP = "com.google.android.material:compose-theme-adapter:${Versions.JetpackCompose.COMPOSE_THEME_ADAPTER_VERSION}"
-        const val ACCOMPANIST_APPCOMPAT_THEME_DEP = "com.google.accompanist:accompanist-appcompat-theme:${Versions.JetpackCompose.ACCOMPANIST_APPCOMPAT_THEME_VERSION}"
-        const val COMPOSE_NAVIGATION_DEP = "androidx.navigation:navigation-compose:${Versions.JetpackCompose.COMPOSE_NAVIGATION_VERSION}"
+        const val ui = "androidx.compose.ui:ui:${Versions.JetpackCompose.compose}"
+        const val uiTooling = "androidx.compose.ui:ui-tooling:${Versions.JetpackCompose.compose}"
+        const val foundation = "androidx.compose.foundation:foundation:${Versions.JetpackCompose.compose}"
+        const val material = "androidx.compose.material:material:${Versions.JetpackCompose.compose}"
+        const val materialIconsCore = "androidx.compose.material:material-icons-core:${Versions.JetpackCompose.compose}"
+        const val materialIconsExtended = "androidx.compose.material:material-icons-extended:${Versions.JetpackCompose.compose}"
+        const val runTimeLiveData = "androidx.compose.runtime:runtime-livedata:${Versions.JetpackCompose.compose}"
+        const val themeAdapter = "com.google.android.material:compose-theme-adapter:${Versions.JetpackCompose.composeThemeAdapter}"
+        const val accompanistAppcompatTheme = "com.google.accompanist:accompanist-appcompat-theme:${Versions.JetpackCompose.accompanistAppcompatTheme}"
+        const val navigation = "androidx.navigation:navigation-compose:${Versions.JetpackCompose.composeNavigation}"
     }
 
     object Glide {
-        const val GLIDE_DEP = "com.github.bumptech.glide:glide:${Versions.Glide.GLIDE_VERSION}"
-        const val GLIDE_COMPILER_DEP = "com.github.bumptech.glide:compiler:${Versions.Glide.GLIDE_COMPILER_VERSION}"
+        const val glide = "com.github.bumptech.glide:glide:${Versions.Glide.glide}"
+        const val compiler = "com.github.bumptech.glide:compiler:${Versions.Glide.glide}"
     }
 
     object Hilt {
-        const val HILT_ANDROID_DEP = "com.google.dagger:hilt-android:${Versions.Hilt.HILT_ANDROID_VERSION}"
-        const val HILT_ANDROID_COMPILER_DEP = "com.google.dagger:hilt-android-compiler:${Versions.Hilt.HILT_ANDROID_COMPILER_VERSION}"
-        const val HILT_NAVIGATION_FRAGMENT_DEP = "androidx.hilt:hilt-navigation-fragment:${Versions.Hilt.HILT_NAVIGATION_FRAGMENT_VERSION}"
-        const val HILT_WORK_DEP = "androidx.hilt:hilt-work:${Versions.Hilt.HILT_WORK_VERSION}"
-        const val HILT_COMPILER_DEP = "androidx.hilt:hilt-compiler:${Versions.Hilt.HILT_COMPILER_VERSION}"
+        const val android = "com.google.dagger:hilt-android:${Versions.Hilt.hilt}"
+        const val androidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.Hilt.hilt}"
+        const val navigationFragment = "androidx.hilt:hilt-navigation-fragment:${Versions.Hilt.navigationFragment}"
+        const val work = "androidx.hilt:hilt-work:${Versions.Hilt.work}"
+        const val compiler = "androidx.hilt:hilt-compiler:${Versions.Hilt.compiler}"
     }
 
     object JetpackCore {
-        const val CORE_KTX_DEP = "androidx.core:core-ktx:${Versions.JetpackCore.CORE_KTX_VERSION}"
-        const val COLLECTION_KTX_DEP = "androidx.collection:collection-ktx:${Versions.JetpackCore.COLLECTION_KTX_VERSION}"
-        const val ACTIVITY_KTX_DEP = "androidx.activity:activity-ktx:${Versions.JetpackCore.ACTIVITY_KTX_VERSION}"
-        const val FRAGMENT_KTX_DEP = "androidx.fragment:fragment-ktx:${Versions.JetpackCore.FRAGMENT_KTX_VERSION}"
-        const val APPCOMPAT_DEP = "androidx.appcompat:appcompat:${Versions.JetpackCore.APPCOMPAT_VERSION}"
-        const val MATERIAL_DEP = "com.google.android.material:material:${Versions.JetpackCore.MATERIAL_VERSION}"
-        const val CONSTRAINT_LAYOUT_DEP = "androidx.constraintlayout:constraintlayout:${Versions.JetpackCore.CONSTRAINT_LAYOUT_VERSION}"
+        const val coreKtx = "androidx.core:core-ktx:${Versions.JetpackCore.coreKtx}"
+        const val collectionKtx = "androidx.collection:collection-ktx:${Versions.JetpackCore.collectionKtx}"
+        const val activityKtx = "androidx.activity:activity-ktx:${Versions.JetpackCore.activityKtx}"
+        const val fragmentKtx = "androidx.fragment:fragment-ktx:${Versions.JetpackCore.fragmentKtx}"
+        const val appcompat = "androidx.appcompat:appcompat:${Versions.JetpackCore.appcompat}"
+        const val material = "com.google.android.material:material:${Versions.JetpackCore.material}"
+        const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.JetpackCore.constraintLayout}"
     }
 
     object Tests {
-        const val JUNIT_DEP = "junit:junit:${Versions.Tests.JUNIT_VERSION}"
-        const val JUNIT_EXT_DEP = "androidx.test.ext:junit:${Versions.Tests.JUNIT_EXT_VERSION}"
-        const val ESPRESSO_CORE_DEP = "androidx.test.espresso:espresso-core:${Versions.Tests.ESPRESSO_CORE_VERSION}"
-        const val COMPOSE_UI_TESTS_DEP = "androidx.compose.ui:ui-test-junit4:${Versions.Tests.COMPOSE_UI_TESTS_VERSION}"
+        const val jUnit = "junit:junit:${Versions.Tests.jUnit}"
+        const val jUnitExt = "androidx.test.ext:junit:${Versions.Tests.jUnitExt}"
+        const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.Tests.espressoCore}"
+        const val composeUiTests = "androidx.compose.ui:ui-test-junit4:${Versions.Tests.composeUiTests}"
     }
 }
