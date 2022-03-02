@@ -87,11 +87,8 @@ dependencies {
     kapt(Dependencies.Glide.compiler)
 
     //Hilt
-    implementation(Dependencies.Hilt.android)
-    kapt(Dependencies.Hilt.androidCompiler)
-    implementation(Dependencies.Hilt.navigationFragment)
-    implementation(Dependencies.Hilt.work)
-    kapt(Dependencies.Hilt.compiler)
+    implementation(Dependencies.Hilt.hilt)
+    kapt(Dependencies.Hilt.hiltCompiler)
 
     //Jetpack Core
     implementation(Dependencies.JetpackCore.coreKtx)

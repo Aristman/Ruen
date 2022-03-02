@@ -41,11 +41,8 @@ object Dependencies {
     }
 
     object Hilt {
-        const val android = "com.google.dagger:hilt-android:${Versions.Hilt.hilt}"
-        const val androidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.Hilt.hilt}"
-        const val navigationFragment = "androidx.hilt:hilt-navigation-fragment:${Versions.Hilt.navigationFragment}"
-        const val work = "androidx.hilt:hilt-work:${Versions.Hilt.work}"
-        const val compiler = "androidx.hilt:hilt-compiler:${Versions.Hilt.compiler}"
+        const val hilt = "com.google.dagger:hilt-android:${Versions.Hilt.hilt}"
+        const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.Hilt.hilt}"
     }
 
     object JetpackCore {
