@@ -32,6 +32,13 @@ class CardAddFragment : Fragment() {
         viewModel.getLiveData().observe(viewLifecycleOwner) { card -> handle(card) }
         val card = arguments?.getParcelable(CARD) ?: getTestCard()
         viewModel.init(card)
+        saveButtonListener()
+    }
+
+    private fun saveButtonListener() {
+        binding.btnSave.setOnClickListener{
+            viewModel.save(listOf(),"")
+        }
     }
 
     private fun getTestCard() = Card(
@@ -50,7 +57,7 @@ class CardAddFragment : Fragment() {
         tvWord.text = card.value
         card.transcription?.let { tvTranscription.text = it }
 
-        card.translations.forEach{ translation->
+        card.translations?.forEach{ translation->
             val chipTranslation = layoutInflater.inflate(R.layout.chip_translation, cgTranslations, false)
             chipTranslation.findViewById<Chip>(R.id.chipTranslation).apply {
                 text=translation.value
