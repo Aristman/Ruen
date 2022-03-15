@@ -10,5 +10,5 @@ data class Card(
     var imageUrl: String? = null,
     var transcription: String? = null,
     var sound: String? = null,
-    var translations: MutableList<Translation>? = null,
+    var translations: MutableList<Translation>,
 ) : Parcelable

@@ -2,12 +2,9 @@ package ru.marslab.ruen.data.repositories.room
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import ru.marslab.ruen.data.repositories.room.entities.RoomCard
-import ru.marslab.ruen.data.repositories.room.entities.RoomImage
-import ru.marslab.ruen.data.repositories.room.entities.RoomTranslation
 
 @Database(
-    entities = arrayOf(RoomCard::class, RoomTranslation::class, RoomImage::class),
+    entities = arrayOf(CardDao::class, TranslationDao::class, ImageDao::class),
     version = 1,
     exportSchema = false
 )
