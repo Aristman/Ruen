@@ -1,4 +1,4 @@
-package ru.marslab.ruen.data.repositories.room
+package ru.marslab.ruen.data.repositories.room.DAO
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -9,7 +9,7 @@ import ru.marslab.ruen.data.repositories.room.entities.RoomCard
 @Dao
 interface CardDao {
     @Query("SELECT * FROM cards")
-    fun all():List<RoomCard>
+    fun get():List<RoomCard>
 
     @Insert
     fun save(card: RoomCard):Long

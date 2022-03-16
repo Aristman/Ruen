@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.google.android.material.chip.Chip
+import kotlinx.coroutines.*
 import ru.marslab.ruen.Card
 import ru.marslab.ruen.R
 import ru.marslab.ruen.Translation
@@ -32,6 +33,17 @@ class CardAddFragment : Fragment() {
         viewModel.getLiveData().observe(viewLifecycleOwner) { card -> handle(card) }
         val card = arguments?.getParcelable(CARD) ?: getTestCard()
         viewModel.init(card)
+        setClickListener()
+    }
+
+    private fun setClickListener() = with(binding) {
+        btnSave.setOnClickListener {
+            val translationList = mutableListOf<String>()
+            cgTranslations.checkedChipIds.forEach {
+                translationList.add(cgTranslations.findViewById<Chip>(it).text.toString())
+            }
+            viewModel.save(translationList, etCustomTranslation.text.toString())
+        }
     }
 
     private fun getTestCard() = Card(
@@ -50,10 +62,11 @@ class CardAddFragment : Fragment() {
         tvWord.text = card.value
         card.transcription?.let { tvTranscription.text = it }
 
-        card.translations.forEach{ translation->
-            val chipTranslation = layoutInflater.inflate(R.layout.chip_translation, cgTranslations, false)
-            chipTranslation.findViewById<Chip>(R.id.chipTranslation).apply {
-                text=translation.value
+        card.translations?.forEach { translation ->
+            val chipTranslation =
+                layoutInflater.inflate(R.layout.chip_translation, cgTranslations, false) as Chip
+            chipTranslation.apply {
+                text = translation.value
             }
             cgTranslations.addView(chipTranslation)
         }

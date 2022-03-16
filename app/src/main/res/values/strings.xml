@@ -5,4 +5,5 @@
     <string name="save">сохранить</string>
     <string name="custom_translate">Свой перевод</string>
     <string name="test">test</string>
+    <string name="start_repeating">Начать повторение</string>
 </resources>

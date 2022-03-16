@@ -15,4 +15,6 @@
     <dimen name="card_custom_translation_margin_horizontal">30dp</dimen>
     <dimen name="card_custom_translation_margin_top">20dp</dimen>
     <dimen name="card_save_margin">20dp</dimen>
+    <dimen name="btn_start_repeating_margin">10dp</dimen>
+    <dimen name="tvword_margin">10dp</dimen>
 </resources>
