@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/situation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/landscape_situations_image_layout_width"
+        android:layout_height="@dimen/landscape_situations_image_layout_height"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
         android:contentDescription="@string/situation"

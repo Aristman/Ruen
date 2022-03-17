@@ -28,7 +28,7 @@ class SituationsFragment : Fragment() {
                     bundle.putParcelable(SituationsDetailsFragment.KEY_SITUATIONS, situations)
                     manager.beginTransaction()
                         .replace(R.id.container, SituationsDetailsFragment.newInstance(bundle))
-                        .addToBackStack("")
+                        .addToBackStack(EMPTY_STRING)
                         .commit()
                 }
             }
@@ -64,7 +64,7 @@ class SituationsFragment : Fragment() {
                 situationsAdapter.setSituation(situations)
             }
             is AppState.Error -> {
-                Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, ERROR, Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -75,6 +75,8 @@ class SituationsFragment : Fragment() {
     }
 
     companion object {
+        const val EMPTY_STRING = ""
+        const val ERROR = "Error"
         fun newInstance(): SituationsFragment {
             return SituationsFragment()
         }
