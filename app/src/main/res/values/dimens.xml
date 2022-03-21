@@ -17,4 +17,7 @@
     <dimen name="card_save_margin">20dp</dimen>
     <dimen name="btn_start_repeating_margin">10dp</dimen>
     <dimen name="tvword_margin">10dp</dimen>
+    <dimen name="rv_item_text_size">24sp</dimen>
+    <dimen name="translation_container_margin">30dp</dimen>
+    <dimen name="btn_remember_vertical_margin">30dp</dimen>
 </resources>

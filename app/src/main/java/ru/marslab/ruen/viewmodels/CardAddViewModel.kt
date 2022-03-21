@@ -42,7 +42,6 @@ class CardAddViewModel(
                 it.translations?.add(Translation(value = customTranslate))
             }
             coroutineScope.launch(Dispatchers.IO) {
-                Log.i(TAG, "VVV save start")
                 repository.save(it)
             }
         }

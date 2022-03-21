@@ -15,8 +15,7 @@ import ru.marslab.ruen.Translation
 import ru.marslab.ruen.databinding.FragmentCardAddBinding
 import ru.marslab.ruen.viewmodels.CardAddViewModel
 
-class CardAddFragment : Fragment() {
-    private lateinit var binding: FragmentCardAddBinding
+class CardAddFragment : BaseFragment<FragmentCardAddBinding>() {
     private val viewModel: CardAddViewModel by viewModels()
 
     override fun onCreateView(
@@ -24,7 +23,7 @@ class CardAddFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentCardAddBinding.inflate(inflater, container, false)
+        _binding = FragmentCardAddBinding.inflate(inflater, container, false)
         return binding.root
     }
 

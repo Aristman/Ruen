@@ -2,6 +2,7 @@ package ru.marslab.ruen
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
+import java.util.*
 
 @Parcelize
 data class Card(
@@ -11,5 +12,5 @@ data class Card(
     var transcription: String? = null,
     var sound: String? = null,
     var translations: MutableList<Translation>? = null,
-    var nextDateRepetition: Long? = null
+    var nextDateRepeating: Date = Date()
 ) : Parcelable

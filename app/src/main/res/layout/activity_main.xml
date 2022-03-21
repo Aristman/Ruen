@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragmentContainer"
-        android:name="ru.marslab.ruen.views.CardAddFragment"
+        android:name="ru.marslab.ruen.views.CardRepeatingFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
