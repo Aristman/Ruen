@@ -1,6 +1,6 @@
 package ru.marslab.ruen.typicalsituations.view
 
-import android.graphics.Color
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
@@ -10,12 +10,15 @@ import ru.marslab.ruen.databinding.RecyclerviewSituationsCardItemBinding
 import ru.marslab.ruen.typicalsituations.model.Situations
 
 class SituationsAdapter(
-    private var situationsData: List<Situations>,
     private var onItemViewClickListener: OnItemViewClickListener?
 ) : RecyclerView.Adapter<SituationsAdapter.SituationsViewHolder>() {
 
-    private val colors = listOf(PURPLE_COLOR, BLUE_COLOR, YELLOW_COLOR, GREEN_COLOR)
+    private var situationsData: List<Situations> = listOf()
 
+    private val colors =
+        listOf(R.color.purple_color, R.color.blue_color, R.color.yellow_color, R.color.green_color)
+
+    @SuppressLint("NotifyDataSetChanged")
     fun setSituation(data: List<Situations>) {
         situationsData = data
         notifyDataSetChanged()
@@ -36,7 +39,7 @@ class SituationsAdapter(
     override fun onBindViewHolder(holder: SituationsViewHolder, position: Int) {
         val cardView: CardView = holder.itemView.findViewById(R.id.cardView)
         holder.bind(situationsData[position])
-        cardView.setCardBackgroundColor(Color.parseColor(colors[position % colors.size]))
+        cardView.setBackgroundResource(colors[position % colors.size])
     }
 
     override fun getItemCount(): Int {
@@ -57,12 +60,5 @@ class SituationsAdapter(
                 cardName.setOnClickListener { onItemViewClickListener?.onItemViewClick(situation) }
             }
         }
-    }
-
-    companion object {
-        const val PURPLE_COLOR = "#7109AA"
-        const val BLUE_COLOR = "#1240AB"
-        const val YELLOW_COLOR = "#FFD300"
-        const val GREEN_COLOR = "#228653"
     }
 }

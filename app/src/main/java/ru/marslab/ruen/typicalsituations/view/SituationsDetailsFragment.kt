@@ -4,23 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import ru.marslab.ruen.databinding.FragmentSituationsDetailsBinding
 import ru.marslab.ruen.typicalsituations.model.Situations
 
-class SituationsDetailsFragment : Fragment() {
+class SituationsDetailsFragment : ViewBindingFragment<FragmentSituationsDetailsBinding>() {
 
-    private var _binding: FragmentSituationsDetailsBinding? = null
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentSituationsDetailsBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+    override val inflateBinding: (LayoutInflater, ViewGroup?, Boolean) -> FragmentSituationsDetailsBinding =
+        FragmentSituationsDetailsBinding::inflate
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -40,17 +30,10 @@ class SituationsDetailsFragment : Fragment() {
         }
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
     companion object {
         const val KEY_SITUATIONS = "KEY_SITUATIONS"
         fun newInstance(bundle: Bundle): SituationsDetailsFragment {
-            val fragment = SituationsDetailsFragment()
-            fragment.arguments = bundle
-            return fragment
+            return SituationsDetailsFragment().apply { arguments = bundle }
         }
     }
 }

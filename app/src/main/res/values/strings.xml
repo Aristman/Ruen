@@ -4,4 +4,6 @@
     <string name="russian_example">Russian Example</string>
     <string name="english_example">English Example</string>
     <string name="taxi">Taxi</string>
+    <string name="empty_string">""</string>
+    <string name="error">Error</string>
 </resources>

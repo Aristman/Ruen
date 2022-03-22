@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import ru.marslab.ruen.R
@@ -14,13 +13,13 @@ import ru.marslab.ruen.typicalsituations.model.Situations
 import ru.marslab.ruen.typicalsituations.viewmodel.AppState
 import ru.marslab.ruen.typicalsituations.viewmodel.SituationsViewModel
 
-class SituationsFragment : Fragment() {
+class SituationsFragment : ViewBindingFragment<FragmentSituationsBinding>() {
 
-    private var _binding: FragmentSituationsBinding? = null
-    private val binding get() = _binding!!
-    private var situationsList: List<Situations> = listOf()
+    override val inflateBinding: (LayoutInflater, ViewGroup?, Boolean) -> FragmentSituationsBinding =
+        FragmentSituationsBinding::inflate
+
     private val situationsAdapter =
-        SituationsAdapter(situationsList, object : OnItemViewClickListener {
+        SituationsAdapter(object : OnItemViewClickListener {
             override fun onItemViewClick(situations: Situations) {
                 val manager = activity?.supportFragmentManager
                 if (manager != null) {
@@ -28,22 +27,13 @@ class SituationsFragment : Fragment() {
                     bundle.putParcelable(SituationsDetailsFragment.KEY_SITUATIONS, situations)
                     manager.beginTransaction()
                         .replace(R.id.container, SituationsDetailsFragment.newInstance(bundle))
-                        .addToBackStack(EMPTY_STRING)
+                        .addToBackStack(R.string.empty_string.toString())
                         .commit()
                 }
             }
 
         })
     private lateinit var viewModel: SituationsViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentSituationsBinding.inflate(inflater, container, false)
-        return binding.root
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.recyclerViewSituations.apply {
@@ -52,7 +42,7 @@ class SituationsFragment : Fragment() {
         }
         viewModel = ViewModelProvider(this)[SituationsViewModel::class.java]
         viewModel.apply {
-            getLiveData().observe(viewLifecycleOwner) { renderData(it) }
+            liveDataToObserve.observe(viewLifecycleOwner) { renderData(it) }
             getSituations()
         }
     }
@@ -63,20 +53,18 @@ class SituationsFragment : Fragment() {
                 val situations = data.situations
                 situationsAdapter.setSituation(situations)
             }
+            // TODO
+            is AppState.Loading -> {
+
+            }
+            // TODO SwipeRefreshLayout
             is AppState.Error -> {
-                Toast.makeText(context, ERROR, Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, R.string.error, Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
     companion object {
-        const val EMPTY_STRING = ""
-        const val ERROR = "Error"
         fun newInstance(): SituationsFragment {
             return SituationsFragment()
         }
