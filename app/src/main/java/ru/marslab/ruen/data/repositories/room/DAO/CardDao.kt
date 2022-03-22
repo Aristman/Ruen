@@ -13,8 +13,8 @@ interface CardDao {
     @Query("SELECT * FROM cards")
     suspend fun get(): List<RoomCard>
 
-    @Query("SELECT * FROM cards WHERE next_date_repeating<=:date OR next_date_repeating=null")
-    suspend fun getCardsForRepeating(date: Date): List<RoomCard>
+    @Query("SELECT * FROM cards WHERE next_date_repeating<=:date OR next_date_repeating=null LIMIT 1")
+    suspend fun getCardForRepeating(date: Date): RoomCard?
 
     @Insert(onConflict = REPLACE)
     suspend fun save(card: RoomCard): Long

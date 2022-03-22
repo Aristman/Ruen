@@ -5,7 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import kotlinx.coroutines.*
 
 abstract class BaseViewModel(application: Application) : AndroidViewModel(application) {
-    protected val coroutineScope = CoroutineScope(Dispatchers.Main + SupervisorJob() + CoroutineExceptionHandler{ _, throwable->
+    protected val coroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob() + CoroutineExceptionHandler{ _, throwable->
         handleError(throwable)
     })
 

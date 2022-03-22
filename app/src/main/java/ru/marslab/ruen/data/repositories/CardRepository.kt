@@ -1,10 +1,8 @@
 package ru.marslab.ruen.data.repositories
 
 import ru.marslab.ruen.Card
-import ru.marslab.ruen.data.repositories.room.DataBaseBuilder
 import ru.marslab.ruen.data.repositories.room.RuenDatabase
 import ru.marslab.ruen.data.repositories.room.entities.RoomCard
-import java.time.LocalDate
 import java.util.*
 
 class CardRepository(
@@ -22,22 +20,19 @@ class CardRepository(
         }
     }
 
-    override suspend fun get(): List<Card> {
-        val roomCards = db.cardDao().get()
-        return mapRoomCards(roomCards)
+    override suspend fun get() = db.cardDao().get().map { CardMapper.toCard(it) }
+
+
+    override suspend fun getCardForRepeating(): Card? {
+        val roomCard = db.cardDao().getCardForRepeating(Date())
+        return roomCard?.let { mapRoomCard(it) }
     }
 
-    override suspend fun getCardsForRepeating(): List<Card> {
-        val roomCards = db.cardDao().getCardsForRepeating(Date())
-        return mapRoomCards(roomCards)
-    }
-
-    private suspend fun mapRoomCards(roomCards: List<RoomCard>) = roomCards.map { roomCard ->
+    private suspend fun mapRoomCard(roomCard: RoomCard): Card {
         val translationsList =
             db.translateDao().get(roomCard.id!!)
                 .map { TranslationMapper.toTranslation(it) }
                 .toMutableList()
-
-        CardMapper.toCard(roomCard).apply { translations = translationsList }
+        return CardMapper.toCard(roomCard).apply { translations = translationsList }
     }
 }

@@ -58,6 +58,7 @@
         android:gravity="center"
         android:orientation="vertical"
         android:textAlignment="center"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintBottom_toTopOf="@id/btnRemember"
         app:layout_constraintEnd_toEndOf="parent"

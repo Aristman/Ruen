@@ -5,7 +5,14 @@ import ru.marslab.ruen.data.repositories.room.entities.RoomCard
 
 object CardMapper {
     fun toRoomCard(card: Card) =
-        RoomCard(card.id, card.value, card.transcription, card.imageUrl, card.nextDateRepeating)
+        RoomCard(
+            card.id,
+            card.value,
+            card.transcription,
+            card.imageUrl,
+            card.nextDateRepeating,
+            card.countRepeat
+        )
 
     fun toCard(roomCard: RoomCard) =
         Card(
@@ -13,6 +20,7 @@ object CardMapper {
             roomCard.value,
             transcription = roomCard.transcription,
             imageUrl = roomCard.imageUrl,
-            nextDateRepeating = roomCard.nextDateRepeating
+            nextDateRepeating = roomCard.nextDateRepeating,
+            countRepeat = roomCard.countRepeat
         )
 }

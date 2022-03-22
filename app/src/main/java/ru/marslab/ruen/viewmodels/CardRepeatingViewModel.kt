@@ -1,28 +1,33 @@
 package ru.marslab.ruen.viewmodels
 
 import android.app.Application
-import android.speech.tts.TextToSpeech
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import ru.marslab.ruen.Card
 import ru.marslab.ruen.data.repositories.CardRepository
 import ru.marslab.ruen.data.repositories.ICardRepository
 import ru.marslab.ruen.data.repositories.room.DataBaseBuilder
-import ru.marslab.ruen.utilities.TTSFactory
+import ru.marslab.ruen.utilities.ITextToSpeech
+import ru.marslab.ruen.utilities.TTS
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.temporal.ChronoUnit
+import java.util.*
 
 class CardRepeatingViewModel(application: Application) : BaseViewModel(application) {
     private val _liveData = MutableLiveData<AppState>()
     private val _repository: ICardRepository =
         CardRepository(DataBaseBuilder(application.applicationContext).getDataBase())
-    private var _cardsList: MutableList<Card>? = null
-    private val tts = TTSFactory(application.applicationContext) {}.getInstance()
+    private val tts: ITextToSpeech = TTS(application.applicationContext)
+    private var card: Card? = null
 
     val liveData: LiveData<AppState> = _liveData
     override fun handleError(e: Throwable) {
-        _liveData.postValue(AppState.Error(e))
+        Log.e(TAG, e.stackTraceToString())
     }
 
     override fun onCleared() {
@@ -32,37 +37,66 @@ class CardRepeatingViewModel(application: Application) : BaseViewModel(applicati
     }
 
     fun init() {
+        getCard()
+    }
+
+    fun getCard() {
         coroutineScope.launch {
-            _liveData.postValue(AppState.Loading)
-            var cards: List<Card>? = null
-            launch(Dispatchers.IO) {
-                cards = _repository.getCardsForRepeating()
-            }.join()
-            cards?.let {
-                _cardsList = it.toMutableList()
+            card = _repository.getCardForRepeating()
+            withContext(Dispatchers.Main) {
+                if (card == null) {
+                    _liveData.postValue(AppState.NoCard)
+                } else {
+                    _liveData.postValue(AppState.Success(card!!))
+                }
+            }
+        }
+    }
+
+    fun speechClicked() {
+        card?.let { card ->
+            tts.speak(card.value)
+        }
+    }
+
+    fun showClicked() {
+        _liveData.postValue(AppState.Translation)
+    }
+
+    fun rememberClicked() {
+        coroutineScope.launch {
+            card?.let { card ->
+                card.countRepeat++
+                card.nextDateRepeating = addDayToDate(Date(), countingDays(card.countRepeat))
+                _repository.save(card)
             }
             getCard()
         }
     }
 
-    fun getCard() {
-        if (_cardsList.isNullOrEmpty()) {
-            _liveData.postValue(AppState.NoCard)
-        } else {
-            _liveData.postValue(AppState.Success(_cardsList!![0]))
+    private fun countingDays(count: Int) = count * 2 + 1
+
+    private fun addDayToDate(date: Date, days: Int) =
+        Date.from(date.toInstant().plus(days.toLong(), ChronoUnit.DAYS))
+
+    fun notRememberClicked() {
+        coroutineScope.launch {
+            card?.let { card ->
+                card.countRepeat = -1
+                card.nextDateRepeating = Date()
+                _repository.save(card)
+            }
+            getCard()
         }
     }
 
-    fun speechClicked() {
-        if (!_cardsList.isNullOrEmpty()) {
-            tts.speak(_cardsList!![0].value, TextToSpeech.QUEUE_FLUSH, null)
-        }
+    companion object {
+        private const val TAG = "CardRepeatingViewModel"
     }
 
     sealed class AppState {
         class Success(val card: Card) : AppState()
         object NoCard : AppState()
-        class Error(val error: Throwable) : AppState()
-        object Loading : AppState()
+        object Translation : AppState()
     }
 }

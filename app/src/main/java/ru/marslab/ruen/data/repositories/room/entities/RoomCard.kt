@@ -16,6 +16,7 @@ data class RoomCard(
     @ColumnInfo(name = "image_url")
     val imageUrl: String? = null,
     @ColumnInfo(name = "next_date_repeating")
-    val nextDateRepeating: Date = Date()
-
+    val nextDateRepeating: Date = Date(),
+    @ColumnInfo(name = "count_repeat")
+    val countRepeat: Int = -1
 )

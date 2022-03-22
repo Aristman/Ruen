@@ -12,5 +12,6 @@ data class Card(
     var transcription: String? = null,
     var sound: String? = null,
     var translations: MutableList<Translation>? = null,
-    var nextDateRepeating: Date = Date()
+    var nextDateRepeating: Date = Date(),
+    var countRepeat: Int = -1
 ) : Parcelable

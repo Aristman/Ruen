@@ -10,4 +10,5 @@
     <string name="remember">Помню</string>
     <string name="not_remember">Не помню</string>
     <string name="show">Показать</string>
+    <string name="no_card_for_repeating">Нет карт для повторения</string>
 </resources>
