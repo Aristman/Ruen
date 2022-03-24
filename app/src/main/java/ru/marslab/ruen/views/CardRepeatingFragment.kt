@@ -8,16 +8,21 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
+import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.Card
 import ru.marslab.ruen.R
 import ru.marslab.ruen.databinding.FragmentCardRepeatingBinding
 import ru.marslab.ruen.utilities.IImageLoader
 import ru.marslab.ruen.utilities.GlideImageLoader
 import ru.marslab.ruen.viewmodels.CardRepeatingViewModel
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class CardRepeatingFragment : BaseFragment<FragmentCardRepeatingBinding>() {
+    @Inject
+    lateinit var imageLoader: IImageLoader
     private val viewModel: CardRepeatingViewModel by viewModels()
-    private val imageLoader: IImageLoader = GlideImageLoader()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -72,7 +77,7 @@ class CardRepeatingFragment : BaseFragment<FragmentCardRepeatingBinding>() {
         }
     }
 
-    private fun showCard(card: Card) = with(binding){
+    private fun showCard(card: Card) = with(binding) {
         clearView()
         tvWord.text = card.value
         tvTranscription.text = card.transcription

@@ -1,13 +1,14 @@
 package ru.marslab.ruen.viewmodels
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.*
 
-abstract class BaseViewModel(application: Application) : AndroidViewModel(application) {
-    protected val coroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob() + CoroutineExceptionHandler{ _, throwable->
-        handleError(throwable)
-    })
+abstract class BaseViewModel :
+    ViewModel() {
+    protected val coroutineScope =
+        CoroutineScope(Dispatchers.IO + SupervisorJob() + CoroutineExceptionHandler { _, throwable ->
+            handleError(throwable)
+        })
 
     abstract fun handleError(e: Throwable)
 
@@ -16,7 +17,7 @@ abstract class BaseViewModel(application: Application) : AndroidViewModel(applic
         cancelJob()
     }
 
-    protected fun cancelJob(){
+    protected fun cancelJob() {
         coroutineScope.coroutineContext.cancelChildren()
     }
 }

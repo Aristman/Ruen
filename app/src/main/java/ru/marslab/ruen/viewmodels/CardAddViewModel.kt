@@ -1,26 +1,21 @@
 package ru.marslab.ruen.viewmodels
 
-import android.app.Application
-import android.content.Context
 import android.util.Log
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import okhttp3.Dispatcher
 import ru.marslab.ruen.Card
 import ru.marslab.ruen.Translation
-import ru.marslab.ruen.data.repositories.CardRepository
 import ru.marslab.ruen.data.repositories.ICardRepository
-import ru.marslab.ruen.data.repositories.room.DataBaseBuilder
+import javax.inject.Inject
 
-class CardAddViewModel(
-    application: Application
-) : BaseViewModel(application) {
-    private val repository =
-        CardRepository(DataBaseBuilder(application.applicationContext).getDataBase())
+@HiltViewModel
+class CardAddViewModel @Inject constructor(
+    private val repository: ICardRepository
+) : BaseViewModel() {
+
     private val liveData = MutableLiveData<Card>()
     private var card: Card? = null
 

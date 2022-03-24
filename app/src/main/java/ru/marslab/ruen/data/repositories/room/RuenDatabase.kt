@@ -8,6 +8,7 @@ import ru.marslab.ruen.data.repositories.room.DAO.TranslationDao
 import ru.marslab.ruen.data.repositories.room.converters.DateConverter
 import ru.marslab.ruen.data.repositories.room.entities.RoomCard
 import ru.marslab.ruen.data.repositories.room.entities.RoomTranslation
+import javax.inject.Inject
 
 @Database(
     entities = arrayOf(RoomCard::class, RoomTranslation::class),

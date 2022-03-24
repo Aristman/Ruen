@@ -1,31 +1,30 @@
 package ru.marslab.ruen.viewmodels
 
-import android.app.Application
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import ru.marslab.ruen.Card
-import ru.marslab.ruen.data.repositories.CardRepository
 import ru.marslab.ruen.data.repositories.ICardRepository
-import ru.marslab.ruen.data.repositories.room.DataBaseBuilder
 import ru.marslab.ruen.utilities.ITextToSpeech
 import ru.marslab.ruen.utilities.TTS
-import java.time.LocalDate
-import java.time.LocalDateTime
 import java.time.temporal.ChronoUnit
 import java.util.*
+import javax.inject.Inject
 
-class CardRepeatingViewModel(application: Application) : BaseViewModel(application) {
+@HiltViewModel
+class CardRepeatingViewModel @Inject constructor(
+    private val repository: ICardRepository,
+    private val tts: ITextToSpeech
+) : BaseViewModel() {
+
     private val _liveData = MutableLiveData<AppState>()
-    private val _repository: ICardRepository =
-        CardRepository(DataBaseBuilder(application.applicationContext).getDataBase())
-    private val tts: ITextToSpeech = TTS(application.applicationContext)
     private var card: Card? = null
-
     val liveData: LiveData<AppState> = _liveData
+
     override fun handleError(e: Throwable) {
         Log.e(TAG, e.stackTraceToString())
     }
@@ -43,7 +42,7 @@ class CardRepeatingViewModel(application: Application) : BaseViewModel(applicati
     fun getCard() {
         _liveData.postValue(AppState.Loading)
         coroutineScope.launch {
-            card = _repository.getCardForRepeating()
+            card = repository.getCardForRepeating()
             withContext(Dispatchers.Main) {
                 if (card == null) {
                     _liveData.postValue(AppState.NoCard)
@@ -69,7 +68,7 @@ class CardRepeatingViewModel(application: Application) : BaseViewModel(applicati
             card?.let { card ->
                 card.countRepeat++
                 card.nextDateRepeating = addDayToDate(Date(), countingDays(card.countRepeat))
-                _repository.save(card)
+                repository.save(card)
             }
             getCard()
         }
@@ -85,7 +84,7 @@ class CardRepeatingViewModel(application: Application) : BaseViewModel(applicati
             card?.let { card ->
                 card.countRepeat = -1
                 card.nextDateRepeating = Date()
-                _repository.save(card)
+                repository.save(card)
             }
             getCard()
         }

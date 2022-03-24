@@ -5,8 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.marslab.ruen.Card
 import ru.marslab.ruen.databinding.RvCardItemBinding
+import javax.inject.Inject
 
-class RVCardsAdapter : RecyclerView.Adapter<RVCardsAdapter.ViewHolder>() {
+class RVCardsAdapter @Inject constructor() : RecyclerView.Adapter<RVCardsAdapter.ViewHolder>() {
 
     private val cardsList = mutableListOf<Card>()
 

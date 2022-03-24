@@ -7,13 +7,18 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.scopes.FragmentScoped
 import ru.marslab.ruen.R
 import ru.marslab.ruen.adapters.RVCardsAdapter
 import ru.marslab.ruen.databinding.FragmentCardsBinding
 import ru.marslab.ruen.viewmodels.CardsViewModel
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class CardsFragment : BaseFragment<FragmentCardsBinding>() {
-    private var adapter: RVCardsAdapter? = null
+    @Inject
+    lateinit var adapter: RVCardsAdapter
     private val viewModel: CardsViewModel by viewModels()
 
     override fun onCreateView(
@@ -59,7 +64,7 @@ class CardsFragment : BaseFragment<FragmentCardsBinding>() {
     private fun handleViewState(viewState: CardsViewModel.ViewState) {
         when (viewState) {
             is CardsViewModel.ViewState.Success -> {
-                adapter?.updateCards(viewState.cards)
+                adapter.updateCards(viewState.cards)
                 showLoading(false)
             }
             is CardsViewModel.ViewState.Error -> {
