@@ -36,6 +36,10 @@ class CardsViewModel(application: Application) : BaseViewModel(application) {
         }
     }
 
+    fun startRepeatingClicked() {
+        liveData.postValue(ViewState.CardRepeating)
+    }
+
     companion object {
         private const val TAG = "CardsViewModel"
     }
@@ -44,5 +48,6 @@ class CardsViewModel(application: Application) : BaseViewModel(application) {
         data class Success(val cards: List<Card>) : ViewState()
         data class Error(val error: Throwable) : ViewState()
         object Loading : ViewState()
+        object CardRepeating : ViewState()
     }
 }

@@ -41,6 +41,7 @@ class CardRepeatingViewModel(application: Application) : BaseViewModel(applicati
     }
 
     fun getCard() {
+        _liveData.postValue(AppState.Loading)
         coroutineScope.launch {
             card = _repository.getCardForRepeating()
             withContext(Dispatchers.Main) {
@@ -98,5 +99,6 @@ class CardRepeatingViewModel(application: Application) : BaseViewModel(applicati
         class Success(val card: Card) : AppState()
         object NoCard : AppState()
         object Translation : AppState()
+        object Loading : AppState()
     }
 }

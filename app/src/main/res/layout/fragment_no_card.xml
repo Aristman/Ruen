@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/no_card_image_height"
         android:layout_margin="@dimen/no_card_image_margin"
-        app:srcCompat="@drawable/no_card" />
+        app:srcCompat="@drawable/empty" />
 
     <TextView
         android:layout_width="wrap_content"

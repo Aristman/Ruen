@@ -1,23 +1,23 @@
 package ru.marslab.ruen.views
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import android.widget.TextView
-import android.widget.Toast
+import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
+import ru.marslab.ruen.Card
+import ru.marslab.ruen.R
 import ru.marslab.ruen.databinding.FragmentCardRepeatingBinding
+import ru.marslab.ruen.utilities.IImageLoader
+import ru.marslab.ruen.utilities.GlideImageLoader
 import ru.marslab.ruen.viewmodels.CardRepeatingViewModel
 
 class CardRepeatingFragment : BaseFragment<FragmentCardRepeatingBinding>() {
     private val viewModel: CardRepeatingViewModel by viewModels()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
+    private val imageLoader: IImageLoader = GlideImageLoader()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,6 +29,7 @@ class CardRepeatingFragment : BaseFragment<FragmentCardRepeatingBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        showLoading(true)
         init()
         setListeners()
     }
@@ -56,22 +57,58 @@ class CardRepeatingFragment : BaseFragment<FragmentCardRepeatingBinding>() {
     private fun handleData(appState: CardRepeatingViewModel.AppState) = with(binding) {
         when (appState) {
             is CardRepeatingViewModel.AppState.Success -> {
-                clearView()
                 val card = appState.card
-                tvWord.text = card.value
-                tvTranscription.text = card.transcription
-                card.translations?.forEach { translation ->
-                    val textView = createTextView(translation.value)
-                    llTranslationContainer.addView(textView)
-                }
+                showCard(card)
             }
             is CardRepeatingViewModel.AppState.NoCard -> {
-                Toast.makeText(context, "no card", Toast.LENGTH_SHORT).show()
+                startNoCardFragment()
             }
             is CardRepeatingViewModel.AppState.Translation -> {
-                llTranslationContainer.visibility = View.VISIBLE
-                groupRememberBtn.visibility = View.VISIBLE
-                btnShow.visibility = View.INVISIBLE
+                showTranslation()
+            }
+            is CardRepeatingViewModel.AppState.Loading -> {
+                showLoading(true)
+            }
+        }
+    }
+
+    private fun showCard(card: Card) = with(binding){
+        clearView()
+        tvWord.text = card.value
+        tvTranscription.text = card.transcription
+        card.imageUrl?.let { loadImage(it) }
+        card.translations?.forEach { translation ->
+            val textView = createTextView(translation.value)
+            llTranslationContainer.addView(textView)
+        }
+        showLoading(false)
+    }
+
+    private fun FragmentCardRepeatingBinding.showTranslation() {
+        llTranslationContainer.visibility = View.VISIBLE
+        groupRememberBtn.visibility = View.VISIBLE
+        btnShow.visibility = View.INVISIBLE
+    }
+
+    private fun loadImage(url: String) = with(binding) {
+        imageLoader.load(url, ivPicture)
+    }
+
+    private fun startNoCardFragment() {
+        parentFragmentManager.commit {
+            add(R.id.fragmentContainer, NoCardFragment())
+            setReorderingAllowed(true)
+            addToBackStack(null)
+        }
+    }
+
+
+    private fun showLoading(show: Boolean) = with(binding) {
+        loadingContainer.pbloading.apply {
+            visibility = if (show) {
+                View.VISIBLE
+            } else {
+                View.GONE
             }
         }
     }
