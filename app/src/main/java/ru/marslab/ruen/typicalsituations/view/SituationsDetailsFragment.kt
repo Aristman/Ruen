@@ -7,10 +7,7 @@ import android.view.ViewGroup
 import ru.marslab.ruen.databinding.FragmentSituationsDetailsBinding
 import ru.marslab.ruen.typicalsituations.model.Situations
 
-class SituationsDetailsFragment : ViewBindingFragment<FragmentSituationsDetailsBinding>() {
-
-    override val inflateBinding: (LayoutInflater, ViewGroup?, Boolean) -> FragmentSituationsDetailsBinding =
-        FragmentSituationsDetailsBinding::inflate
+class SituationsDetailsFragment : ViewBindingFragment<FragmentSituationsDetailsBinding>(FragmentSituationsDetailsBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

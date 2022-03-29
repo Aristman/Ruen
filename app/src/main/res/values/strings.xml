@@ -1,9 +1,22 @@
 <resources>
     <string name="app_name">Ruen</string>
+
+    <!--Situations screen start-->
     <string name="situation">Situation</string>
     <string name="russian_example">Russian Example</string>
     <string name="english_example">English Example</string>
     <string name="taxi">Taxi</string>
     <string name="empty_string">""</string>
     <string name="error">Error</string>
+    <!--Situations screen end-->
+
+    <!--settings screen start-->
+    <string name="tv_daily_word">Daily word</string>
+    <string name="tv_card_repetition">Repetition of cards</string>
+    <string name="tv_card_repetition_popup">Card repetition pop-up</string>
+    <string name="tv_activate_all_images">Activate images display in all places</string>
+    <string name="tv_activate_cards_images">Activate images display in card repetition</string>
+    <string name="tv_dark_theme">Dark theme</string>
+    <string name="tv_font_size">Big font size</string>
+    <!--settings screen end-->
 </resources>

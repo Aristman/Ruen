@@ -13,10 +13,7 @@ import ru.marslab.ruen.typicalsituations.model.Situations
 import ru.marslab.ruen.typicalsituations.viewmodel.AppState
 import ru.marslab.ruen.typicalsituations.viewmodel.SituationsViewModel
 
-class SituationsFragment : ViewBindingFragment<FragmentSituationsBinding>() {
-
-    override val inflateBinding: (LayoutInflater, ViewGroup?, Boolean) -> FragmentSituationsBinding =
-        FragmentSituationsBinding::inflate
+class SituationsFragment : ViewBindingFragment<FragmentSituationsBinding>(FragmentSituationsBinding::inflate) {
 
     private val situationsAdapter =
         SituationsAdapter(object : OnItemViewClickListener {
