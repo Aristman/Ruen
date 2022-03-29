@@ -3,6 +3,7 @@ package ru.marslab.ruen
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import ru.marslab.ruen.databinding.ActivityMainBinding
+import ru.marslab.ruen.settingsscreen.view.SettingsFragment
 import ru.marslab.ruen.typicalsituations.view.SituationsFragment
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(binding.container.id, SituationsFragment.newInstance())
+                .replace(binding.container.id, SettingsFragment.newInstance())
                 .addToBackStack("")
                 .commit()
         }

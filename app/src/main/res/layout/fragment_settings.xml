@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
+        android:id="@+id/dailyWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        app:text="Daily word" />
+
+    <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
+        android:id="@+id/cardRepetition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        app:text="Repetition of cards" />
+
+    <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
+        android:id="@+id/popUpCardNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        app:text="Card repetition pop-up" />
+
+    <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
+        android:id="@+id/activateImages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        app:text="Activate images display in all places" />
+
+    <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
+        android:id="@+id/activateImagesInCards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        app:text="Activate images display in card repetition" />
+
+    <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
+        android:id="@+id/theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        app:text="Dark theme" />
+
+    <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
+        android:id="@+id/fontSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        app:text="Big font size" />
+
+</LinearLayout>
