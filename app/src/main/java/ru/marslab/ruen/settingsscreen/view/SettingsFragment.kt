@@ -2,6 +2,7 @@ package ru.marslab.ruen.settingsscreen.view
 
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatDelegate
 import ru.marslab.ruen.App
 import ru.marslab.ruen.databinding.FragmentSettingsBinding
 import ru.marslab.ruen.typicalsituations.view.ViewBindingFragment
@@ -47,7 +48,12 @@ class SettingsFragment :
                 settings.storeIsShowImagesInCards(value)
             }
             theme.setOnCheckedChangeListener { _, value ->
-//                activity?.setTheme()
+                val mode = if (value) {
+                    AppCompatDelegate.MODE_NIGHT_YES
+                } else {
+                    AppCompatDelegate.MODE_NIGHT_NO
+                }
+                AppCompatDelegate.setDefaultNightMode(mode)
                 settings.storeIsDarkTheme(value)
                 activity?.recreate()
             }

@@ -2,9 +2,9 @@ package ru.marslab.ruen
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import ru.marslab.ruen.databinding.ActivityMainBinding
 import ru.marslab.ruen.settingsscreen.view.SettingsFragment
-import ru.marslab.ruen.typicalsituations.view.SituationsFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,6 +13,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        val mode = if (App.instance.setting.isDarkTheme()) {
+            AppCompatDelegate.MODE_NIGHT_YES
+        } else {
+            AppCompatDelegate.MODE_NIGHT_NO
+        }
+        AppCompatDelegate.setDefaultNightMode(mode)
         setContentView(binding.root)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()

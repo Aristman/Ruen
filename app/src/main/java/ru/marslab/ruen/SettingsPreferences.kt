@@ -44,7 +44,7 @@ class SettingsPreferences(context: Context) {
         prefs.edit().putBoolean(IS_ACTIVE_IMAGES_IN_CARDS_KEY, value).apply()
     }
 
-    fun isShowImagesInCards() = prefs.getBoolean(IS_ACTIVE_DAILY_WORD_KEY, true)
+    fun isShowImagesInCards() = prefs.getBoolean(IS_ACTIVE_IMAGES_IN_CARDS_KEY, true)
     //endregion
 
     //region Dark theme
@@ -52,7 +52,7 @@ class SettingsPreferences(context: Context) {
         prefs.edit().putBoolean(IS_DARK_THEME_KEY, value).apply()
     }
 
-    fun isDarkTheme() = prefs.getBoolean(IS_ACTIVE_DAILY_WORD_KEY, false)
+    fun isDarkTheme() = prefs.getBoolean(IS_DARK_THEME_KEY, false)
     //endregion
 
     //region Big font size
@@ -60,7 +60,7 @@ class SettingsPreferences(context: Context) {
         prefs.edit().putBoolean(IS_BIG_FONT_SIZE_KEY, value).apply()
     }
 
-    fun isBigFontSize() = prefs.getBoolean(IS_ACTIVE_DAILY_WORD_KEY, false)
+    fun isBigFontSize() = prefs.getBoolean(IS_BIG_FONT_SIZE_KEY, false)
     //endregion
 
     private companion object {

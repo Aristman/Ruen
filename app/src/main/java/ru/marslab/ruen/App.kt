@@ -4,7 +4,7 @@ import android.app.Application
 
 class App : Application() {
 
-    lateinit var setting: SettingsPreferences
+    lateinit var setting: SettingsPreferences private set
 
     override fun onCreate() {
         super.onCreate()
@@ -13,7 +13,6 @@ class App : Application() {
     }
 
     companion object {
-        lateinit var instance: App
-            private set
+        lateinit var instance: App private set
     }
 }
