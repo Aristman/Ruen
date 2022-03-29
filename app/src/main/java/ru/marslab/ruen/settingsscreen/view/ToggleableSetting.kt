@@ -34,6 +34,10 @@ class ToggleableSetting(context: Context, attrs: AttributeSet) : LinearLayout(co
         switch.setOnCheckedChangeListener(listener)
     }
 
+    fun setChecked(value: Boolean){
+        switch.isChecked = value
+    }
+
     fun isChecked() = switch.isChecked
 
     fun setText(text: String) {
