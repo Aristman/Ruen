@@ -2,8 +2,12 @@ package ru.marslab.ruen
 
 import android.content.Context
 import android.content.SharedPreferences
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class SettingsPreferences(context: Context) {
+@Singleton
+class SettingsPreferences @Inject constructor(@ApplicationContext context: Context) {
     private val prefs: SharedPreferences =
         context.getSharedPreferences(prefsKey, Context.MODE_PRIVATE)
 

@@ -3,14 +3,18 @@ package ru.marslab.ruen.settingsscreen.view
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatDelegate
-import ru.marslab.ruen.App
+import dagger.hilt.android.AndroidEntryPoint
+import ru.marslab.ruen.SettingsPreferences
 import ru.marslab.ruen.databinding.FragmentSettingsBinding
 import ru.marslab.ruen.typicalsituations.view.ViewBindingFragment
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class SettingsFragment :
     ViewBindingFragment<FragmentSettingsBinding>(FragmentSettingsBinding::inflate) {
 
-    private val settings = App.instance.setting
+    @Inject
+    lateinit var settings: SettingsPreferences
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

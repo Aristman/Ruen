@@ -1,18 +1,7 @@
 package ru.marslab.ruen
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class App : Application() {
-
-    lateinit var setting: SettingsPreferences private set
-
-    override fun onCreate() {
-        super.onCreate()
-        instance = this
-        setting = SettingsPreferences(applicationContext)
-    }
-
-    companion object {
-        lateinit var instance: App private set
-    }
-}
+@HiltAndroidApp
+class App : Application()
