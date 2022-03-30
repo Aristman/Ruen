@@ -3,9 +3,12 @@ package ru.marslab.ruen
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.databinding.ActivityMainBinding
-import ru.marslab.ruen.settingsscreen.view.SettingsFragment
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -26,11 +29,19 @@ class MainActivity : AppCompatActivity() {
         }
         AppCompatDelegate.setDefaultNightMode(mode)
         setContentView(binding.root)
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(binding.container.id, SettingsFragment.newInstance())
-                .addToBackStack("")
-                .commit()
-        }
+
+        setupNavigation()
+    }
+
+    private fun setupNavigation() {
+        val navController = findNavController(R.id.navHostFragment)
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.navigationSituations,
+                R.id.navigationSettings
+            )
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        binding.navView.setupWithNavController(navController)
     }
 }
