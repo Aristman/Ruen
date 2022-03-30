@@ -53,6 +53,8 @@ object Dependencies {
         const val appcompat = "androidx.appcompat:appcompat:${Versions.JetpackCore.appcompat}"
         const val material = "com.google.android.material:material:${Versions.JetpackCore.material}"
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.JetpackCore.constraintLayout}"
+        const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.JetpackCore.navigation}"
+        const val navigationKtx = "androidx.navigation:navigation-ui-ktx:${Versions.JetpackCore.navigation}"
     }
 
     object Tests {

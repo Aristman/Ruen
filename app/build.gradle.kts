@@ -99,6 +99,8 @@ dependencies {
     implementation(Dependencies.JetpackCore.appcompat)
     implementation(Dependencies.JetpackCore.material)
     implementation(Dependencies.JetpackCore.constraintLayout)
+    implementation(Dependencies.JetpackCore.navigationFragment)
+    implementation(Dependencies.JetpackCore.navigationKtx)
 
     //Tests
     testImplementation(Dependencies.Tests.jUnit)

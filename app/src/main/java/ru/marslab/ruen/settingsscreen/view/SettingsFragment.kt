@@ -67,8 +67,4 @@ class SettingsFragment :
             }
         }
     }
-
-    companion object {
-        fun newInstance() = SettingsFragment()
-    }
 }

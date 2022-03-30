@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Ruen</string>
 
+    <!--Bottom navigation start-->
+    <string name="menu_situations">Situations</string>
+    <string name="menu_settings">Settings</string>
+    <!--Bottom navigation end-->
+
     <!--Situations screen start-->
     <string name="situation">Situation</string>
     <string name="russian_example">Russian Example</string>

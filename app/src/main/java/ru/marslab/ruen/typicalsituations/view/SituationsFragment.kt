@@ -1,11 +1,11 @@
 package ru.marslab.ruen.typicalsituations.view
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import ru.marslab.ruen.R
 import ru.marslab.ruen.databinding.FragmentSituationsBinding
@@ -13,20 +13,18 @@ import ru.marslab.ruen.typicalsituations.model.Situations
 import ru.marslab.ruen.typicalsituations.viewmodel.AppState
 import ru.marslab.ruen.typicalsituations.viewmodel.SituationsViewModel
 
-class SituationsFragment : ViewBindingFragment<FragmentSituationsBinding>(FragmentSituationsBinding::inflate) {
+class SituationsFragment :
+    ViewBindingFragment<FragmentSituationsBinding>(FragmentSituationsBinding::inflate) {
 
     private val situationsAdapter =
         SituationsAdapter(object : OnItemViewClickListener {
             override fun onItemViewClick(situations: Situations) {
-                val manager = activity?.supportFragmentManager
-                if (manager != null) {
-                    val bundle = Bundle()
-                    bundle.putParcelable(SituationsDetailsFragment.KEY_SITUATIONS, situations)
-                    manager.beginTransaction()
-                        .replace(R.id.container, SituationsDetailsFragment.newInstance(bundle))
-                        .addToBackStack(R.string.empty_string.toString())
-                        .commit()
-                }
+                findNavController().navigate(
+                    R.id.action_navigationSituations_to_situationsDetailsFragment,
+                    bundleOf(
+                        SituationsDetailsFragment.KEY_SITUATIONS to situations
+                    )
+                )
             }
 
         })
@@ -58,12 +56,6 @@ class SituationsFragment : ViewBindingFragment<FragmentSituationsBinding>(Fragme
             is AppState.Error -> {
                 Toast.makeText(context, R.string.error, Toast.LENGTH_SHORT).show()
             }
-        }
-    }
-
-    companion object {
-        fun newInstance(): SituationsFragment {
-            return SituationsFragment()
         }
     }
 }
