@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+        android:clipToOutline="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:targetApi="s">
+
+        <View
+            android:id="@+id/logo"
+            android:layout_width="@dimen/width_48"
+            android:layout_height="@dimen/height_43"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_50"
+            android:layout_marginTop="@dimen/margin_28"
+            android:background="@drawable/ic_launcher_logo" />
+
+        <View
+            android:id="@+id/name"
+            android:layout_width="@dimen/width_85"
+            android:layout_height="@dimen/height_98"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_110"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/ic_launcher_name" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="@dimen/width_317"
+            android:layout_height="@dimen/height_251"
+            android:layout_marginStart="@dimen/margin_48"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_48"
+            android:background="@drawable/ic_launcher_search"
+            android:elevation="4dp" />
+
+        <EditText
+            android:layout_width="@dimen/width_179"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_98"
+            android:layout_marginTop="@dimen/margin_82"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="@string/write_the_word"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            android:textAppearance="@style/write_the_word" />
+
+        <TextView
+            android:id="@+id/rus"
+            android:layout_width="@dimen/width_62"
+            android:layout_height="@dimen/height_50"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_48"
+            android:layout_marginTop="@dimen/margin_82"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/rus"
+            android:textAppearance="@style/rus" />
+
+        <ImageButton
+            android:id="@+id/search_go_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_37"
+            android:layout_marginStart="@dimen/margin_295"
+            android:layout_marginTop="@dimen/margin_93"
+            android:layout_marginEnd="@dimen/margin_55"
+            android:clickable="true"
+            android:src="@drawable/ic_launcher_btn"
+            android:focusable="true"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_48"
+            android:layout_marginStart="@dimen/margin_298"
+            android:layout_marginTop="@dimen/margin_84"
+            android:layout_marginEnd="@dimen/margin_55"
+            android:background="@drawable/ic_menu_translate" />
+
+        <FrameLayout
+            android:id="@+id/word_of_the_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_48"
+            android:layout_marginTop="@dimen/margin_153"
+            android:layout_marginEnd="@dimen/margin_48"
+            android:layout_marginBottom="@dimen/margin_320">
+
+            <include layout="@layout/fragment_word_of_day" />
+
+        </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_48"
+            android:layout_marginTop="@dimen/margin_420"
+            android:layout_marginEnd="@dimen/margin_48"
+            android:layout_marginBottom="@dimen/margin_90"
+            android:backgroundTint="#4FFFFFFF">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/margin_25"
+                android:layout_marginTop="@dimen/margin_3"
+                android:text="@string/translation"
+                android:textAppearance="@style/translation" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/history_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_2"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_history" />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

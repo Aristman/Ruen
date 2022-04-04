@@ -10,4 +10,41 @@
     <dimen name="card_name_text_size">30sp</dimen>
 
     <dimen name="settings_spacing">20dp</dimen>
+
+    <dimen name="width_48">48dp</dimen>
+    <dimen name="width_85">85dp</dimen>
+    <dimen name="width_317">317dp</dimen>
+    <dimen name="width_179">179dp</dimen>
+    <dimen name="width_62">62dp</dimen>
+    <dimen name="width_140">140dp</dimen>
+    <dimen name="height_98">98dp</dimen>
+    <dimen name="height_251">251dp</dimen>
+    <dimen name="height_50">50dp</dimen>
+    <dimen name="height_37">37dp</dimen>
+    <dimen name="height_48">48dp</dimen>
+    <dimen name="height_43">43dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_28">28dp</dimen>
+    <dimen name="margin_110">110dp</dimen>
+    <dimen name="margin_48">48dp</dimen>
+    <dimen name="margin_98">98dp</dimen>
+    <dimen name="margin_82">82dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_420">420dp</dimen>
+    <dimen name="margin_90">90dp</dimen>
+    <dimen name="margin_153">153dp</dimen>
+    <dimen name="margin_320">320dp</dimen>
+    <dimen name="margin_298">298dp</dimen>
+    <dimen name="margin_84">84dp</dimen>
+    <dimen name="margin_55">55dp</dimen>
+    <dimen name="margin_93">93dp</dimen>
+    <dimen name="margin_295">295dp</dimen>
+    <dimen name="margin_24">-24dp</dimen>
+    <dimen name="height_32">32dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
 </resources>

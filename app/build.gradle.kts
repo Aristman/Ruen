@@ -64,6 +64,8 @@ dependencies {
 
     //Room
     implementation(Dependencies.Room.runTime)
+    implementation("androidx.navigation:navigation-fragment-ktx:2.4.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.4.1")
     kapt(Dependencies.Room.compiler)
     implementation(Dependencies.Room.ktx)
 

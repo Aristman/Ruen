@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="word_of_the">
+        <item name="android:textSize">17.28sp</item>
+        <item name="android:textColor">#80FFFFFF</item>
+    </style>
+
+    <style name="money">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#CCFFFFFF</item>
+
+    </style>
+    <style name="some_id">
+        <item name="android:textSize">17.28sp</item>
+        <item name="android:textColor">#80515455</item>
+    </style>
+
+    <style name="translation">
+        <item name="android:textSize">17.28sp</item>
+        <item name="android:textColor">#515455</item>
+    </style>
+
+    <style name="write_the_word">
+        <item name="android:textSize">17.28sp</item>
+        <item name="android:textColor">#526B0303</item>
+    </style>
+
+    <style name="rus">
+        <item name="android:textSize">17.28sp</item>
+        <item name="android:textColor">#B3515455</item>
+    </style>
+
+    <style name="freedom">
+        <item name="android:textSize">17.28sp</item>
+        <item name="android:textColor">#B3515455</item>
+    </style>
+</resources>

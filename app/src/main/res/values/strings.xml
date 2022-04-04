@@ -24,4 +24,20 @@
     <string name="tv_dark_theme">Dark theme</string>
     <string name="tv_font_size">Big font size</string>
     <!--settings screen end-->
+    <string name="tittle_translate">translate</string>
+    <string name="tittle_translate_cards">cards</string>
+    <string name="tittle_settings">settings</string>
+
+    <!--fragment_main-->
+    <string name="translation">Translation history</string>
+    <string name="write_the_word">Write the word</string>
+    <string name="rus">RUS</string>
+    <string name="freedom">Freedom</string>
+    <string name="freedom_translate">Свобода</string>
+
+    <!--fragment_word_of_day-->
+    <string name="word_of_the">Word of the Day</string>
+    <string name="money">Money</string>
+    <string name="money_translate">Деньги</string>
+
 </resources>
