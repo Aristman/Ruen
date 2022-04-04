@@ -1,5 +1,6 @@
 package ru.marslab.ruen.data.repositories
 
+import kotlinx.coroutines.flow.map
 import ru.marslab.ruen.Card
 import ru.marslab.ruen.data.repositories.room.RuenDatabase
 import ru.marslab.ruen.data.repositories.room.entities.RoomCard
@@ -20,7 +21,8 @@ class CardRepository(
         }
     }
 
-    override suspend fun get() = db.cardDao().get().map { CardMapper.toCard(it) }
+    override suspend fun get() = db.cardDao().get()
+        .map { list -> list.map { CardMapper.toCard(it) } }
 
 
     override suspend fun getCardForRepeating(): Card? {

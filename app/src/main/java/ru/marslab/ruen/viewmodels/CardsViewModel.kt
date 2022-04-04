@@ -1,10 +1,12 @@
 package ru.marslab.ruen.viewmodels
 
 import android.util.Log
+import androidx.constraintlayout.motion.utils.ViewState
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import ru.marslab.ruen.Card
@@ -27,12 +29,10 @@ class CardsViewModel @Inject constructor(
     fun updateData() {
         coroutineScope.launch {
             liveData.postValue(ViewState.Loading)
-            var cardsList: List<Card>?
-            withContext(Dispatchers.IO) {
-                cardsList = repository.get()
-            }
-            cardsList?.let {
-                liveData.postValue(ViewState.Success(it))
+            var cardsList: List<Card>? = null
+            repository.get().collect {
+                cardsList = it
+                liveData.postValue(ViewState.Success(cardsList!!))
             }
         }
     }

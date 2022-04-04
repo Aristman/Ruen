@@ -1,5 +1,6 @@
 object Versions {
     const val hiltGradlePlugin = "2.38.1"
+    const val navigationGradlePlugin = JetpackCore.navigation
 
     object Lifecycle {
         const val lifeCycle = "2.4.1"
@@ -44,6 +45,7 @@ object Versions {
         const val appcompat = "1.4.1"
         const val material = "1.5.0"
         const val constraintLayout = "2.1.3"
+        const val navigation = "2.4.1"
     }
 
     object Tests {

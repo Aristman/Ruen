@@ -84,14 +84,14 @@ class CardRepeatingFragment : BaseFragment<FragmentCardRepeatingBinding>() {
         card.imageUrl?.let { loadImage(it) }
         card.translations?.forEach { translation ->
             val textView = createTextView(translation.value)
-            llTranslationContainer.addView(textView)
+            linearTranslationContainer.addView(textView)
         }
         showLoading(false)
     }
 
     private fun FragmentCardRepeatingBinding.showTranslation() {
-        llTranslationContainer.visibility = View.VISIBLE
-        groupRememberBtn.visibility = View.VISIBLE
+        linearTranslationContainer.visibility = View.VISIBLE
+        groupRememberBtns.visibility = View.VISIBLE
         btnShow.visibility = View.INVISIBLE
     }
 
@@ -100,16 +100,12 @@ class CardRepeatingFragment : BaseFragment<FragmentCardRepeatingBinding>() {
     }
 
     private fun startNoCardFragment() {
-        parentFragmentManager.commit {
-            add(R.id.fragmentContainer, NoCardFragment())
-            setReorderingAllowed(true)
-            addToBackStack(null)
-        }
+
     }
 
 
     private fun showLoading(show: Boolean) = with(binding) {
-        loadingContainer.pbloading.apply {
+        loadingContainer.loading.apply {
             visibility = if (show) {
                 View.VISIBLE
             } else {
@@ -119,9 +115,10 @@ class CardRepeatingFragment : BaseFragment<FragmentCardRepeatingBinding>() {
     }
 
     private fun clearView() = with(binding) {
-        llTranslationContainer.removeAllViews()
+        linearTranslationContainer.removeAllViews()
         tvTranscription.text = ""
         tvWord.text = ""
+
     }
 
     private fun createTextView(label: String) = TextView(context).apply {

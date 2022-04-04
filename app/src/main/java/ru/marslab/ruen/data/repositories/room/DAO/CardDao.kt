@@ -5,13 +5,14 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy.REPLACE
 import androidx.room.Query
+import kotlinx.coroutines.flow.Flow
 import ru.marslab.ruen.data.repositories.room.entities.RoomCard
 import java.util.*
 
 @Dao
 interface CardDao {
     @Query("SELECT * FROM cards")
-    suspend fun get(): List<RoomCard>
+    fun get(): Flow<List<RoomCard>>
 
     @Query("SELECT * FROM cards WHERE next_date_repeating<=:date OR next_date_repeating=null LIMIT 1")
     suspend fun getCardForRepeating(date: Date): RoomCard?

@@ -5,11 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.scopes.FragmentScoped
-import ru.marslab.ruen.R
 import ru.marslab.ruen.adapters.RVCardsAdapter
 import ru.marslab.ruen.databinding.FragmentCardsBinding
 import ru.marslab.ruen.viewmodels.CardsViewModel
@@ -47,11 +45,8 @@ class CardsFragment : BaseFragment<FragmentCardsBinding>() {
     }
 
     private fun testStartFragment() {
-        parentFragmentManager.commit {
-            add(R.id.fragmentContainer, CardAddFragment())
-            setReorderingAllowed(true)
-            addToBackStack(null)
-        }
+        val directions = CardsFragmentDirections.actionCardsFragmentToCardAddFragment()
+        findNavController().navigate(directions)
     }
 
     private fun init() {
@@ -85,15 +80,12 @@ class CardsFragment : BaseFragment<FragmentCardsBinding>() {
     }
 
     private fun startRememberFragment() {
-        parentFragmentManager.commit {
-            add(R.id.fragmentContainer, CardRepeatingFragment())
-            addToBackStack(null)
-            setReorderingAllowed(true)
-        }
+        val directions = CardsFragmentDirections.actionCardsFragmentToCardRepeatingFragment()
+        findNavController().navigate(directions)
     }
 
     private fun showLoading(show: Boolean) = with(binding) {
-        loadingContainer.pbloading.apply {
+        loadingContainer.loading.apply {
             visibility = if (show) {
                 View.VISIBLE
             } else {

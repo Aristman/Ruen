@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.google.android.material.chip.Chip
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import ru.marslab.ruen.Card
 import ru.marslab.ruen.R
@@ -15,6 +16,7 @@ import ru.marslab.ruen.Translation
 import ru.marslab.ruen.databinding.FragmentCardAddBinding
 import ru.marslab.ruen.viewmodels.CardAddViewModel
 
+@AndroidEntryPoint
 class CardAddFragment : BaseFragment<FragmentCardAddBinding>() {
     private val viewModel: CardAddViewModel by viewModels()
 

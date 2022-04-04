@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivPicture"
+        android:id="@+id/iv_picture"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/picture_margin"
@@ -16,41 +16,41 @@
         app:srcCompat="@drawable/noimage" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvWord"
+        android:id="@+id/tv_word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/card_word_margin_top"
         android:textSize="@dimen/card_word_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivPicture"
+        app:layout_constraintTop_toBottomOf="@id/iv_picture"
         tools:text="@string/word" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvTranscription"
+        android:id="@+id/tv_transcription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/card_transcription_margin_top"
         android:textSize="@dimen/card_transcription_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvWord"
+        app:layout_constraintTop_toBottomOf="@id/tv_word"
         tools:text="@string/transcription" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivSound"
+        android:id="@+id/iv_sound"
         android:layout_width="@dimen/card_icon_sound_width"
         android:layout_height="@dimen/card_icon_sound_height"
         android:layout_marginStart="@dimen/card_icon_sound_margin_start"
-        app:layout_constraintBottom_toBottomOf="@id/tvTranscription"
+        app:layout_constraintBottom_toBottomOf="@id/tv_transcription"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tvTranscription"
-        app:layout_constraintTop_toTopOf="@id/tvTranscription"
+        app:layout_constraintStart_toEndOf="@id/tv_transcription"
+        app:layout_constraintTop_toTopOf="@id/tv_transcription"
         app:srcCompat="@drawable/sound" />
 
 
     <com.google.android.material.chip.ChipGroup
-        android:id="@+id/cgTranslations"
+        android:id="@+id/cg_translations"
         android:layout_width="@dimen/card_translations_width"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/card_translations_margin_top"
@@ -60,12 +60,12 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTranscription">
+        app:layout_constraintTop_toBottomOf="@id/tv_transcription">
 
     </com.google.android.material.chip.ChipGroup>
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/etCustomTranslation"
+        android:id="@+id/et_customTranslation"
         android:layout_width="@dimen/card_custom_translation_width"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/card_custom_translation_margin_horizontal"
@@ -74,10 +74,10 @@
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cgTranslations" />
+        app:layout_constraintTop_toBottomOf="@id/cg_translations" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSave"
+        android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/card_save_margin"

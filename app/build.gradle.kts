@@ -4,6 +4,7 @@ plugins {
     kotlin("kapt")
     id("dagger.hilt.android.plugin")
     id("kotlin-parcelize")
+    id ("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -99,6 +100,8 @@ dependencies {
     implementation(Dependencies.JetpackCore.appcompat)
     implementation(Dependencies.JetpackCore.material)
     implementation(Dependencies.JetpackCore.constraintLayout)
+    implementation(Dependencies.JetpackCore.navigationFragment)
+    implementation(Dependencies.JetpackCore.navigationKtx)
 
     //Tests
     testImplementation(Dependencies.Tests.jUnit)

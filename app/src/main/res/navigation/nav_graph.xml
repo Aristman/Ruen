@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cardsFragment">
+
+    <fragment
+        android:id="@+id/cardsFragment"
+        android:name="ru.marslab.ruen.views.CardsFragment"
+        android:label="CardsFragment"
+        tools:layout="@layout/fragment_cards">
+        <action
+            android:id="@+id/action_cardsFragment_to_cardAddFragment"
+            app:destination="@id/cardAddFragment" />
+        <action
+            android:id="@+id/action_cardsFragment_to_cardRepeatingFragment"
+            app:destination="@id/cardRepeatingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardAddFragment"
+        android:name="ru.marslab.ruen.views.CardAddFragment"
+        android:label="CardAddFragment"
+        tools:layout="@layout/fragment_card_add" />
+    <fragment
+        android:id="@+id/cardRepeatingFragment"
+        android:name="ru.marslab.ruen.views.CardRepeatingFragment"
+        android:label="CardRepeatingFragment"
+        tools:layout="@layout/fragment_card_repeating" >
+        <action
+            android:id="@+id/action_cardRepeatingFragment_to_noCardFragment"
+            app:destination="@id/noCardFragment"
+            app:popUpTo="@id/cardRepeatingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/noCardFragment"
+        android:name="ru.marslab.ruen.views.NoCardFragment"
+        android:label="NoCardFragment"
+        tools:layout="@layout/fragment_no_card" />
+</navigation>
