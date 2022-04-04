@@ -1,5 +1,30 @@
 <resources>
     <string name="app_name">Ruen</string>
+
+    <!--Bottom navigation start-->
+    <string name="menu_situations">Situations</string>
+    <string name="menu_settings">Settings</string>
+    <!--Bottom navigation end-->
+
+    <!--Situations screen start-->
+    <string name="situation">Situation</string>
+    <string name="russian_example">Russian Example</string>
+    <string name="english_example">English Example</string>
+    <string name="taxi">Taxi</string>
+    <string name="empty_string">""</string>
+    <string name="error">Error</string>
+    <!--Situations screen end-->
+
+    <!--settings screen start-->
+    <string name="tv_daily_word">Daily word</string>
+    <string name="tv_card_repetition">Repetition of cards</string>
+    <string name="tv_card_repetition_popup">Card repetition pop-up</string>
+    <string name="tv_activate_all_images">Activate images display in all places</string>
+    <string name="tv_activate_cards_images">Activate images display in card repetition</string>
+    <string name="tv_dark_theme">Dark theme</string>
+    <string name="tv_font_size">Big font size</string>
+    <!--settings screen end-->
+    <!--cards screen-->
     <string name="word">word</string>
     <string name="transcription">Transcription</string>
     <string name="save">сохранить</string>
@@ -12,4 +37,5 @@
     <string name="show">Показать</string>
     <string name="no_card_for_repeating">Нет карт для повторения</string>
     <string name="create">создать</string>
+    <!--cards screen end-->
 </resources>

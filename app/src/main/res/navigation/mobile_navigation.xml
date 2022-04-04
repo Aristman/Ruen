@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigationSituations">
+
+    <fragment
+        android:id="@+id/navigationSituations"
+        android:name="ru.marslab.ruen.typicalsituations.view.SituationsFragment"
+        android:label="Situations">
+        <action
+            android:id="@+id/action_navigationSituations_to_situationsDetailsFragment"
+            app:destination="@id/situationsDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationSettings"
+        android:name="ru.marslab.ruen.settingsscreen.view.SettingsFragment"
+        android:label="Settings" />
+    <fragment
+        android:id="@+id/situationsDetailsFragment"
+        android:name="ru.marslab.ruen.typicalsituations.view.SituationsDetailsFragment"
+        android:label="SituationsDetailsFragment" />
+</navigation>
