@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/android_lar_2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/android_lar_2"
+        android:clipToOutline="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:targetApi="s">
+
+        <View
+            android:id="@+id/logo"
+            android:layout_width="141dp"
+            android:layout_height="52dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/ic_logo" />
+
+        <View
+            android:id="@+id/search"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@+id/rus"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="168dp"
+            android:background="@drawable/search"
+            android:elevation="4dp"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/block_translate"
+            android:layout_width="320dp"
+            android:layout_height="281dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="284dp"
+            android:background="@drawable/block_translate"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@+id/rus"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="168dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="@string/editText"
+            android:imeOptions="actionDone"
+            android:inputType="Введите текст для поиска"
+            android:selectAllOnFocus="true"
+            android:textAppearance="@style/Widget.AppCompat.EditText" />
+
+        <TextView
+            android:id="@+id/rus"
+            android:layout_width="62dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="168dp"
+            android:gravity="center_horizontal|center_horizontal|center_vertical"
+            android:text="@string/rus"
+            android:textAppearance="@style/rus"
+            tools:ignore="MissingConstraints" />
+
+        <FrameLayout
+            android:id="@+id/word_to_translate"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@+id/rus"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="168dp"
+            android:background="#0fff0000"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/some_id"
+            android:textAppearance="@style/some_id"
+            tools:ignore="MissingConstraints">
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_view"
+            android:layout_width="62dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="298dp"
+            android:layout_marginTop="168dp"
+            app:srcCompat="@drawable/arrow" />
+    </RelativeLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="820dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

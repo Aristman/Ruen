@@ -23,5 +23,9 @@
     <string name="tv_activate_cards_images">Activate images display in card repetition</string>
     <string name="tv_dark_theme">Dark theme</string>
     <string name="tv_font_size">Big font size</string>
+    <string name="search">search</string>
+    <string name="rus">rus</string>
+    <string name="some_id">some_id</string>
+    <string name="editText">editText</string>
     <!--settings screen end-->
 </resources>
