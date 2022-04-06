@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.SettingsPreferences
 import ru.marslab.ruen.databinding.FragmentSettingsBinding
-import ru.marslab.ruen.typicalsituations.view.ViewBindingFragment
+import ru.marslab.ruen.view.ViewBindingFragment
 import javax.inject.Inject
 
 @AndroidEntryPoint

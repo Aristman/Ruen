@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="picture_margin">10dp</dimen>
     <dimen name="card_word_text_size">32sp</dimen>
-    <dimen name="card_word_margin_top">10dp</dimen>
-    <dimen name="card_transcription_margin_top">10dp</dimen>
-    <dimen name="card_transcription_text_size">18sp</dimen>
+    <dimen name="card_transcription_text_size">20sp</dimen>
     <dimen name="card_icon_sound_width">32dp</dimen>
     <dimen name="card_icon_sound_height">32dp</dimen>
     <dimen name="card_icon_sound_margin_start">10dp</dimen>
@@ -12,9 +9,8 @@
     <dimen name="card_translations_width">0dp</dimen>
     <dimen name="card_translations_chip_spacing">5dp</dimen>
     <dimen name="card_custom_translation_width">0dp</dimen>
-    <dimen name="card_custom_translation_margin_horizontal">30dp</dimen>
     <dimen name="card_custom_translation_margin_top">20dp</dimen>
-    <dimen name="card_save_margin">20dp</dimen>
+    <dimen name="card_save_margin_vertical">10dp</dimen>
     <dimen name="btn_start_repeating_margin">10dp</dimen>
     <dimen name="tvword_margin">10dp</dimen>
     <dimen name="rv_item_text_size">24sp</dimen>
@@ -33,4 +29,17 @@
     <dimen name="card_name_text_size">30sp</dimen>
 
     <dimen name="settings_spacing">20dp</dimen>
+    <dimen name="rv_card_item_tv_padding_horizontal">5dp</dimen>
+    <dimen name="rv_card_item_margin">10dp</dimen>
+    <dimen name="rv_item_transcription_text_size">20sp</dimen>
+    <dimen name="logo_margin">13dp</dimen>
+    <dimen name="fragment_container_margin_horizontal">20dp</dimen>
+    <dimen name="card_picture_height">200dp</dimen>
+    <dimen name="background_view_padding">10dp</dimen>
+    <dimen name="btn_save_width">42dp</dimen>
+    <dimen name="text_view_custom_translation_padding">10dp</dimen>
+    <dimen name="chip_group_translations_margin_horizontal">20dp</dimen>
+    <dimen name="text_view_description_margin_horizontal">10dp</dimen>
+    <dimen name="text_view_word_magin_horizontal">10dp</dimen>
+    <dimen name="card_word_margin_vertical">10dp</dimen>
 </resources>

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Widget.MaterialComponents.Chip.Choice"
     android:layout_width="wrap_content"
+    android:background="?colorPrimaryVariant"
     android:layout_height="wrap_content"
     tools:text="@string/test">
 

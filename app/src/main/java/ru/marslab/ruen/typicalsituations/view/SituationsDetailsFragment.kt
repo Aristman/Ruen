@@ -1,11 +1,10 @@
 package ru.marslab.ruen.typicalsituations.view
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import ru.marslab.ruen.databinding.FragmentSituationsDetailsBinding
 import ru.marslab.ruen.typicalsituations.model.Situations
+import ru.marslab.ruen.view.ViewBindingFragment
 
 class SituationsDetailsFragment : ViewBindingFragment<FragmentSituationsDetailsBinding>(FragmentSituationsDetailsBinding::inflate) {
 
