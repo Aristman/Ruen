@@ -16,4 +16,13 @@
 
     <color name="primary_color">#626A70</color>
     <color name="secondary_color">#9A9DA0</color>
+    <color name="gray_half_light">#80FFFFFF</color>
+    <color name="gray_light">#CCFFFFFF</color>
+    <color name="gray_dark_translucent">#80515455</color>
+    <color name="gray_half_dark_translucent">#515455</color>
+    <color name="dark_red">#526B0303</color>
+    <color name="gray_dark_translucent_2">#B3515455</color>
+    <color name="gray_half_light_translucent">#4FFFFFFF</color>
+
+    #4FFFFFFF
 </resources>

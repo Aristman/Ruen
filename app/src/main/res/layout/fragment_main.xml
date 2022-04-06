@@ -22,45 +22,27 @@
         tools:layout_editor_absoluteY="0dp"
         tools:targetApi="s">
 
-        <View
-            android:id="@+id/logo"
-            android:layout_width="@dimen/width_48"
-            android:layout_height="@dimen/height_43"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/margin_50"
-            android:layout_marginTop="@dimen/margin_28"
-            android:background="@drawable/ic_launcher_logo" />
 
-        <View
-            android:id="@+id/name"
-            android:layout_width="@dimen/width_85"
-            android:layout_height="@dimen/height_98"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/margin_110"
-            android:layout_marginTop="0dp"
-            android:background="@drawable/ic_launcher_name" />
 
         <ImageView
             android:id="@+id/search"
-            android:layout_width="@dimen/width_317"
-            android:layout_height="@dimen/height_251"
-            android:layout_marginStart="@dimen/margin_48"
-            android:layout_marginTop="@dimen/margin_24"
-            android:layout_marginEnd="@dimen/margin_48"
-            android:background="@drawable/ic_launcher_search"
-            android:elevation="4dp" />
+            android:layout_width="@dimen/view_search_width"
+            android:layout_height="@dimen/view_search_height"
+            android:layout_marginStart="@dimen/view_search_margin_start"
+            android:layout_marginTop="@dimen/view_search_margin_top"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:background="@drawable/ic_search"
+            android:elevation="@dimen/view_search_elevation" />
 
         <EditText
-            android:layout_width="@dimen/width_179"
+            android:layout_width="@dimen/edit_text_search_width"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/margin_98"
-            android:layout_marginTop="@dimen/margin_82"
+            android:layout_marginStart="@dimen/edit_text_search_margin_start"
+            android:layout_marginTop="@dimen/edit_text_search_margin_top"
             android:gravity="center_horizontal|center_vertical"
-            android:hint="@string/write_the_word"
+            android:hint="@string/write_a_word"
             android:imeOptions="actionDone"
             android:inputType="textEmailAddress"
             android:selectAllOnFocus="true"
@@ -72,30 +54,30 @@
             android:layout_height="@dimen/height_50"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/margin_48"
-            android:layout_marginTop="@dimen/margin_82"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/edit_text_search_margin_top"
             android:gravity="center_horizontal|center_vertical"
-            android:text="@string/rus"
+            android:text="@string/query_language"
             android:textAppearance="@style/rus" />
 
         <ImageButton
             android:id="@+id/search_go_btn"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/height_37"
-            android:layout_marginStart="@dimen/margin_295"
-            android:layout_marginTop="@dimen/margin_93"
-            android:layout_marginEnd="@dimen/margin_55"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="@dimen/button_margin_start"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:layout_marginEnd="@dimen/button_margin_end"
             android:clickable="true"
-            android:src="@drawable/ic_launcher_btn"
+            android:src="@drawable/ic_btn"
             android:focusable="true"
             tools:ignore="ContentDescription" />
 
         <View
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/height_48"
-            android:layout_marginStart="@dimen/margin_298"
-            android:layout_marginTop="@dimen/margin_84"
-            android:layout_marginEnd="@dimen/margin_55"
+            android:layout_height="@dimen/view_btn_height"
+            android:layout_marginStart="@dimen/view_btn_margin_start"
+            android:layout_marginTop="@dimen/view_btn_margin_top"
+            android:layout_marginEnd="@dimen/button_margin_end"
             android:background="@drawable/ic_menu_translate" />
 
         <FrameLayout
@@ -104,10 +86,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/margin_48"
-            android:layout_marginTop="@dimen/margin_153"
-            android:layout_marginEnd="@dimen/margin_48"
-            android:layout_marginBottom="@dimen/margin_320">
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/framelayout_word_of_the_day_margin_top"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:layout_marginBottom="@dimen/framelayout_word_of_the_day_margin_bottom">
 
             <include layout="@layout/fragment_word_of_day" />
 
@@ -117,19 +99,19 @@
             android:id="@+id/card_view_history"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/margin_48"
-            android:layout_marginTop="@dimen/margin_420"
-            android:layout_marginEnd="@dimen/margin_48"
-            android:layout_marginBottom="@dimen/margin_90"
-            android:backgroundTint="#4FFFFFFF">
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/card_view_history_margin_top"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:layout_marginBottom="@dimen/card_view_history_margin_bottom"
+            android:backgroundTint="@color/gray_half_light_translucent">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="@dimen/margin_25"
-                android:layout_marginTop="@dimen/margin_3"
+                android:layout_marginStart="@dimen/textview_history_margin_start"
+                android:layout_marginTop="@dimen/textview_history_margin_top"
                 android:text="@string/translation"
                 android:textAppearance="@style/translation" />
 
@@ -137,9 +119,9 @@
                 android:id="@+id/history_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_2"
-                android:layout_marginTop="@dimen/margin_20"
-                android:layout_marginRight="@dimen/margin_2"
+                android:layout_marginStart="@dimen/recyclerview_history_margin"
+                android:layout_marginTop="@dimen/recyclerview_history_margin_top"
+                android:layout_marginEnd="@dimen/recyclerview_history_margin"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_history" />
 
@@ -157,3 +139,25 @@
         app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+ <View
+            android:id="@+id/logo"
+            android:layout_width="@dimen/view_logo_width"
+            android:layout_height="@dimen/view_logo_height"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/view_logo_margin_start"
+            android:layout_marginTop="@dimen/view_logo__margin_top"
+            android:background="@drawable/ic_logo" />
+
+        <View
+            android:id="@+id/name"
+            android:layout_width="@dimen/view_app_name_width"
+            android:layout_height="@dimen/view_app_name_height"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/view_app_name_margin_start"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/ic_name" />
+-->
