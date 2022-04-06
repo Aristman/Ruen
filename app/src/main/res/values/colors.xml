@@ -16,4 +16,15 @@
 
     <color name="primary_color">#626A70</color>
     <color name="secondary_color">#9A9DA0</color>
+    <color name="switch_thumb_inactive_b">#DDDDDD</color>
+    <color name="switch_thumb_inactive_t">#999FA4</color>
+    <color name="switch_track_inactive">#FFFFFF</color>
+    <color name="switch_thumb_active_t">#78EF5A</color>
+    <color name="switch_thumb_active_b">#54AA3E</color>
+    <color name="switch_track_active">#67D04C</color>
+    <color name="subheader_color">#94373E41</color>
+    <color name="header_color">#667078</color>
+    <color name="seekbar_thumb_t">#D7D7D7</color>
+    <color name="seekbar_thumb_b">#7D7D7D</color>
+    <color name="seekbar_track">#8A8A8A</color>
 </resources>

@@ -6,21 +6,22 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="@dimen/settings_spacing">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Settings"
-        android:textColor="#667078"
-        android:textSize="18sp" />
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/settings_header"
+        android:textColor="@color/header_color"
+        android:textSize="@dimen/header_size" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:cardBackgroundColor="#E4E4E4"
-        app:cardCornerRadius="15dp">
+        app:cardCornerRadius="@dimen/corner_radius_big">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,13 +31,13 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="@dimen/settings_spacing" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pop-up notifications"
-                android:textColor="#94373E41" />
+                android:text="@string/tv_popup_notifications"
+                android:textColor="@color/subheader_color" />
 
             <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
                 android:id="@+id/dailyWord"
@@ -52,13 +53,13 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="@dimen/settings_spacing" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Inner settings"
-                android:textColor="#94373E41" />
+                android:text="@string/tv_inner_settings"
+                android:textColor="@color/subheader_color" />
 
             <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
                 android:id="@+id/popUpCardNotification"
@@ -84,33 +85,23 @@
                 android:layout_height="wrap_content"
                 app:text="@string/tv_dark_theme" />
 
-            <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
-                android:id="@+id/fontSize"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:text="@string/tv_font_size" />
-
-            <com.google.android.material.slider.Slider
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:stepSize="1"
-                android:valueFrom="0"
-                android:valueTo="4"
-                app:labelBehavior="gone"
-                app:thumbRadius="14dp"
-                app:tickColor="@color/orange"
-                app:trackColor="#8A8A8A"
-                app:trackHeight="2dp" />
+                android:text="@string/tv_font_size" />
 
             <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/fontSize"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:max="4"
                 android:progressDrawable="@drawable/seekbar_track"
                 android:thumb="@drawable/slider_thumb"
+                android:tickMark="@drawable/seekbar_tick"
                 tools:progress="1" />
 
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>

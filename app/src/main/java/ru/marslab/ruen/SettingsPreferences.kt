@@ -60,11 +60,11 @@ class SettingsPreferences @Inject constructor(@ApplicationContext context: Conte
     //endregion
 
     //region Big font size
-    fun storeIsBigFontSize(value: Boolean) {
-        prefs.edit().putBoolean(IS_BIG_FONT_SIZE_KEY, value).apply()
+    fun storeFontSize(value: Int) {
+        prefs.edit().putInt(IS_BIG_FONT_SIZE_KEY, value).apply()
     }
 
-    fun isBigFontSize() = prefs.getBoolean(IS_BIG_FONT_SIZE_KEY, false)
+    fun getFontSize() = prefs.getInt(IS_BIG_FONT_SIZE_KEY, 1)
     //endregion
 
     private companion object {

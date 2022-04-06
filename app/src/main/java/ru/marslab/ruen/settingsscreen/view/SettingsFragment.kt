@@ -2,6 +2,7 @@ package ru.marslab.ruen.settingsscreen.view
 
 import android.os.Bundle
 import android.view.View
+import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatDelegate
 import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.SettingsPreferences
@@ -10,7 +11,7 @@ import ru.marslab.ruen.typicalsituations.view.ViewBindingFragment
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class SettingsFragment :
+class SettingsFragment:
     ViewBindingFragment<FragmentSettingsBinding>(FragmentSettingsBinding::inflate) {
 
     @Inject
@@ -30,7 +31,7 @@ class SettingsFragment :
             activateImages.setChecked(settings.isShowAllImages())
             activateImagesInCards.setChecked(settings.isShowImagesInCards())
             theme.setChecked(settings.isDarkTheme())
-            fontSize.setChecked(settings.isBigFontSize())
+            fontSize.progress = settings.getFontSize()
         }
     }
 
@@ -61,10 +62,15 @@ class SettingsFragment :
                 settings.storeIsDarkTheme(value)
                 activity?.recreate()
             }
-            fontSize.setOnCheckedChangeListener { _, value ->
-                settings.storeIsBigFontSize(value)
-                activity?.recreate()
-            }
+            fontSize.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener {
+                override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+                    settings.storeFontSize(p1)
+                    activity?.recreate()
+                }
+
+                override fun onStartTrackingTouch(p0: SeekBar?) {}
+                override fun onStopTrackingTouch(p0: SeekBar?) {}
+            })
         }
     }
 }

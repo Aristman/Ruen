@@ -3,13 +3,13 @@
     <item android:state_checked="true">
         <shape android:shape="oval">
             <size android:width="30dp" android:height="30dp" />
-            <gradient android:angle="270" android:endColor="#54AA3E" android:startColor="#78EF5A" />
+            <gradient android:angle="270" android:endColor="@color/switch_thumb_active_b" android:startColor="@color/switch_thumb_active_t" />
         </shape>
     </item>
     <item android:state_checked="false">
         <shape android:shape="oval">
             <size android:width="30dp" android:height="30dp" />
-            <gradient android:angle="90" android:endColor="#A9AFB4" android:startColor="#999FA4" />
+            <gradient android:angle="270" android:endColor="@color/switch_thumb_inactive_b" android:startColor="@color/switch_thumb_inactive_t" />
         </shape>
     </item>
 </selector>

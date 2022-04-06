@@ -6,6 +6,6 @@
         android:height="24dp" />
     <gradient
         android:angle="270"
-        android:endColor="#7D7D7D"
-        android:startColor="#D7D7D7" />
+        android:endColor="@color/seekbar_thumb_b"
+        android:startColor="@color/seekbar_thumb_t" />
 </shape>

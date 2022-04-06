@@ -6,7 +6,7 @@
                 <shape>
                     <corners android:radius="14dp" />
                     <size android:width="54dp" android:height="20dp" />
-                    <solid android:color="#FFFFFF" />
+                    <solid android:color="@color/switch_track_inactive" />
                 </shape>
             </item>
         </layer-list>
@@ -17,7 +17,7 @@
                 <shape>
                     <corners android:radius="14dp" />
                     <size android:width="54dp" android:height="20dp" />
-                    <solid android:color="#67D04C" />
+                    <solid android:color="@color/switch_track_active" />
                 </shape>
             </item>
         </layer-list>

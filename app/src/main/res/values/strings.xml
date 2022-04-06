@@ -16,12 +16,15 @@
     <!--Situations screen end-->
 
     <!--settings screen start-->
+    <string name="settings_header">Settings</string>
     <string name="tv_daily_word">Daily word</string>
     <string name="tv_card_repetition">Repetition of cards</string>
     <string name="tv_card_repetition_popup">Card repetition pop-up</string>
     <string name="tv_activate_all_images">Activate images display in all places</string>
     <string name="tv_activate_cards_images">Activate images display in card repetition</string>
     <string name="tv_dark_theme">Dark theme</string>
-    <string name="tv_font_size">Big font size</string>
+    <string name="tv_font_size">Change font size</string>
+    <string name="tv_inner_settings">Inner settings</string>
+    <string name="tv_popup_notifications">Pop-up notifications</string>
     <!--settings screen end-->
 </resources>
