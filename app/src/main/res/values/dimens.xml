@@ -20,6 +20,4 @@
     <dimen name="word_of_a_day_height">230dp</dimen>
     <dimen name="view_search_padding">10dp</dimen>
     <dimen name="history_item_height">32dp</dimen>
-    <dimen name="header_size">18sp</dimen>
-    <dimen name="corner_radius_big">15dp</dimen>
 </resources>

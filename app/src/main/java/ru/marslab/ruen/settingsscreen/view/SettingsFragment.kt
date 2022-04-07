@@ -11,7 +11,7 @@ import ru.marslab.ruen.typicalsituations.view.ViewBindingFragment
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class SettingsFragment:
+class SettingsFragment :
     ViewBindingFragment<FragmentSettingsBinding>(FragmentSettingsBinding::inflate) {
 
     @Inject
@@ -62,14 +62,15 @@ class SettingsFragment:
                 settings.storeIsDarkTheme(value)
                 activity?.recreate()
             }
-            fontSize.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener {
+            fontSize.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
                 override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
                     settings.storeFontSize(p1)
-                    activity?.recreate()
                 }
 
                 override fun onStartTrackingTouch(p0: SeekBar?) {}
-                override fun onStopTrackingTouch(p0: SeekBar?) {}
+                override fun onStopTrackingTouch(p0: SeekBar?) {
+                    activity?.recreate()
+                }
             })
         }
     }
