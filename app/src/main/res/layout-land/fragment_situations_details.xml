@@ -21,7 +21,7 @@
         android:layout_margin="@dimen/cardview_layout_margin"
         android:clickable="true"
         android:focusable="true"
-        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardCornerRadius="@dimen/radius_big"
         app:cardElevation="@dimen/card_elevation">
 
         <LinearLayout
@@ -60,7 +60,7 @@
         android:layout_margin="@dimen/cardview_layout_margin"
         android:clickable="true"
         android:focusable="true"
-        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardCornerRadius="@dimen/radius_big"
         app:cardElevation="@dimen/card_elevation">
 
         <LinearLayout

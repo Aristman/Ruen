@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/navigationTranslation"
+        android:icon="@drawable/ic_menu_translate"
+        android:title="@string/menu_translate"/>
     <item
         android:id="@+id/navigationSituations"
         android:icon="@drawable/ic_menu_cards"
-        android:orderInCategory="10"
-        android:title="@string/menu_situations"
-        app:showAsAction="ifRoom" />
+        android:title="@string/menu_situations"/>
     <item
         android:id="@+id/navigationSettings"
         android:icon="@drawable/ic_menu_settings"
-        android:orderInCategory="100"
-        android:title="@string/menu_settings"
-        app:showAsAction="ifRoom" />
+        android:title="@string/menu_settings"/>
+
+
 </menu>

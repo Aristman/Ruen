@@ -9,49 +9,49 @@
         android:id="@+id/dailyWord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/settings_spacing"
+        android:paddingHorizontal="@dimen/default_spacing"
         app:text="@string/tv_daily_word" />
 
     <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
         android:id="@+id/cardRepetition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/settings_spacing"
+        android:paddingHorizontal="@dimen/default_spacing"
         app:text="@string/tv_card_repetition" />
 
     <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
         android:id="@+id/popUpCardNotification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/settings_spacing"
+        android:paddingHorizontal="@dimen/default_spacing"
         app:text="@string/tv_card_repetition_popup" />
 
     <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
         android:id="@+id/activateImages"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/settings_spacing"
+        android:paddingHorizontal="@dimen/default_spacing"
         app:text="@string/tv_activate_all_images" />
 
     <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
         android:id="@+id/activateImagesInCards"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/settings_spacing"
+        android:paddingHorizontal="@dimen/default_spacing"
         app:text="@string/tv_activate_cards_images" />
 
     <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
         android:id="@+id/theme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/settings_spacing"
+        android:paddingHorizontal="@dimen/default_spacing"
         app:text="@string/tv_dark_theme" />
 
     <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
         android:id="@+id/fontSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/settings_spacing"
+        android:paddingHorizontal="@dimen/default_spacing"
         app:text="@string/tv_font_size" />
 
 </LinearLayout>
