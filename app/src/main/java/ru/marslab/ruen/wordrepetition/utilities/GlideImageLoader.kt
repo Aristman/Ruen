@@ -12,7 +12,6 @@ class GlideImageLoader() :
         val radius = imageView.context.resources.getDimensionPixelSize(R.dimen.card_corner_radius)
         Glide.with(imageView.context)
             .load(url)
-            .centerCrop()
             .transform(RoundedCorners(radius))
             .into(imageView)
     }

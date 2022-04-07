@@ -18,16 +18,17 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iv_picture"
-            android:padding="@dimen/imageview_cardview_margin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:padding="@dimen/imageview_cardview_padding"
             app:srcCompat="@drawable/noimage" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginVertical="20dp"
+        android:layout_marginVertical="@dimen/cardview_word_margin_vertical"
         app:cardBackgroundColor="@color/gray_100"
         app:cardCornerRadius="@dimen/card_corner_radius"
         app:layout_constraintBottom_toTopOf="@id/btn_remember"
@@ -94,7 +95,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:visibility="invisible"
-        app:constraint_referenced_ids="btn_remember,btn_not_remember" />
+        app:constraint_referenced_ids="btn_remember,btn_not_remember"
+        tools:visibility="visible" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_remember"

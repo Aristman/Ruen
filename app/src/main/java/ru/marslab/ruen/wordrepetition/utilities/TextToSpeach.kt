@@ -10,7 +10,7 @@ class TTS(private val context: Context, private val success: (() -> Unit)? = nul
     private val tts = TextToSpeech(context, this)
 
     override fun onInit(status: Int) {
-        if (status === TextToSpeech.SUCCESS) {
+        if (status == TextToSpeech.SUCCESS) {
             val locale = Locale(LANGUAGE)
             val result: Int = tts.setLanguage(locale)
             if (result == TextToSpeech.LANG_MISSING_DATA
@@ -25,6 +25,7 @@ class TTS(private val context: Context, private val success: (() -> Unit)? = nul
         }
     }
 
+    @Suppress("DEPRECATION")
     override fun speak(text: String) {
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null)
     }
