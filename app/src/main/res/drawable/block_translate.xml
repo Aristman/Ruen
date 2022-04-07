@@ -15,7 +15,7 @@
 
         <path
             android:pathData="M0 0V281H320V0"
-            android:fillColor="#4FFFFFFF"
+            android:fillColor="@color/block_translate"
             />
 
     </group>

@@ -16,6 +16,22 @@
 
     <color name="primary_color">#626A70</color>
     <color name="secondary_color">#9A9DA0</color>
+
+    <color name="rus">#8C969E</color>
+    <color name="word_to_translate">#515455</color>
+    <color name="search">#515455</color>
+    <color name="Realty">#515455</color>
+    <color name="first_description">#515455</color>
+    <color name="_1">#515455</color>
+    <color name="realty">#515455</color>
+    <color name="immovables">#515455</color>
+    <color name="estate">#515455</color>
+    <color name="property">#515455</color>
+    <color name="second_description">#515455</color>
+    <color name="_2">#515455</color>
+    <color name="V">#515455</color>
+    <color name="block_translate">#4FFFFFFF</color>
+
     <color name="gray_half_light">#80FFFFFF</color>
     <color name="gray_light">#CCFFFFFF</color>
     <color name="gray_dark_translucent">#80515455</color>
@@ -23,7 +39,6 @@
     <color name="dark_red">#526B0303</color>
     <color name="gray_dark_translucent_2">#B3515455</color>
     <color name="gray_half_light_translucent">#4FFFFFFF</color>
-
 
     <color name="view_search_text">#4C0C0C</color>
     <color name="history_eng_background">#C4C4C4</color>

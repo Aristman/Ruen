@@ -10,7 +10,7 @@
         android:id="@+id/android_lar_2"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/android_lar_2"
+        android:background="@drawable/background"
         android:clipToOutline="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +20,7 @@
         tools:layout_editor_absoluteY="0dp"
         tools:targetApi="s">
 
-        <View
+    <View
             android:id="@+id/logo"
             android:layout_width="141dp"
             android:layout_height="52dp"
@@ -28,43 +28,31 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="48dp"
             android:layout_marginTop="80dp"
-            android:background="@drawable/ic_logo" />
+            android:background="@drawable/logo" />
 
         <View
             android:id="@+id/search"
-            android:layout_width="300dp"
+            android:layout_width="178dp"
             android:layout_height="50dp"
             android:layout_alignStart="@+id/rus"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="62dp"
             android:layout_marginTop="168dp"
             android:background="@drawable/search"
             android:elevation="4dp"
             tools:ignore="MissingConstraints" />
 
-        <View
-            android:id="@+id/block_translate"
-            android:layout_width="320dp"
-            android:layout_height="281dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="284dp"
-            android:background="@drawable/block_translate"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
-
         <EditText
-            android:layout_width="280dp"
+            android:layout_width="178dp"
             android:layout_height="50dp"
             android:layout_alignStart="@+id/rus"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="62dp"
             android:layout_marginTop="168dp"
             android:gravity="center_horizontal|center_vertical"
             android:hint="@string/editText"
             android:imeOptions="actionDone"
-            android:inputType="Введите текст для поиска"
+            android:inputType="enterTextToSearch"
             android:selectAllOnFocus="true"
             android:textAppearance="@style/Widget.AppCompat.EditText" />
 
@@ -83,17 +71,153 @@
 
         <FrameLayout
             android:id="@+id/word_to_translate"
-            android:layout_width="300dp"
+            android:layout_width="178dp"
             android:layout_height="50dp"
             android:layout_alignStart="@+id/rus"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="62dp"
             android:layout_marginTop="168dp"
             android:background="#0fff0000"
             android:gravity="center_horizontal|center_vertical"
-            android:text="@string/some_id"
-            android:textAppearance="@style/some_id"
+            android:text="@string/word_to_translate"
+            android:textAppearance="@style/word_to_translate"
             tools:ignore="MissingConstraints">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/block_translate"
+            android:layout_width="320dp"
+            android:layout_height="281dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="284dp"
+            android:background="@drawable/block_translate"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="285dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/editText"
+                android:imeOptions="actionDone"
+                android:inputType="enterTextToSearch"
+                android:selectAllOnFocus="true"
+                android:textAppearance="@style/Widget.AppCompat.EditText" />
+
+            <TextView
+                android:id="@+id/Realty"
+                android:layout_width="62dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="22dp"
+                android:gravity="center_horizontal|center_horizontal|center_vertical"
+                android:text="@string/Realty"
+                android:textAppearance="@style/realty" />
+
+            <TextView
+                android:id="@+id/transp"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="272dp"
+                android:layout_marginTop="22dp"
+                android:gravity="center_horizontal|center_horizontal|center_vertical"
+                android:text="@string/transp"
+                android:textAppearance="@style/transp" />
+
+            <TextView
+                android:id="@+id/first_description"
+                android:layout_width="295dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="48dp"
+                android:gravity="center_horizontal|center_horizontal|center_vertical"
+                android:text="@string/first_description"
+                android:textAppearance="@style/first_description" />
+
+            <TextView
+                android:id="@+id/_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="81dp"
+                android:gravity="center_horizontal|center_horizontal|center_vertical"
+                android:text="@string/_1"
+                android:textAppearance="@style/_1" />
+
+            <TextView
+                android:id="@+id/realty"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="83dp"
+                android:layout_marginTop="81dp"
+                android:gravity="center_horizontal|center_horizontal|center_vertical"
+                android:text="@string/realty"
+                android:textAppearance="@style/realty" />
+
+            <TextView
+                android:id="@+id/immovables"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="164dp"
+                android:layout_marginTop="81dp"
+                android:gravity="center_horizontal|center_horizontal|center_vertical"
+                android:text="@string/immovables"
+                android:textAppearance="@style/immovables" />
+
+            <TextView
+                android:id="@+id/estate"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="130dp"
+                android:gravity="center_horizontal|center_horizontal|center_vertical"
+                android:text="@string/estate"
+                android:textAppearance="@style/estate" />
+
+            <TextView
+                android:id="@+id/property"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="116dp"
+                android:layout_marginTop="130dp"
+                android:gravity="center_horizontal|center_horizontal|center_vertical"
+                android:text="@string/property"
+                android:textAppearance="@style/property" />
+
+            <TextView
+                android:id="@+id/second_description"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="167dp"
+                android:gravity="center_horizontal|center_horizontal|center_vertical"
+                android:text="@string/second_description"
+                android:textAppearance="@style/second_description" />
+
+            <TextView
+                android:id="@+id/_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="210dp"
+                android:gravity="center_horizontal|center_horizontal|center_vertical"
+                android:text="@string/_2"
+                android:textAppearance="@style/_2" />
+
+            <TextView
+                android:id="@+id/V"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="267dp"
+                android:layout_marginTop="210dp"
+                android:gravity="center_horizontal|center_horizontal|center_vertical"
+                android:text="@string/V"
+                android:textAppearance="@style/V" />
 
         </FrameLayout>
 
@@ -104,12 +228,12 @@
             android:layout_marginStart="298dp"
             android:layout_marginTop="168dp"
             app:srcCompat="@drawable/arrow" />
+
     </RelativeLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_nav_menu"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="820dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

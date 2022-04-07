@@ -1,12 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="poisk">poisk</style>
-
-    <style name="rus">rus</style>
-
-    <style name="some_id">some_id
-        <item name="android:textColor">
-            #515455
-        </item>
+    <style name="search">search
+        <item name="android:textSize">@dimen/search</item>
+        <item name="android:textColor">@color/search</item>
     </style>
+
+    <style name="rus">rus
+        <item name="android:textSize">@dimen/rus</item>
+        <item name="android:textColor">@color/rus</item>
+    </style>
+
+    <style name="word_to_translate">word_to_translate
+        <item name="android:textColor">#515455</item>
+    </style>
+
+    <style name="Realty">Realty
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">#515455</item>
+    </style>
+
+    <style name="_1">1
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">#515455</item>
+    </style>
+
+    <style name="first_description">first_description
+        <item name="android:textColor">#515455</item>
+    </style>
+
+    <style name="realty">realty
+        <item name="android:textSize">@dimen/realty</item>
+        <item name="android:textColor">#515455</item>
+    </style>
+
+    <style name="transp">tr
+        <item name="android:textSize">@dimen/transp</item>
+        <item name="android:textColor">#535551</item>
+    </style>
+
+    <style name="immovables">immovables
+        <item name="android:textColor">#515455</item>
+    </style>
+
+    <style name="estate">estate
+        <item name="android:textColor">#515455</item>
+    </style>
+
+    <style name="property">property
+        <item name="android:textColor">#515455</item>
+    </style>
+
+    <style name="second_description">second_description
+        <item name="android:textColor">#515455</item>
+    </style>
+
+    <style name="_2">2
+        <item name="android:textColor">#515455</item>
+    </style>
+
+    <style name="V">V
+        <item name="android:textColor">#515455</item>
+    </style>
+
 </resources>
