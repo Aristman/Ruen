@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_translate"
+        android:id="@+id/navigationTranslation"
         android:icon="@drawable/ic_menu_translate"
-        android:title="@string/tittle_translate"/>
+        android:title="@string/menu_translate"/>
     <item
-        android:id="@+id/navigation_cards"
+        android:id="@+id/navigationSituations"
         android:icon="@drawable/ic_menu_cards"
-        android:title="@string/tittle_translate_cards"/>
+        android:title="@string/menu_situations"/>
     <item
-        android:id="@+id/navigation_settings"
+        android:id="@+id/navigationSettings"
         android:icon="@drawable/ic_menu_settings"
-        android:title="@string/tittle_settings"/>
+        android:title="@string/menu_settings"/>
 
 
 </menu>

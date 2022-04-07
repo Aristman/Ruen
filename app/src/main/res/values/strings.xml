@@ -2,6 +2,7 @@
     <string name="app_name">Ruen</string>
 
     <!--Bottom navigation start-->
+    <string name="menu_translate">Translate</string>
     <string name="menu_situations">Situations</string>
     <string name="menu_settings">Settings</string>
     <!--Bottom navigation end-->
@@ -24,19 +25,11 @@
     <string name="tv_dark_theme">Dark theme</string>
     <string name="tv_font_size">Big font size</string>
     <!--settings screen end-->
-    <string name="tittle_translate">translate</string>
-    <string name="tittle_translate_cards">cards</string>
-    <string name="tittle_settings">settings</string>
 
-    <!--fragment_main-->
+    <!--fragment_translation-->
     <string name="translation">Translation history</string>
     <string name="write_a_word">Write a word</string>
     <string name="query_language">RUS</string>
-
-
-    <!--fragment_word_of_day-->
-    <string name="word_of_the">Word of the Day</string>
-    <string name="money">Money</string>
-    <string name="money_translate">Деньги</string>
+    <string name="word_of_the_day">Word of the Day</string>
 
 </resources>

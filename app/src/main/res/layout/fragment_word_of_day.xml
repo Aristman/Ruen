@@ -1,70 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".FragmentWordOfDay">
+    android:layout_height="@dimen/word_of_a_day_height"
+    app:cardCornerRadius="@dimen/radius_big">
 
-    <View
-        android:id="@+id/background"
-        android:layout_width="wrap_content"
-        android:layout_height="357dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/ic_background_word_day"
-        android:elevation="8dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-52dp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:scaleType="center"
+        android:src="@drawable/word_of_day_background" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/default_spacing">
 
-    <View
-        android:id="@+id/word_for_day"
-        android:layout_width="238dp"
-        android:layout_height="220dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/ic_word_for_day"
-        android:elevation="8dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-35dp"
-        tools:layout_editor_absoluteY="-88dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:text="@string/word_of_the_day"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/money"
-        android:layout_width="218dp"
-        android:layout_height="200dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/ic_money"
-        android:elevation="8dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="16dp" />
+        <TextView
+            android:id="@+id/engWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/eng_word_of_the_day"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Money" />
 
-    <View
-        android:id="@+id/money_ru"
-        android:layout_width="166dp"
-        android:layout_height="169dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/ic_ru"
-        android:elevation="8dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="61dp" />
+        <TextView
+            android:id="@+id/rusWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/engWord"
+            app:layout_constraintStart_toStartOf="@id/engWord"
+            app:layout_constraintTop_toBottomOf="@id/engWord"
+            tools:text="-Деньги-" />
 
-    <View
-        android:id="@+id/add"
-        android:layout_width="84dp"
-        android:layout_height="87dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/ic_add"
-        android:elevation="8dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="173dp" />
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_check_mark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

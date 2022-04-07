@@ -12,7 +12,7 @@
         android:layout_margin="@dimen/cardview_layout_margin"
         android:clickable="true"
         android:focusable="true"
-        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardCornerRadius="@dimen/radius_big"
         app:cardElevation="@dimen/card_elevation">
 
         <LinearLayout
@@ -37,7 +37,7 @@
                 android:gravity="center"
                 android:hint="@string/taxi"
                 android:textColor="@color/black"
-                android:textSize="@dimen/card_name_text_size"
+                android:textSize="@dimen/header_big"
                 android:textStyle="bold" />
 
         </LinearLayout>
