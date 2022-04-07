@@ -9,10 +9,11 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.appcompat.widget.DrawableUtils
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.chip.Chip
 import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.R
-import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.databinding.FragmentCardRepeatingBinding
+import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.view.ViewBindingFragment
 import ru.marslab.ruen.wordrepetition.utilities.IImageLoader
 import ru.marslab.ruen.wordrepetition.viewmodels.CardRepeatingViewModel
@@ -74,23 +75,27 @@ class CardRepeatingFragment :
     private fun showCard(card: Card) = with(binding) {
         clearView()
         tvWord.text = card.value
-        tvTranscription.text = card.transcription
+        tvTranscription.text = "[${card.transcription}]"
         card.imageUrl?.let { loadImage(it) }
         card.translations?.forEach { translation ->
-            val textView = createTextView(translation.value)
-            linearTranslationContainer.addView(textView)
+            val chipTranslation =
+                layoutInflater.inflate(R.layout.chip_translation, cgTranslations, false) as Chip
+            chipTranslation.apply {
+                text = translation.value
+            }
+            cgTranslations.addView(chipTranslation)
         }
         showLoading(false)
     }
 
     private fun setVisibilityTranslation(visible: Boolean = true) = with(binding) {
         val visibility = getVisibility(visible)
-        linearTranslationContainer.visibility = visibility
+        cgTranslations.visibility = visibility
         groupRememberBtns.visibility = visibility
         btnShow.visibility = getVisibility(!visible)
     }
 
-    private fun getVisibility(visible: Boolean) = if (visible) View.VISIBLE else View.GONE
+    private fun getVisibility(visible: Boolean) = if (visible) View.VISIBLE else View.INVISIBLE
 
     private fun loadImage(url: String) = with(binding) {
         imageLoader.load(url, ivPicture)
@@ -114,7 +119,7 @@ class CardRepeatingFragment :
     }
 
     private fun clearView() = with(binding) {
-        linearTranslationContainer.removeAllViews()
+        cgTranslations.removeAllViews()
         tvTranscription.text = ""
         tvWord.text = ""
         ivPicture.setImageDrawable(
@@ -122,14 +127,6 @@ class CardRepeatingFragment :
                 requireContext(),
                 R.drawable.noimage
             )
-        )
-    }
-
-    private fun createTextView(label: String) = TextView(context).apply {
-        text = label
-        layoutParams = ViewGroup.LayoutParams(
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT
         )
     }
 }

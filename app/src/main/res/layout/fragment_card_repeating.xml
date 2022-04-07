@@ -1,80 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/iv_picture"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_image"
         android:layout_width="0dp"
-        android:layout_height="250dp"
+        android:layout_height="@dimen/card_picture_height"
+        app:cardBackgroundColor="@color/gray_100"
+        app:cardCornerRadius="@dimen/card_corner_radius"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/noimage" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_word"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/card_word_text_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_picture"
-        tools:text="@string/word" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_picture"
+            android:padding="@dimen/imageview_cardview_margin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/noimage" />
+    </androidx.cardview.widget.CardView>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_transcription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/card_transcription_text_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_word"
-        tools:text="@string/transcription" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/iv_sound"
-        android:layout_width="@dimen/card_icon_sound_width"
-        android:layout_height="@dimen/card_icon_sound_height"
-        android:layout_marginStart="@dimen/card_icon_sound_margin_start"
-        app:layout_constraintBottom_toBottomOf="@id/tv_transcription"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv_transcription"
-        app:layout_constraintTop_toTopOf="@id/tv_transcription"
-        app:srcCompat="@drawable/sound" />
-
-
-    <LinearLayout
-        android:id="@+id/linear_translation_container"
+    <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="@dimen/translation_container_margin"
-        android:foregroundGravity="center"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:textAlignment="center"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginVertical="20dp"
+        app:cardBackgroundColor="@color/gray_100"
+        app:cardCornerRadius="@dimen/card_corner_radius"
         app:layout_constraintBottom_toTopOf="@id/btn_remember"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_transcription" />
+        app:layout_constraintTop_toBottomOf="@id/cardview_image">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/text_view_word_magin_horizontal"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/card_word_text_size"
+                app:layout_constraintEnd_toStartOf="@+id/tv_transcription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/word" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_transcription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/text_view_description_margin_horizontal"
+                android:textSize="@dimen/card_transcription_text_size"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_word"
+                app:layout_constraintEnd_toStartOf="@+id/iv_sound"
+                app:layout_constraintStart_toEndOf="@+id/tv_word"
+                tools:text="@string/transcription" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_sound"
+                android:layout_width="@dimen/card_icon_sound_width"
+                android:layout_height="@dimen/card_icon_sound_height"
+                app:layout_constraintBottom_toBottomOf="@id/tv_word"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_transcription"
+                app:layout_constraintTop_toTopOf="@id/tv_word"
+                app:srcCompat="@drawable/sound" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cg_translations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/chip_group_translations_margin_horizontal"
+                android:layout_marginTop="@dimen/card_translations_margin_top"
+                android:textAlignment="center"
+                app:chipSpacingHorizontal="@dimen/card_translations_chip_spacing"
+                app:flow_horizontalAlign="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_word" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group_remember_btns"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:visibility="invisible"
         app:constraint_referenced_ids="btn_remember,btn_not_remember" />
-
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_remember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="@dimen/btn_remember_vertical_margin"
+        android:layout_marginBottom="@dimen/btn_repetiotion_margin_bottom"
         android:text="@string/remember"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_not_remember"
@@ -87,28 +113,20 @@
         android:text="@string/not_remember"
         app:layout_constraintBottom_toBottomOf="@id/btn_remember"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_remember"
-        app:layout_constraintTop_toTopOf="@id/btn_remember" />
+        app:layout_constraintStart_toEndOf="@+id/btn_remember" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="@dimen/btn_remember_vertical_margin"
+        android:layout_marginBottom="@dimen/btn_repetiotion_margin_bottom"
         android:text="@string/show"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-
     <include
         android:id="@+id/loading_container"
-        layout="@layout/window_loading"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="gone" />
+        layout="@layout/window_loading" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

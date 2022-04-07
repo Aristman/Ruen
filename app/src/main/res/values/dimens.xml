@@ -15,7 +15,6 @@
     <dimen name="tvword_margin">10dp</dimen>
     <dimen name="rv_item_text_size">24sp</dimen>
     <dimen name="translation_container_margin">30dp</dimen>
-    <dimen name="btn_remember_vertical_margin">30dp</dimen>
     <dimen name="no_card_image_height">300dp</dimen>
     <dimen name="no_card_image_margin">30dp</dimen>
     <dimen name="no_card_tv_text_size">24sp</dimen>
@@ -43,12 +42,14 @@
     <dimen name="rv_item_transcription_text_size">20sp</dimen>
     <dimen name="logo_margin">13dp</dimen>
     <dimen name="fragment_container_margin_horizontal">20dp</dimen>
-    <dimen name="card_picture_height">200dp</dimen>
-    <dimen name="background_view_padding">10dp</dimen>
+    <dimen name="card_picture_height">250dp</dimen>
+    <dimen name="imageview_cardview_margin">10dp</dimen>
     <dimen name="btn_save_width">42dp</dimen>
     <dimen name="text_view_custom_translation_padding">10dp</dimen>
     <dimen name="chip_group_translations_margin_horizontal">20dp</dimen>
     <dimen name="text_view_description_margin_horizontal">10dp</dimen>
     <dimen name="text_view_word_magin_horizontal">10dp</dimen>
     <dimen name="card_word_margin_vertical">10dp</dimen>
+    <dimen name="btn_repetiotion_margin_bottom">10dp</dimen>
+    <dimen name="card_background_radius">15dp</dimen>
 </resources>
