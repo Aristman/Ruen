@@ -3,22 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/translator_fragment"
-        android:icon="@drawable/ic_menu_cards"
-        android:orderInCategory="10"
-        android:title="@string/translator"
+        android:id="@+id/navigationTranslation"
+        android:icon="@drawable/ic_menu_translate"
+        android:title="@string/menu_translate"/>
+    <item
+        android:id="@+id/nav_graph_repetition"
+        android:icon="@drawable/card_64"
+        android:orderInCategory="20"
+        android:title="@string/Cards"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/navigationSituations"
         android:icon="@drawable/ic_menu_cards"
         android:orderInCategory="30"
         android:title="@string/menu_situations"
-        app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/nav_graph_repetition"
-        android:icon="@drawable/card_64"
-        android:orderInCategory="50"
-        android:title="@string/Cards"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/navigationSettings"

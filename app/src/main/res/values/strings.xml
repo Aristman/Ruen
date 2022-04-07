@@ -2,6 +2,7 @@
     <string name="app_name">Ruen</string>
 
     <!--Bottom navigation start-->
+    <string name="menu_translate">Translate</string>
     <string name="menu_situations">Situations</string>
     <string name="menu_settings">Settings</string>
     <!--Bottom navigation end-->
@@ -44,4 +45,11 @@
     <string name="fragment_label_creating_card">Creating a card</string>
     <string name="translator">Переводчик</string>
     <!--cards screen end-->
+
+    <!--fragment_translation-->
+    <string name="translation">Translation history</string>
+    <string name="write_a_word">Write a word</string>
+    <string name="query_language">RUS</string>
+    <string name="word_of_the_day">Word of the Day</string>
+
 </resources>
