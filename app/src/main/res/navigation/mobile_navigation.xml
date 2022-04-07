@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigationSituations">
+    app:startDestination="@id/navigationTranslation">
 
     <fragment
         android:id="@+id/navigationSituations"
@@ -21,4 +21,8 @@
         android:id="@+id/situationsDetailsFragment"
         android:name="ru.marslab.ruen.typicalsituations.view.SituationsDetailsFragment"
         android:label="SituationsDetailsFragment" />
+    <fragment
+        android:id="@+id/navigationTranslation"
+        android:name="ru.marslab.ruen.translation.TranslationFragment"
+        android:label="TranslationFragment" />
 </navigation>
