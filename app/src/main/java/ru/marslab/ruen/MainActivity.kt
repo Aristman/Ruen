@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.findNavController()
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.translator_fragment,
+                R.id.navigationTranslation,
                 R.id.navigationSituations,
                 R.id.navigationSettings,
                 R.id.nav_graph_repetition
@@ -51,7 +51,8 @@ class MainActivity : AppCompatActivity() {
             navView.setupWithNavController(navController)
             toolbar.setupWithNavController(navController, appBarConfiguration)
             navController.addOnDestinationChangedListener { _, _, arguments ->
-                toolbar.isVisible = arguments?.getBoolean("showToolBar", true) ?: true
+                toolbar.isVisible =
+                    arguments?.getBoolean(resources.getString(R.string.show_toolbar), true) ?: true
             }
         }
     }

@@ -51,5 +51,6 @@
     <string name="write_a_word">Write a word</string>
     <string name="query_language">RUS</string>
     <string name="word_of_the_day">Word of the Day</string>
+    <string name="show_toolbar">show_toolbar</string>
 
 </resources>
