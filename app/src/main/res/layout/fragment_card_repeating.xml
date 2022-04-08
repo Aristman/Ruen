@@ -103,6 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/btn_repetiotion_margin_bottom"
         android:text="@string/remember"
+        style="@style/MaterialButtonSuccess"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_not_remember"
         app:layout_constraintStart_toStartOf="parent" />
@@ -111,6 +112,7 @@
         android:id="@+id/btn_not_remember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/MaterialButtonDanger"
         android:text="@string/not_remember"
         app:layout_constraintBottom_toBottomOf="@id/btn_remember"
         app:layout_constraintEnd_toEndOf="parent"

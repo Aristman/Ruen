@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/no_card_image_height"
         android:layout_margin="@dimen/no_card_image_margin"
-        app:srcCompat="@drawable/ic_baseline_layers_clear_24" />
+        app:srcCompat="@drawable/ic_no_cards" />
 
     <TextView
         android:layout_width="wrap_content"
