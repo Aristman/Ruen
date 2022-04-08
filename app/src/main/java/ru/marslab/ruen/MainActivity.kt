@@ -3,9 +3,10 @@ package ru.marslab.ruen
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.navigation.findNavController
+import androidx.core.view.isVisible
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.databinding.ActivityMainBinding
@@ -34,14 +35,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupNavigation() {
-        val navController = findNavController(R.id.navHostFragment)
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_container) as NavHostFragment
+        val navController = navHostFragment.findNavController()
         val appBarConfiguration = AppBarConfiguration(
             setOf(
+                R.id.navigationTranslation,
                 R.id.navigationSituations,
-                R.id.navigationSettings
+                R.id.navigationSettings,
+                R.id.nav_graph_repetition
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        binding.navView.setupWithNavController(navController)
+
+        with(binding) {
+            navView.setupWithNavController(navController)
+            toolbar.setupWithNavController(navController, appBarConfiguration)
+            navController.addOnDestinationChangedListener { _, _, arguments ->
+                toolbar.isVisible =
+                    arguments?.getBoolean(resources.getString(R.string.show_toolbar), true) ?: true
+            }
+        }
     }
 }

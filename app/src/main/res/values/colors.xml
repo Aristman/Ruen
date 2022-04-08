@@ -13,7 +13,11 @@
     <color name="blue_color">#1240AB</color>
     <color name="yellow_color">#FFD300</color>
     <color name="green_color">#228653</color>
-
+    <color name="gray_500">#4E4E4E</color>
+    <color name="gray_300">#7C7C7C</color>
+    <color name="gray_200">#dddddd</color>
+    <color name="gray_150">#E9E9E9</color>
+    <color name="gray_100">#EDEDED</color>
     <color name="primary_color">#626A70</color>
     <color name="secondary_color">#9A9DA0</color>
     <color name="gray_half_light">#80FFFFFF</color>

@@ -12,6 +12,7 @@ import ru.marslab.ruen.databinding.FragmentSituationsBinding
 import ru.marslab.ruen.typicalsituations.model.Situations
 import ru.marslab.ruen.typicalsituations.viewmodel.AppState
 import ru.marslab.ruen.typicalsituations.viewmodel.SituationsViewModel
+import ru.marslab.ruen.view.ViewBindingFragment
 
 class SituationsFragment :
     ViewBindingFragment<FragmentSituationsBinding>(FragmentSituationsBinding::inflate) {
