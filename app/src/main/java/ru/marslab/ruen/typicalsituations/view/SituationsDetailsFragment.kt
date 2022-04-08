@@ -28,8 +28,5 @@ class SituationsDetailsFragment : ViewBindingFragment<FragmentSituationsDetailsB
 
     companion object {
         const val KEY_SITUATIONS = "KEY_SITUATIONS"
-        fun newInstance(bundle: Bundle): SituationsDetailsFragment {
-            return SituationsDetailsFragment().apply { arguments = bundle }
-        }
     }
 }

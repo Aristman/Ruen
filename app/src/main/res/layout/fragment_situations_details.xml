@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange"
+    android:background="@color/secondary_color"
     android:orientation="vertical">
 
     <ImageView
@@ -37,7 +37,7 @@
                 android:gravity="center"
                 android:hint="@string/russian_example"
                 android:textColor="@color/black"
-                android:textSize="@dimen/example_text_size"
+                android:textSize="@dimen/situations_example_text_size"
                 android:textStyle="italic" />
 
             <TextView
@@ -48,7 +48,7 @@
                 android:gravity="center"
                 android:hint="@string/english_example"
                 android:textColor="@color/black"
-                android:textSize="@dimen/example_text_size"
+                android:textSize="@dimen/situations_example_text_size"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -76,7 +76,7 @@
                 android:gravity="center"
                 android:hint="@string/russian_example"
                 android:textColor="@color/black"
-                android:textSize="@dimen/example_text_size"
+                android:textSize="@dimen/situations_example_text_size"
                 android:textStyle="italic" />
 
             <TextView
@@ -87,7 +87,7 @@
                 android:gravity="center"
                 android:hint="@string/english_example"
                 android:textColor="@color/black"
-                android:textSize="@dimen/example_text_size"
+                android:textSize="@dimen/situations_example_text_size"
                 android:textStyle="bold" />
         </LinearLayout>
 
