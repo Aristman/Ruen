@@ -23,7 +23,7 @@ class SituationsViewModel(
         }
     }
 
-    override fun handleError(error: Throwable) {
-        _liveDataToObserve.postValue(AppState.Error(error))
+    override fun handleError(e: Throwable) {
+        _liveDataToObserve.postValue(AppState.Error(e))
     }
 }

@@ -1,7 +1,5 @@
 package ru.marslab.ruen.typicalsituations.model
 
-import ru.marslab.ruen.R
-
 fun getSituationsData(): List<Situations> {
     return listOf(
         Situations(
