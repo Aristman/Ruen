@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/cardview_layout_margin"
+        android:backgroundTint="@color/primary_color"
         android:clickable="true"
         android:focusable="true"
         app:cardCornerRadius="@dimen/radius_big"
@@ -27,6 +28,7 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/situation"
+                android:scaleType="fitXY"
                 android:src="@drawable/taxi" />
 
             <TextView
@@ -37,7 +39,7 @@
                 android:gravity="center"
                 android:hint="@string/taxi"
                 android:textColor="@color/black"
-                android:textSize="@dimen/header_big"
+                android:textSize="@dimen/situations_card_name_text_size"
                 android:textStyle="bold" />
 
         </LinearLayout>
