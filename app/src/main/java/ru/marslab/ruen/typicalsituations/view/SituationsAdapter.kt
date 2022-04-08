@@ -4,8 +4,6 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import ru.marslab.ruen.R
 import ru.marslab.ruen.databinding.RecyclerviewSituationsCardItemBinding
 import ru.marslab.ruen.typicalsituations.model.Situations
 
@@ -45,10 +43,7 @@ class SituationsAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(situation: Situations) {
             binding.apply {
-                Glide.with(situationImage.context)
-                    .load(situation.situationImage)
-                    .placeholder(R.drawable.empty)
-                    .into(situationImage)
+                situationImage.setImageResource(situation.situationImage)
                 cardName.text = situation.situationName
                 situationImage.setOnClickListener {
                     onItemViewClickListener?.onItemViewClick(

@@ -1,9 +1,11 @@
 package ru.marslab.ruen.typicalsituations.model
 
+import ru.marslab.ruen.R
+
 fun getSituationsData(): List<Situations> {
     return listOf(
         Situations(
-            "https://cdn.pixabay.com/photo/2015/10/14/20/02/taxi-988348_960_720.jpg",
+            R.drawable.taxicity,
             "Taxi",
             "Вы не знаете, где можно поймать такси?",
             "Do you know where I can get a taxi?",
@@ -11,7 +13,7 @@ fun getSituationsData(): List<Situations> {
             "Could you take me to the city centre?"
         ),
         Situations(
-            "https://cdn.pixabay.com/photo/2020/07/09/14/10/airport-5387490_960_720.jpg",
+            R.drawable.airport,
             "Airport",
             "Сколько времени продлится полет?",
             "How long does the flight take?",
@@ -19,7 +21,7 @@ fun getSituationsData(): List<Situations> {
             "I have nothing to declare."
         ),
         Situations(
-            "https://cdn.pixabay.com/photo/2016/11/22/21/57/apparel-1850804_960_720.jpg",
+            R.drawable.shop,
             "Shop",
             "Вы принимаете кредитные карточки?",
             "Do you take credit cards?",
@@ -27,7 +29,7 @@ fun getSituationsData(): List<Situations> {
             "Can I buy it tax-free?"
         ),
         Situations(
-            "https://cdn.pixabay.com/photo/2021/09/09/04/24/signpost-6609445_960_720.jpg",
+            R.drawable.direction,
             "Direction",
             "Вы не подскажете, как добраться до…?",
             "Could you tell me how to get to the ...?",
@@ -35,7 +37,7 @@ fun getSituationsData(): List<Situations> {
             "Can you show me on the map?"
         ),
         Situations(
-            "https://cdn.pixabay.com/photo/2017/08/02/18/14/architecture-2572715_960_720.jpg",
+            R.drawable.hotel,
             "Hotel",
             "Я бы хотел забронировать номер.",
             "I'd like to book a room.",
@@ -43,7 +45,7 @@ fun getSituationsData(): List<Situations> {
             "I've lost my room key."
         ),
         Situations(
-            "https://cdn.pixabay.com/photo/2015/05/31/11/23/table-791167_960_720.jpg",
+            R.drawable.restaurant,
             "Restaurant",
             "Я бы хотел заказать столик.",
             "I want to order a table.",
@@ -51,7 +53,7 @@ fun getSituationsData(): List<Situations> {
             "I'd like a glass of wine."
         ),
         Situations(
-            "https://cdn.pixabay.com/photo/2019/09/30/18/11/flight-4516478_960_720.jpg",
+            R.drawable.airplane,
             "Airplane",
             "Могу я поменяться с вами местами?",
             "Could I change seats with you?",
@@ -59,7 +61,7 @@ fun getSituationsData(): List<Situations> {
             "May I recline my seat?"
         ),
         Situations(
-            "https://cdn.pixabay.com/photo/2017/11/01/11/34/bank-2907728_960_720.jpg",
+            R.drawable.bank,
             "Bank",
             "Каков обменный курс валют долларов в фунты?",
             "What’s the exchange rate for dollars to pounds?",

@@ -9,8 +9,8 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="@color/primary_color"
         android:layout_margin="@dimen/cardview_layout_margin"
+        android:backgroundTint="@color/primary_color"
         android:clickable="true"
         android:focusable="true"
         app:cardCornerRadius="@dimen/radius_big"
@@ -27,8 +27,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
                 android:contentDescription="@string/situation"
+                android:scaleType="fitXY"
                 android:src="@drawable/taxi" />
 
             <TextView
