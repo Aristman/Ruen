@@ -11,20 +11,22 @@
     </style>
 
     <style name="word_to_translate">word_to_translate
+        <item name="android:textSize">@dimen/word_to_translate</item>
         <item name="android:textColor">#515455</item>
     </style>
 
     <style name="Realty">Realty
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">@dimen/Realty</item>
         <item name="android:textColor">#515455</item>
     </style>
 
     <style name="_1">1
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">@dimen/_1</item>
         <item name="android:textColor">#515455</item>
     </style>
 
     <style name="first_description">first_description
+        <item name="android:textSize">@dimen/first_description</item>
         <item name="android:textColor">#515455</item>
     </style>
 
@@ -39,26 +41,32 @@
     </style>
 
     <style name="immovables">immovables
+        <item name="android:textSize">@dimen/immovables</item>
         <item name="android:textColor">#515455</item>
     </style>
 
     <style name="estate">estate
+        <item name="android:textSize">@dimen/estate</item>
         <item name="android:textColor">#515455</item>
     </style>
 
     <style name="property">property
+        <item name="android:textSize">@dimen/property</item>
         <item name="android:textColor">#515455</item>
     </style>
 
     <style name="second_description">second_description
+        <item name="android:textSize">@dimen/second_description</item>
         <item name="android:textColor">#515455</item>
     </style>
 
     <style name="_2">2
+        <item name="android:textSize">@dimen/_2</item>
         <item name="android:textColor">#515455</item>
     </style>
 
     <style name="V">V
+        <item name="android:textSize">@dimen/V</item>
         <item name="android:textColor">#515455</item>
     </style>
 

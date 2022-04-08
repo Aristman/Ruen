@@ -17,20 +17,21 @@
     <color name="primary_color">#626A70</color>
     <color name="secondary_color">#9A9DA0</color>
 
+    <color name="background">#E4E4E4</color>
     <color name="rus">#8C969E</color>
     <color name="word_to_translate">#515455</color>
     <color name="search">#515455</color>
     <color name="Realty">#515455</color>
     <color name="first_description">#515455</color>
     <color name="_1">#515455</color>
-    <color name="realty">#515455</color>
-    <color name="immovables">#515455</color>
-    <color name="estate">#515455</color>
-    <color name="property">#515455</color>
+    <color name="realty">#C4C4C4</color>
+    <color name="immovables">#C4C4C4</color>
+    <color name="estate">#C4C4C4</color>
+    <color name="property">#C4C4C4</color>
     <color name="second_description">#515455</color>
     <color name="_2">#515455</color>
     <color name="V">#515455</color>
-    <color name="block_translate">#4FFFFFFF</color>
+    <color name="block_translate">#FFFFFF</color>
 
     <color name="gray_half_light">#80FFFFFF</color>
     <color name="gray_light">#CCFFFFFF</color>

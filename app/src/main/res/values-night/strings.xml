@@ -1,8 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="poisk">poisk</string>
+    <string name="app_name">Ruen</string>
+
+    <!--Bottom navigation start-->
+    <string name="menu_translate">Translate</string>
+    <string name="menu_situations">Situations</string>
+    <string name="menu_settings">Settings</string>
+    <!--Bottom navigation end-->
+
+    <!--Situations screen start-->
+    <string name="situation">Situation</string>
+    <string name="russian_example">Russian Example</string>
+    <string name="english_example">English Example</string>
+    <string name="taxi">Taxi</string>
+    <string name="empty_string">""</string>
+    <string name="error">Error</string>
+    <!--Situations screen end-->
+
+    <!--settings screen start-->
+    <string name="tv_daily_word">Daily word</string>
+    <string name="tv_card_repetition">Repetition of cards</string>
+    <string name="tv_card_repetition_popup">Card repetition pop-up</string>
+    <string name="tv_activate_all_images">Activate images display in all places</string>
+    <string name="tv_activate_cards_images">Activate images display in card repetition</string>
+    <string name="tv_dark_theme">Dark theme</string>
+    <string name="tv_font_size">Big font size</string>
+    <string name="search">search</string>
     <string name="rus">rus</string>
+    <string name="word_to_translate">word_to_translate</string>
+    <string name="block_translate">block_translate</string>
     <string name="some_id">some_id</string>
     <string name="editText">editText</string>
+    <string name="Realty">Realty</string>
     <string name="realty">realty</string>
+    <string name="transp">tr</string>
+    <string name="_1">1</string>
+    <string name="first_description">сущ. женский род</string>
+    <string name="immovables">immovables</string>
+    <string name="estate">estate</string>
+    <string name="property">property</string>
+    <string name="second_description">недвижимое имущество, имущество, собственность</string>
+    <string name="_2">2</string>
+    <string name="V">V</string>
+    <!--settings screen end-->
+
+    <!--fragment_translation-->
+    <string name="translation">Translation history</string>
+    <string name="write_a_word">Write a word</string>
+    <string name="query_language">RUS</string>
+    <string name="word_of_the_day">Word of the Day</string>
+
 </resources>

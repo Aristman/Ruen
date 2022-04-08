@@ -34,4 +34,5 @@
         <item name="android:textSize">@dimen/header</item>
         <item name="android:textColor">@color/gray_dark_translucent_2</item>
     </style>
+
 </resources>

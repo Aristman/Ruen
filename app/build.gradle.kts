@@ -64,10 +64,6 @@ dependencies {
 
     //Room
     implementation(Dependencies.Room.runTime)
-    implementation("com.google.android.material:material:1.5.0")
-    implementation("androidx.cardview:cardview:1.0.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.3")
-    implementation("androidx.recyclerview:recyclerview:1.2.1")
     kapt(Dependencies.Room.compiler)
     implementation(Dependencies.Room.ktx)
 
