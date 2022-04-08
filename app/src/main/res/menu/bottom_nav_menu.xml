@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/navigationTranslation"
+        android:id="@+id/mainFragment"
         android:icon="@drawable/ic_translate"
         android:title="@string/menu_translate"/>
     <item

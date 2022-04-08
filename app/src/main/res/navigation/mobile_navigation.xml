@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigationTranslation">
+    app:startDestination="@id/mainFragment">
 
     <fragment
         android:id="@+id/navigationSituations"
@@ -27,7 +27,21 @@
         <argument
             android:name="@string/show_toolbar"
             android:defaultValue="false" />
+        <argument
+            android:name="word"
+            app:argType="string" />
     </fragment>
 
     <include app:graph="@navigation/nav_graph_repetition" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="ru.marslab.ruen.translation.views.MainFragment"
+        android:label="MainFragment" >
+        <argument
+            android:name="@string/show_toolbar"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_mainFragment_to_navigationTranslation"
+            app:destination="@id/navigationTranslation" />
+    </fragment>
 </navigation>

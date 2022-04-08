@@ -59,5 +59,6 @@
     <string name="show_toolbar">show_toolbar</string>
     <string name="small_font_size">Small</string>
     <string name="big_font_size">Big</string>
+    <string name="not_found">Not found</string>
 
 </resources>

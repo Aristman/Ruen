@@ -1,4 +1,4 @@
-package ru.marslab.ruen.wordrepetition.di
+package ru.marslab.ruen.di
 
 import dagger.Module
 import dagger.Provides
