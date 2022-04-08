@@ -16,7 +16,7 @@
             android:layout_height="@dimen/card_picture_height"
             android:background="@drawable/background_box"
             android:padding="@dimen/imageview_cardview_padding"
-            app:srcCompat="@drawable/noimage" />
+            app:srcCompat="@drawable/ic_no_photo" />
 
 
         <androidx.appcompat.widget.LinearLayoutCompat

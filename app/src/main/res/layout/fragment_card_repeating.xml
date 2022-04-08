@@ -20,9 +20,8 @@
             android:id="@+id/iv_picture"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
             android:padding="@dimen/imageview_cardview_padding"
-            app:srcCompat="@drawable/noimage" />
+            app:srcCompat="@drawable/ic_no_photo" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView

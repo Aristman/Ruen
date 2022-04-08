@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/navigationTranslation"
-        android:icon="@drawable/ic_menu_translate"
+        android:icon="@drawable/ic_translate"
         android:title="@string/menu_translate"/>
     <item
         android:id="@+id/nav_graph_repetition"
@@ -14,7 +14,7 @@
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/navigationSituations"
-        android:icon="@drawable/ic_menu_cards"
+        android:icon="@drawable/ic_situations"
         android:orderInCategory="30"
         android:title="@string/menu_situations"
         app:showAsAction="ifRoom" />

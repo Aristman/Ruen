@@ -1,12 +1,8 @@
 package ru.marslab.ruen.wordrepetition.views
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.appcompat.widget.DrawableUtils
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.chip.Chip
@@ -125,7 +121,7 @@ class CardRepeatingFragment :
         ivPicture.setImageDrawable(
             AppCompatResources.getDrawable(
                 requireContext(),
-                R.drawable.noimage
+                R.drawable.ic_no_photo
             )
         )
     }
