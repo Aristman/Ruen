@@ -99,20 +99,20 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_remember"
+        style="@style/MaterialButtonSuccess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/btn_repetiotion_margin_bottom"
         android:text="@string/remember"
-        style="@style/MaterialButtonSuccess"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_not_remember"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_not_remember"
+        style="@style/MaterialButtonDanger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/MaterialButtonDanger"
         android:text="@string/not_remember"
         app:layout_constraintBottom_toBottomOf="@id/btn_remember"
         app:layout_constraintEnd_toEndOf="parent"
@@ -130,6 +130,12 @@
 
     <include
         android:id="@+id/loading_container"
-        layout="@layout/window_loading" />
+        layout="@layout/window_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
