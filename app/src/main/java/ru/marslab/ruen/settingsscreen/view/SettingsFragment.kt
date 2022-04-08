@@ -2,6 +2,7 @@ package ru.marslab.ruen.settingsscreen.view
 
 import android.os.Bundle
 import android.view.View
+import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatDelegate
 import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.SettingsPreferences
@@ -30,7 +31,7 @@ class SettingsFragment :
             activateImages.setChecked(settings.isShowAllImages())
             activateImagesInCards.setChecked(settings.isShowImagesInCards())
             theme.setChecked(settings.isDarkTheme())
-            fontSize.setChecked(settings.isBigFontSize())
+            fontSize.progress = settings.getFontSize()
         }
     }
 
@@ -61,10 +62,16 @@ class SettingsFragment :
                 settings.storeIsDarkTheme(value)
                 activity?.recreate()
             }
-            fontSize.setOnCheckedChangeListener { _, value ->
-                settings.storeIsBigFontSize(value)
-                activity?.recreate()
-            }
+            fontSize.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+                override fun onProgressChanged(seekBar: SeekBar?, value: Int, flag: Boolean) {
+                    settings.storeFontSize(value)
+                }
+
+                override fun onStartTrackingTouch(p0: SeekBar?) {}
+                override fun onStopTrackingTouch(p0: SeekBar?) {
+                    activity?.recreate()
+                }
+            })
         }
     }
 }

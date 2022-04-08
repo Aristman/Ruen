@@ -60,11 +60,11 @@ class SettingsPreferences @Inject constructor(@ApplicationContext context: Conte
     //endregion
 
     //region Big font size
-    fun storeIsBigFontSize(value: Boolean) {
-        prefs.edit().putBoolean(IS_BIG_FONT_SIZE_KEY, value).apply()
+    fun storeFontSize(value: Int) {
+        prefs.edit().putInt(FONT_SIZE_KEY, value).apply()
     }
 
-    fun isBigFontSize() = prefs.getBoolean(IS_BIG_FONT_SIZE_KEY, false)
+    fun getFontSize() = prefs.getInt(FONT_SIZE_KEY, 1)
     //endregion
 
     private companion object {
@@ -76,6 +76,6 @@ class SettingsPreferences @Inject constructor(@ApplicationContext context: Conte
         const val IS_ACTIVE_ALL_IMAGES_KEY = "is_active_all_images"
         const val IS_ACTIVE_IMAGES_IN_CARDS_KEY = "is_active_images_in_cards"
         const val IS_DARK_THEME_KEY = "is_dark_theme"
-        const val IS_BIG_FONT_SIZE_KEY = "is_big_font_size"
+        const val FONT_SIZE_KEY = "font_size"
     }
 }

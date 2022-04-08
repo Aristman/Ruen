@@ -20,6 +20,17 @@
     <color name="gray_100">#EDEDED</color>
     <color name="primary_color">#626A70</color>
     <color name="secondary_color">#9A9DA0</color>
+    <color name="switch_thumb_inactive_b">#DDDDDD</color>
+    <color name="switch_thumb_inactive_t">#999FA4</color>
+    <color name="switch_track_inactive">#FFFFFF</color>
+    <color name="switch_thumb_active_t">#78EF5A</color>
+    <color name="switch_thumb_active_b">#54AA3E</color>
+    <color name="switch_track_active">#67D04C</color>
+    <color name="subheader_color">#373E41</color>
+    <color name="header_color">#667078</color>
+    <color name="seekbar_thumb_t">#D7D7D7</color>
+    <color name="seekbar_thumb_b">#7D7D7D</color>
+    <color name="seekbar_track">#8A8A8A</color>
     <color name="gray_half_light">#80FFFFFF</color>
     <color name="gray_light">#CCFFFFFF</color>
     <color name="gray_dark_translucent">#80515455</color>
@@ -32,5 +43,6 @@
     <color name="view_search_text">#4C0C0C</color>
     <color name="history_eng_background">#C4C4C4</color>
     <color name="history_rus_background">#E6E6E6</color>
+    <color name="settings_card_background">#E4E4E4</color>
 
 </resources>
