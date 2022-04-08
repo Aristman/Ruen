@@ -2,6 +2,8 @@ package ru.marslab.ruen.typicalsituations.view
 
 import android.os.Bundle
 import android.view.View
+import com.bumptech.glide.Glide
+import ru.marslab.ruen.R
 import ru.marslab.ruen.databinding.FragmentSituationsDetailsBinding
 import ru.marslab.ruen.typicalsituations.model.Situations
 import ru.marslab.ruen.view.ViewBindingFragment
@@ -18,7 +20,12 @@ class SituationsDetailsFragment : ViewBindingFragment<FragmentSituationsDetailsB
 
     private fun setData(situationsData: Situations) {
         binding.apply {
-            situation.setImageResource(situationsData.situationImage)
+            context?.let {
+                Glide.with(it)
+                    .load(situationsData.situationImage)
+                    .placeholder(R.drawable.empty)
+                    .into(situation)
+            }
             firstRussianExample.text = situationsData.firstRusPhrase
             firstEnglishExample.text = situationsData.firstEngPhrase
             secondRussianExample.text = situationsData.secondRusPhrase

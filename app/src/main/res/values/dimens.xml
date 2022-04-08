@@ -53,4 +53,6 @@
     <dimen name="cardview_word_margin_vertical">20dp</dimen>
     <dimen name="imageview_cardview_padding">15dp</dimen>
     <dimen name="imageview_cardview_margin">10dp</dimen>
+    <dimen name="situations_card_name_text_size">20sp</dimen>
+    <dimen name="situations_example_text_size">15sp</dimen>
 </resources>
