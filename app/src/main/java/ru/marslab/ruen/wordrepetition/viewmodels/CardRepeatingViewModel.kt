@@ -3,6 +3,8 @@ package ru.marslab.ruen.wordrepetition.viewmodels
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -19,15 +21,11 @@ import javax.inject.Inject
 class CardRepeatingViewModel @Inject constructor(
     private val repository: ICardRepository,
     private val tts: ITextToSpeech
-) : BaseViewModel() {
+) : ViewModel() {
 
     private val _liveData = MutableLiveData<AppState>()
     private var card: Card? = null
     val liveData: LiveData<AppState> = _liveData
-
-    override fun handleError(e: Throwable) {
-        Log.e(TAG, e.stackTraceToString())
-    }
 
     override fun onCleared() {
         super.onCleared()
@@ -41,14 +39,14 @@ class CardRepeatingViewModel @Inject constructor(
 
     fun getCardForRepetition() {
         _liveData.postValue(AppState.Loading)
-        coroutineScope.launch {
-            card = repository.getCardForRepeating()
-            withContext(Dispatchers.Main) {
-                if (card == null) {
-                    _liveData.postValue(AppState.NoCard)
-                } else {
-                    _liveData.postValue(AppState.Success(card!!))
-                }
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) {
+                card = repository.getCardForRepeating()
+            }
+            if (card == null) {
+                _liveData.postValue(AppState.NoCard)
+            } else {
+                _liveData.postValue(AppState.Success(card!!))
             }
         }
     }
@@ -64,7 +62,7 @@ class CardRepeatingViewModel @Inject constructor(
     }
 
     fun rememberClicked() {
-        coroutineScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             card?.let { card ->
                 val count = countingIndex(card.countRepeat)
                 card.countRepeat = count
@@ -76,7 +74,7 @@ class CardRepeatingViewModel @Inject constructor(
     }
 
     fun notRememberClicked() {
-        coroutineScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             card?.let { card ->
                 card.countRepeat = 0
                 card.nextDateRepeating = Date()

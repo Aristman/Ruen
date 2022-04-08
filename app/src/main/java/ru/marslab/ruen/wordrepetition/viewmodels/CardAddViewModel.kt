@@ -1,8 +1,11 @@
 package ru.marslab.ruen.wordrepetition.viewmodels
 
 import android.util.Log
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -14,7 +17,7 @@ import javax.inject.Inject
 @HiltViewModel
 class CardAddViewModel @Inject constructor(
     private val repository: ICardRepository
-) : BaseViewModel() {
+) : ViewModel() {
 
     private val liveData = MutableLiveData<Card>()
     private var card: Card? = null
@@ -36,14 +39,10 @@ class CardAddViewModel @Inject constructor(
             if (customTranslateTrimed.isNotEmpty()) {
                 it.translations?.add(Translation(value = customTranslate))
             }
-            coroutineScope.launch(Dispatchers.IO) {
+            viewModelScope.launch(Dispatchers.IO) {
                 repository.save(it)
             }
         }
-    }
-
-    override fun handleError(e: Throwable) {
-        Log.e(TAG, "handleError: ${e.message}", e)
     }
 
     companion object {

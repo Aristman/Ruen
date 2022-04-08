@@ -78,13 +78,7 @@ class CardsFragment : ViewBindingFragment<FragmentCardsBinding>(FragmentCardsBin
     }
 
     private fun showLoading(show: Boolean) = with(binding) {
-        loadingContainer.loading.apply {
-            visibility = if (show) {
-                View.VISIBLE
-            } else {
-                View.GONE
-            }
-        }
+        loadingContainer.loading.visibility = if (show) View.VISIBLE else View.GONE
     }
 
     private fun setAdapter() = with(binding) {

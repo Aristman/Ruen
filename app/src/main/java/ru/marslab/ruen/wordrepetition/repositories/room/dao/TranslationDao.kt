@@ -1,4 +1,4 @@
-package ru.marslab.ruen.wordrepetition.repositories.room.DAO
+package ru.marslab.ruen.wordrepetition.repositories.room.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
