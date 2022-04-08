@@ -1,6 +1,5 @@
 package ru.marslab.ruen.wordrepetition.utilities
 
-import android.annotation.SuppressLint
 import android.widget.ImageView
 import androidx.core.content.res.ResourcesCompat
 import com.bumptech.glide.Glide
