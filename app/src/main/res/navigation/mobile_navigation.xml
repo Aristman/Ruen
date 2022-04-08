@@ -22,7 +22,7 @@
         android:label="SituationsDetailsFragment" />
     <fragment
         android:id="@+id/navigationTranslation"
-        android:name="ru.marslab.ruen.translation.TranslationFragment"
+        android:name="ru.marslab.ruen.translation.views.TranslationFragment"
         android:label="TranslationFragment" >
         <argument
             android:name="@string/show_toolbar"

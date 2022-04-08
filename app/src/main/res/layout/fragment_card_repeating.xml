@@ -10,6 +10,7 @@
         android:id="@+id/cardview_image"
         android:layout_width="0dp"
         android:layout_height="@dimen/card_picture_height"
+        android:elevation="-1dp"
         app:cardBackgroundColor="@color/gray_100"
         app:cardCornerRadius="@dimen/card_corner_radius"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,12 +23,14 @@
             android:layout_height="match_parent"
             android:padding="@dimen/imageview_cardview_padding"
             app:srcCompat="@drawable/ic_no_photo" />
+
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginVertical="@dimen/cardview_word_margin_vertical"
+        android:elevation="-1dp"
         app:cardBackgroundColor="@color/gray_100"
         app:cardCornerRadius="@dimen/card_corner_radius"
         app:layout_constraintBottom_toTopOf="@id/btn_remember"
@@ -99,6 +102,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_remember"
+        style="@style/MaterialButtonSuccess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/btn_repetiotion_margin_bottom"
@@ -109,6 +113,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_not_remember"
+        style="@style/MaterialButtonDanger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/not_remember"
@@ -128,6 +133,13 @@
 
     <include
         android:id="@+id/loading_container"
-        layout="@layout/window_loading" />
+        layout="@layout/window_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

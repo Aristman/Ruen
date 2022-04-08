@@ -106,11 +106,7 @@ class CardRepeatingFragment :
 
     private fun showLoading(show: Boolean) = with(binding) {
         loadingContainer.loading.apply {
-            visibility = if (show) {
-                View.VISIBLE
-            } else {
-                View.GONE
-            }
+            visibility = if (show) View.VISIBLE else View.INVISIBLE
         }
     }
 
