@@ -81,7 +81,7 @@
                 android:layout_gravity="end"
                 android:layout_marginVertical="@dimen/card_save_margin_vertical"
                 android:background="@null"
-                android:src="@drawable/check"
+                android:src="@drawable/add_button"
                 android:text="@string/save" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </LinearLayout>

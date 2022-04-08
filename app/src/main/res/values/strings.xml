@@ -44,6 +44,8 @@
     <string name="fragment_label_no_card">No card</string>
     <string name="fragment_label_creating_card">Creating a card</string>
     <string name="translator">Переводчик</string>
+    <string name="no_translation_provided">No translation provided</string>
+    <string name="unkown_error">Unknown error</string>
     <!--cards screen end-->
 
     <!--fragment_translation-->
