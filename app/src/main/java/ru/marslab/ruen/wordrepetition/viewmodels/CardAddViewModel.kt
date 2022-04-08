@@ -30,7 +30,8 @@ class CardAddViewModel @Inject constructor(
     }
 
     fun save(translations: List<String>, customTranslate: String) {
-        if (translations.isEmpty() && customTranslate.isEmpty()) {
+        val trimedTranslation = customTranslate.trim()
+        if (translations.isEmpty() && trimedTranslation.isEmpty()) {
             liveData.postValue(AppState.Error(NoTranslationProvidedException()))
             return
         }
@@ -39,9 +40,8 @@ class CardAddViewModel @Inject constructor(
                 clear()
                 addAll(translations.map { return@map Translation(value = it) })
             }
-            val customTranslateTrimed = customTranslate.trim()
-            if (customTranslateTrimed.isNotEmpty()) {
-                it.translations?.add(Translation(value = customTranslate))
+            if (trimedTranslation.isNotEmpty()) {
+                it.translations?.add(Translation(value = trimedTranslation))
             }
             viewModelScope.launch(Dispatchers.IO) {
                 repository.save(it)

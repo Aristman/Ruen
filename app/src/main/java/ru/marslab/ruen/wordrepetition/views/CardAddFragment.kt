@@ -61,10 +61,12 @@ class CardAddFragment :
                 handleSuccessState(state)
             }
             is CardAddViewModel.AppState.Error -> {
-                var message = if (state.exception is NoTranslationProvidedException)
+                var message = if (state.exception is NoTranslationProvidedException) {
+                    etCustomTranslation.text = null
                     requireContext().getString(R.string.no_translation_provided)
-                else
+                } else {
                     requireContext().getString(R.string.unkown_error)
+                }
                 Toast.makeText(
                     context,
                     message,
@@ -72,9 +74,7 @@ class CardAddFragment :
                 ).show()
             }
             is CardAddViewModel.AppState.SavedSuccess -> findNavController().popBackStack()
-
         }
-
     }
 
     private fun handleSuccessState(state: CardAddViewModel.AppState.Init) = with(binding) {
