@@ -1,5 +1,5 @@
 package ru.marslab.ruen.typicalsituations.model
 
 interface SituationsRepository {
-    fun getSituations(): List<Situations>
+    suspend fun getSituations(): List<Situations>
 }
