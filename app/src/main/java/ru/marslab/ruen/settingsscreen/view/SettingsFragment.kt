@@ -63,8 +63,8 @@ class SettingsFragment :
                 activity?.recreate()
             }
             fontSize.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
-                    settings.storeFontSize(p1)
+                override fun onProgressChanged(seekBar: SeekBar?, value: Int, flag: Boolean) {
+                    settings.storeFontSize(value)
                 }
 
                 override fun onStartTrackingTouch(p0: SeekBar?) {}

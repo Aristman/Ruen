@@ -43,5 +43,6 @@
     <color name="view_search_text">#4C0C0C</color>
     <color name="history_eng_background">#C4C4C4</color>
     <color name="history_rus_background">#E6E6E6</color>
+    <color name="settings_card_background">#E4E4E4</color>
 
 </resources>

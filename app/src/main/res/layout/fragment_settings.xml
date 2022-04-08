@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:cardBackgroundColor="#E4E4E4"
+    app:cardBackgroundColor="@color/settings_card_background"
     app:cardCornerRadius="@dimen/radius_big">
 
     <LinearLayout
@@ -78,7 +78,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="@dimen/small_spacing" />
 
         <androidx.appcompat.widget.AppCompatSeekBar
             android:id="@+id/fontSize"
