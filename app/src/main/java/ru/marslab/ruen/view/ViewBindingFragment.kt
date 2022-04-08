@@ -1,4 +1,4 @@
-package ru.marslab.ruen.typicalsituations.view
+package ru.marslab.ruen.view
 
 import android.os.Bundle
 import android.view.LayoutInflater

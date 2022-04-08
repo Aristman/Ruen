@@ -12,7 +12,6 @@
             android:id="@+id/action_navigationSituations_to_situationsDetailsFragment"
             app:destination="@id/situationsDetailsFragment" />
     </fragment>
-
     <fragment
         android:id="@+id/navigationSettings"
         android:name="ru.marslab.ruen.settingsscreen.view.SettingsFragment"
@@ -24,5 +23,11 @@
     <fragment
         android:id="@+id/navigationTranslation"
         android:name="ru.marslab.ruen.translation.TranslationFragment"
-        android:label="TranslationFragment" />
+        android:label="TranslationFragment" >
+        <argument
+            android:name="@string/show_toolbar"
+            android:defaultValue="false" />
+    </fragment>
+
+    <include app:graph="@navigation/nav_graph_repetition" />
 </navigation>
