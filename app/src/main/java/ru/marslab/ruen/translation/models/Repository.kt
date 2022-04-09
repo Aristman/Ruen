@@ -18,4 +18,5 @@ class Repository @Inject constructor(
         localSource.insertWord(word)
     }
 
+    suspend fun getLastCard() = localSource.getLastCard()
 }

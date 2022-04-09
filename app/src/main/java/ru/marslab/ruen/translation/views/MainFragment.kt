@@ -12,6 +12,7 @@ import ru.marslab.ruen.translation.viewmodels.MainAppState
 import ru.marslab.ruen.translation.viewmodels.MainViewModel
 import ru.marslab.ruen.translation.views.adapters.HistoryRVAdapter
 import ru.marslab.ruen.view.ViewBindingFragment
+import ru.marslab.ruen.wordrepetition.domain.Card
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -29,6 +30,9 @@ class MainFragment : ViewBindingFragment<FragmentMainBinding>(FragmentMainBindin
     }
 
     private fun setAdapter() = with(binding) {
+        historyAdapter.setClickListener { query ->
+            navigateToTranslation(query)
+        }
         historyList.adapter = historyAdapter
     }
 
@@ -43,7 +47,20 @@ class MainFragment : ViewBindingFragment<FragmentMainBinding>(FragmentMainBindin
             is MainAppState.NoWord -> showMessageWriteWord()
             is MainAppState.Translation -> navigateToTranslation(state.word)
             is MainAppState.History -> historyAdapter.updateWordsList(state.words)
+            is MainAppState.LastCard -> setLastCard(state.card)
+            is MainAppState.CardNull -> setNullCard()
         }
+    }
+
+    private fun setLastCard(card: Card) = with(binding) {
+        wordOfTheDay.apply {
+            engWord.text = card.value
+            card.transcription?.let { rusWord.text = it }
+        }
+    }
+
+    private fun setNullCard() = with(binding) {
+        wordOfTheDay.engWord.text = resources.getString(R.string.no_cards)
     }
 
     private fun navigateToTranslation(query: String) = with(binding) {

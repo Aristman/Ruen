@@ -52,7 +52,7 @@
 
     <include
         android:id="@+id/word_of_the_day"
-        layout="@layout/fragment_word_of_day"
+        layout="@layout/card_word_of_day"
         android:layout_width="0dp"
         android:layout_height="@dimen/word_of_a_day_height"
         android:elevation="@dimen/card_elevation"

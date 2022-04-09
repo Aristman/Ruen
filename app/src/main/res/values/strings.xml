@@ -60,5 +60,6 @@
     <string name="small_font_size">Small</string>
     <string name="big_font_size">Big</string>
     <string name="not_found">Not found</string>
+    <string name="no_cards">No cards</string>
 
 </resources>

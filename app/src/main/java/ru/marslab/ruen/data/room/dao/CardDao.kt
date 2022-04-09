@@ -14,9 +14,14 @@ interface CardDao {
     @Query("SELECT * FROM cards ORDER BY next_date_repeating")
     fun get(): Flow<List<RoomCard>>
 
-    @Query("SELECT * FROM cards WHERE next_date_repeating<=:date OR next_date_repeating=null " +
-            "ORDER BY next_date_repeating LIMIT 1")
+    @Query(
+        "SELECT * FROM cards WHERE next_date_repeating<=:date OR next_date_repeating=null " +
+                "ORDER BY next_date_repeating LIMIT 1"
+    )
     suspend fun getCardForRepeating(date: Date): RoomCard?
+
+    @Query("SELECT * FROM cards ORDER BY next_date_repeating LIMIT 1")
+    suspend fun getLastCard(): RoomCard?
 
     @Insert(onConflict = REPLACE)
     suspend fun save(card: RoomCard): Long

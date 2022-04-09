@@ -2,8 +2,11 @@ package ru.marslab.ruen.wordrepetition.repositories
 
 import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.data.room.entities.RoomCard
+import javax.inject.Inject
+import javax.inject.Singleton
 
-object CardMapper {
+@Singleton
+class CardMapper @Inject constructor() {
     fun toRoomCard(card: Card) =
         RoomCard(
             card.id,
