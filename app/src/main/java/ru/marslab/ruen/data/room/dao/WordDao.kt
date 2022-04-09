@@ -9,12 +9,9 @@ import ru.marslab.ruen.data.room.entities.RoomWord
 
 @Dao
 interface WordDao {
-    @Query("SELECT * FROM words")
+    @Query("SELECT * FROM words ORDER BY id DESC")
     fun getWords(): Flow<List<RoomWord>>
 
     @Insert
     suspend fun insertWord(word: RoomWord): Long
-
-    @Query("DELETE FROM words ORDER BY id ASC LIMIT :count")
-    suspend fun deleteFirstWords(count: Int)
 }

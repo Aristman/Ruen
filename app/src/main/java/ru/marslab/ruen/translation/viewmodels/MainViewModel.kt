@@ -4,14 +4,18 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import ru.marslab.ruen.translation.beans.Word
 import ru.marslab.ruen.translation.models.Repository
+import javax.inject.Inject
 
-class MainViewModel(
+@HiltViewModel
+class MainViewModel @Inject constructor(
     private val repository: Repository
 ) : ViewModel() {
 
@@ -32,9 +36,6 @@ class MainViewModel(
     fun init() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.getWords().collect { list ->
-                if (list.size >= MAX_COUNT_WORDS_IN_HISTORY) repository.deleteFirstWords(
-                    list.size - MAX_COUNT_WORDS_IN_HISTORY
-                )
                 withContext(Dispatchers.Main) {
                     liveData.postValue(MainAppState.History(list))
                 }

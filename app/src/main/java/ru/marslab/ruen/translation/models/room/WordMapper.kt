@@ -7,6 +7,6 @@ import javax.inject.Singleton
 
 @Singleton
 class WordMapper @Inject constructor() {
-    fun toRoomWord(word: Word) = RoomWord(word.id, word.value)
-    fun toWord(roomWord: RoomWord) = Word(roomWord.id, roomWord.value)
+    fun toRoomWord(word: Word) = RoomWord(word.id, word.value, word.translation)
+    fun toWord(roomWord: RoomWord) = Word(roomWord.id, roomWord.value, roomWord.translation)
 }

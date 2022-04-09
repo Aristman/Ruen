@@ -10,6 +10,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import ru.marslab.ruen.translation.models.Repository
 import ru.marslab.ruen.data.retrofit.beans.RetrofitWord
+import ru.marslab.ruen.translation.beans.Word
 import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.wordrepetition.domain.Translation
 import ru.marslab.ruen.wordrepetition.utilities.ITextToSpeech
@@ -37,6 +38,13 @@ class TranslationViewModel @Inject constructor(
                 val word = words[0]
                 storedWord = word
                 liveData.postValue(AppState.Success(word))
+                withContext(Dispatchers.IO) {
+                    val translation =
+                        if (word.meanings.isNotEmpty()) word.meanings[0].translation.text else null
+                    wordString?.let {
+                        repository.saveWord(Word(value = wordString!!, translation = translation))
+                    }
+                }
             }
         }
         return liveData

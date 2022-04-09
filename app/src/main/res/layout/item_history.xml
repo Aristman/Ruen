@@ -2,28 +2,32 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="horizontal">
 
     <TextView
         android:id="@+id/word"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/history_item_height"
         android:layout_marginVertical="@dimen/history_vertical_spacing"
         android:layout_weight="1"
         android:background="@color/history_eng_background"
+        android:ellipsize="end"
         android:gravity="center"
+        android:maxLines="1"
         android:textAppearance="@style/history_eng_text"
         tools:text="Freedom" />
 
     <TextView
         android:id="@+id/translate_word"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/history_item_height"
         android:layout_marginVertical="@dimen/history_vertical_spacing"
         android:layout_weight="1"
         android:background="@color/history_rus_background"
+        android:ellipsize="end"
         android:gravity="center"
+        android:maxLines="1"
         android:textAppearance="@style/history_rus_text"
         tools:text="Свобода" />
 

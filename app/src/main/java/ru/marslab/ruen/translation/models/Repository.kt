@@ -18,7 +18,4 @@ class Repository @Inject constructor(
         localSource.insertWord(word)
     }
 
-    suspend fun deleteFirstWords(count: Int) {
-        localSource.deleteFirstWords(count)
-    }
 }

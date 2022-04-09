@@ -8,8 +8,9 @@ import ru.marslab.ruen.translation.beans.Word
 import javax.inject.Inject
 
 
-class HistoryRVAdapter @Inject constructor(private var wordsList: List<Word> = mutableListOf()) :
+class HistoryRVAdapter @Inject constructor() :
     RecyclerView.Adapter<HistoryRVAdapter.ViewHolder>() {
+    private var wordsList: List<Word> = mutableListOf()
 
     fun updateWordsList(list: List<Word>) {
         wordsList = list

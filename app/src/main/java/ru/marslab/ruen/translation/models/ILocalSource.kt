@@ -6,5 +6,4 @@ import ru.marslab.ruen.translation.beans.Word
 interface ILocalSource {
     fun getWords(): Flow<List<Word>>
     suspend fun insertWord(word: Word)
-    suspend fun deleteFirstWords(count: Int)
 }

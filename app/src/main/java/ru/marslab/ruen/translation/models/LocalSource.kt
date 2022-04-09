@@ -19,8 +19,4 @@ class LocalSource(
     override suspend fun insertWord(word: Word) {
         db.wordDao().insertWord(wordMapper.toRoomWord(word))
     }
-
-    override suspend fun deleteFirstWords(count: Int) {
-        db.wordDao().deleteFirstWords(count)
-    }
 }
