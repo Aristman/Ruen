@@ -1,3 +1,65 @@
 <resources>
     <string name="app_name">Ruen</string>
+
+    <!--Bottom navigation start-->
+    <string name="menu_translate">Translate</string>
+    <string name="menu_situations">Situations</string>
+    <string name="menu_settings">Settings</string>
+    <!--Bottom navigation end-->
+
+    <!--Situations screen start-->
+    <string name="situation">Situation</string>
+    <string name="russian_example">Russian Example</string>
+    <string name="english_example">English Example</string>
+    <string name="taxi">Taxi</string>
+    <string name="empty_string">""</string>
+    <string name="error">Error</string>
+    <!--Situations screen end-->
+
+    <!--settings screen start-->
+    <string name="settings_header">Settings</string>
+    <string name="tv_daily_word">Daily word</string>
+    <string name="tv_card_repetition">Repetition of cards</string>
+    <string name="tv_card_repetition_popup">Card repetition pop-up</string>
+    <string name="tv_activate_all_images">Activate images display in all places</string>
+    <string name="tv_activate_cards_images">Activate images display in card repetition</string>
+    <string name="tv_dark_theme">Dark theme</string>
+    <string name="tv_font_size">Change font size</string>
+    <string name="tv_inner_settings">Inner settings</string>
+    <string name="tv_popup_notifications">Pop-up notifications</string>
+    <!--settings screen end-->
+    <!--cards screen-->
+    <string name="word">Word</string>
+    <string name="transcription">Transcription</string>
+    <string name="save">Save</string>
+    <string name="custom_translate">Custom</string>
+    <string name="test">test</string>
+    <string name="start_repeating">Start repetition</string>
+    <string name="test_word">test word</string>
+    <string name="remember">Know</string>
+    <string name="not_remember">Don\'t know</string>
+    <string name="show">Show</string>
+    <string name="no_card_for_repeating">No cards for repetition</string>
+    <string name="create">Create</string>
+    <string name="Cards">Cards</string>
+    <string name="fragment_label_repetition">Repetition</string>
+    <string name="fragment_label_cards">Cards</string>
+    <string name="fragment_label_no_card">No card</string>
+    <string name="fragment_label_creating_card">Creating a card</string>
+    <string name="translator">Переводчик</string>
+    <string name="no_translation_provided">No translation provided</string>
+    <string name="unkown_error">Unknown error</string>
+    <!--cards screen end-->
+
+    <!--fragment_translation-->
+    <string name="translation">Translation history</string>
+    <string name="write_a_word">Write a word</string>
+    <string name="query_language">ENG</string>
+    <string name="word_of_the_day">Word of the Day</string>
+    <string name="show_toolbar">show_toolbar</string>
+    <string name="small_font_size">Small</string>
+    <string name="big_font_size">Big</string>
+    <string name="not_found">Not found</string>
+    <string name="no_cards">No cards</string>
+
 </resources>

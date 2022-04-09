@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="word_of_the">
+        <item name="android:textSize">@dimen/header</item>
+        <item name="android:textColor">@color/gray_half_light</item>
+    </style>
+
+    <style name="eng_word_of_the_day">
+        <item name="android:textSize">@dimen/header_big</item>
+        <item name="android:textColor">@color/gray_light</item>
+
+    </style>
+
+    <style name="history_eng_text">
+        <item name="android:textSize">@dimen/header</item>
+        <item name="android:textColor">@color/gray_dark_translucent_2</item>
+    </style>
+    <style name="history_rus_text">
+        <item name="android:textSize">@dimen/header</item>
+        <item name="android:textColor">@color/gray_dark_translucent</item>
+    </style>
+
+    <style name="translation">
+        <item name="android:textSize">@dimen/header</item>
+        <item name="android:textColor">@color/gray_half_dark_translucent</item>
+    </style>
+
+    <style name="write_a_word">
+        <item name="android:textSize">@dimen/header</item>
+        <item name="android:textColor">@color/dark_red</item>
+    </style>
+
+    <style name="query_language">
+        <item name="android:textSize">@dimen/header</item>
+        <item name="android:textColor">@color/gray_dark_translucent_2</item>
+    </style>
+</resources>

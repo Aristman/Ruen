@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_repetition"
+    app:startDestination="@id/cards_fragment">
+
+    <fragment
+        android:id="@+id/cards_fragment"
+        android:name="ru.marslab.ruen.wordrepetition.views.CardsFragment"
+        android:label="@string/fragment_label_cards"
+        tools:layout="@layout/fragment_cards">
+        <action
+            android:id="@+id/action_cards_fragment_to_card_repeating_fragment"
+            app:destination="@id/card_repeating_fragment"
+            app:launchSingleTop="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/card_repeating_fragment"
+        android:name="ru.marslab.ruen.wordrepetition.views.CardRepeatingFragment"
+        android:label="@string/fragment_label_repetition"
+        tools:layout="@layout/fragment_card_repeating">
+
+        <action
+            android:id="@+id/action_card_repeating_fragment_to_no_card_fragment"
+            app:destination="@id/no_card_fragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/nav_graph_repetition" />
+    </fragment>
+    <fragment
+        android:id="@+id/no_card_fragment"
+        android:name="ru.marslab.ruen.wordrepetition.views.NoCardFragment"
+        android:label="@string/fragment_label_no_card"
+        tools:layout="@layout/fragment_no_card">
+        <argument
+            android:name="showToolBar"
+            android:defaultValue="false" />
+    </fragment>
+</navigation>

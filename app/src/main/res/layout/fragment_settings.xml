@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardBackgroundColor="@color/settings_card_background"
+    app:cardCornerRadius="@dimen/radius_big">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/default_spacing">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_spacing" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text="@string/tv_popup_notifications"
+            android:textColor="@color/subheader_color" />
+
+        <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
+            android:id="@+id/dailyWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text="@string/tv_daily_word" />
+
+        <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
+            android:id="@+id/cardRepetition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text="@string/tv_card_repetition" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_spacing" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text="@string/tv_inner_settings"
+            android:textColor="@color/subheader_color" />
+
+        <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
+            android:id="@+id/popUpCardNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text="@string/tv_card_repetition_popup" />
+
+        <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
+            android:id="@+id/activateImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text="@string/tv_activate_all_images" />
+
+        <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
+            android:id="@+id/activateImagesInCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text="@string/tv_activate_cards_images" />
+
+        <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
+            android:id="@+id/theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text="@string/tv_dark_theme" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_font_size" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/small_spacing" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/fontSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="4"
+            android:min="0"
+            android:progressDrawable="@drawable/seekbar_track"
+            android:thumb="@drawable/slider_thumb"
+            android:tickMark="@drawable/seekbar_tick"
+            tools:progress="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/small_font_size" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/big_font_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
