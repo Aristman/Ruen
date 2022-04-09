@@ -112,9 +112,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/text_view_description_margin_horizontal"
                     android:textSize="@dimen/card_transcription_text_size"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_word"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_word"
                     app:layout_constraintEnd_toStartOf="@+id/iv_sound"
                     app:layout_constraintStart_toEndOf="@+id/tv_word"
+                    app:layout_constraintTop_toTopOf="@+id/tv_word"
                     tools:text="@string/transcription" />
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -127,19 +128,29 @@
                     app:layout_constraintTop_toTopOf="@id/tv_word"
                     app:srcCompat="@drawable/sound" />
 
-                <LinearLayout
-                    android:id="@+id/word_container"
+                <ScrollView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/translation_flexbox_margin_horizontal"
                     android:layout_marginVertical="@dimen/translation_wordcontainer_margin_vertical"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_word" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_transcription">
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/word_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:alignItems="stretch"
+                        app:flexDirection="row"
+                        app:flexWrap="wrap" />
+                </ScrollView>
 
 
                 <androidx.appcompat.widget.AppCompatImageButton
-                    android:id="@+id/btn_save"
+                    android:id="@+id/btn_create_card"
                     android:layout_width="@dimen/btn_save_width"
                     android:layout_height="@dimen/btn_save_width"
                     android:layout_gravity="end"

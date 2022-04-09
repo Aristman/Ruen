@@ -32,14 +32,6 @@ class CardsFragment : ViewBindingFragment<FragmentCardsBinding>(FragmentCardsBin
         btnStartRepeating.setOnClickListener {
             viewModel.startRepeatingClicked()
         }
-        btnCreateNewCard.setOnClickListener {
-            testStartFragment()
-        }
-    }
-
-    private fun testStartFragment() {
-        val directions = CardsFragmentDirections.actionCardsFragmentToCardAddFragment()
-        findNavController().navigate(directions)
     }
 
     private fun init() {

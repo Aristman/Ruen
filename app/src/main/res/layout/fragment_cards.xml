@@ -16,26 +16,14 @@
             android:layout_weight="1"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start_repeating"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/btn_start_repeating_margin"
+            android:text="@string/start_repeating" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_start_repeating"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/btn_start_repeating_margin"
-                android:text="@string/start_repeating" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_create_new_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/btn_start_repeating_margin"
-                android:text="@string/create" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
     </LinearLayout>
 
     <include

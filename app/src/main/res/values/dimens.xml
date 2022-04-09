@@ -41,7 +41,7 @@
     <dimen name="rv_item_transcription_text_size">20sp</dimen>
     <dimen name="logo_margin">13dp</dimen>
     <dimen name="fragment_container_margin">20dp</dimen>
-    <dimen name="card_picture_height">250dp</dimen>
+    <dimen name="card_picture_height">200dp</dimen>
     <dimen name="btn_save_width">42dp</dimen>
     <dimen name="text_view_custom_translation_padding">10dp</dimen>
     <dimen name="chip_group_translations_margin_horizontal">20dp</dimen>
@@ -57,5 +57,13 @@
     <dimen name="situations_example_text_size">15sp</dimen>
     <dimen name="progressbar_loading_elevation">10dp</dimen>
     <dimen name="translation_cardview_margin_top">20dp</dimen>
-    <dimen name="translation_wordcontainer_margin_vertical">50dp</dimen>
+    <dimen name="translation_wordcontainer_margin_vertical">20dp</dimen>
+    <dimen name="translation_flexbox_margin_horizontal">15dp</dimen>
+    <dimen name="textchip_padding_horizontal">7dp</dimen>
+    <dimen name="textchip_padding_vertical">2dp</dimen>
+    <dimen name="textchip_margin">3dp</dimen>
+    <dimen name="card_item_margin_horizontal">5dp</dimen>
+    <dimen name="card_item_margin_vertical">5dp</dimen>
+    <dimen name="card_item_corner_radius">5dp</dimen>
+    <dimen name="card_item_elevation">1dp</dimen>
 </resources>

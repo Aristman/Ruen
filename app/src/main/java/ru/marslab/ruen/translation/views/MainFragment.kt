@@ -27,6 +27,7 @@ class MainFragment : ViewBindingFragment<FragmentMainBinding>(FragmentMainBindin
                 val directions =
                     MainFragmentDirections.actionMainFragmentToNavigationTranslation(word = query)
                 findNavController().navigate(directions)
+                searchQuery.text = null
             }
         }
     }

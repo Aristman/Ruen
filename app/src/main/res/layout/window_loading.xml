@@ -5,7 +5,7 @@
     android:id="@+id/loading"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?colorPrimaryVariant"
+    android:background="@drawable/background"
     android:elevation="@dimen/progressbar_loading_elevation"
     android:visibility="gone"
     app:layout_constraintBottom_toBottomOf="parent"
