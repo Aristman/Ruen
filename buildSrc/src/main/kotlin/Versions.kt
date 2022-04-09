@@ -48,6 +48,10 @@ object Versions {
         const val navigation = "2.4.1"
     }
 
+    object FlexBoxLayout {
+        const val flexBoxLayout = "3.0.0"
+    }
+
     object Tests {
         const val jUnit = "4.13.2"
         const val jUnitExt = "1.1.3"

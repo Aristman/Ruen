@@ -37,15 +37,13 @@
     <color name="gray_half_dark_translucent">#515455</color>
     <color name="dark_red">#526B0303</color>
     <color name="red_400">#AC6565</color>
+    <color name="red_600">#A62424</color>
     <color name="gray_dark_translucent_2">#B3515455</color>
     <color name="gray_half_light_translucent">#4FFFFFFF</color>
-
-
     <color name="view_search_text">#4C0C0C</color>
     <color name="history_eng_background">#C4C4C4</color>
     <color name="history_rus_background">#E6E6E6</color>
     <color name="gray_50">#1D000000</color>
-
     <color name="settings_card_background">#E4E4E4</color>
 
 </resources>

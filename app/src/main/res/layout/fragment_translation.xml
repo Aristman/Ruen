@@ -1,102 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/default_spacing"
-    tools:background="@drawable/background">
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/viewSearch"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/view_search_height"
-        android:background="@drawable/edittext_background"
-        android:elevation="@dimen/card_elevation"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingHorizontal="@dimen/view_search_padding"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2"
+        <LinearLayout
+            android:id="@+id/view_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_search_height"
+            android:background="@drawable/edittext_background"
+            android:elevation="@dimen/card_elevation"
             android:gravity="center"
-            android:text="@string/query_language"
-            android:textAppearance="@style/query_language" />
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/view_search_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/searchQuery"
-            android:layout_width="0dp"
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text="@string/query_language"
+                android:textAppearance="@style/query_language" />
+
+            <EditText
+                android:id="@+id/search_query"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:autofillHints="Hi"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="@string/write_a_word"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:selectAllOnFocus="true"
+                android:textAppearance="@style/write_a_word"
+                android:textColor="@color/view_search_text" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_translate"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="-3dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/search_btn" />
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_picture_height"
+            android:layout_marginTop="@dimen/translation_cardview_margin_top"
+            android:elevation="-1dp"
+            app:cardBackgroundColor="@color/gray_100"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/imageview_cardview_padding"
+                app:srcCompat="@drawable/ic_no_photo" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.6"
-            android:autofillHints="Hi"
-            android:background="@android:color/transparent"
-            android:gravity="center"
-            android:hint="@string/write_a_word"
-            android:imeOptions="actionDone"
-            android:inputType="text"
-            android:selectAllOnFocus="true"
-            android:textAppearance="@style/write_a_word"
-            android:textColor="@color/view_search_text" />
+            android:layout_marginVertical="@dimen/cardview_word_margin_vertical"
+            android:elevation="-1dp"
+            app:cardBackgroundColor="@color/gray_100"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:layout_constraintBottom_toTopOf="@id/btn_remember"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview_image">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="0dp"
-            android:layout_height="35dp"
-            android:layout_marginBottom="-3dp"
-            android:layout_weight="0.2"
-            android:background="@drawable/search_btn" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_word"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/text_view_word_magin_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:textSize="@dimen/card_word_text_size"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_transcription"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/word" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_transcription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/text_view_description_margin_horizontal"
+                    android:textSize="@dimen/card_transcription_text_size"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_word"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_sound"
+                    app:layout_constraintStart_toEndOf="@+id/tv_word"
+                    app:layout_constraintTop_toTopOf="@+id/tv_word"
+                    tools:text="@string/transcription" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_sound"
+                    android:layout_width="@dimen/card_icon_sound_width"
+                    android:layout_height="@dimen/card_icon_sound_height"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_word"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_transcription"
+                    app:layout_constraintTop_toTopOf="@id/tv_word"
+                    app:srcCompat="@drawable/sound" />
+
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/translation_flexbox_margin_horizontal"
+                    android:layout_marginVertical="@dimen/translation_wordcontainer_margin_vertical"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_transcription">
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/word_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:alignItems="stretch"
+                        app:flexDirection="row"
+                        app:flexWrap="wrap" />
+                </ScrollView>
+
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_create_card"
+                    android:layout_width="@dimen/btn_save_width"
+                    android:layout_height="@dimen/btn_save_width"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/card_save_margin"
+                    android:background="@null"
+                    android:src="@drawable/add_button"
+                    android:text="@string/save"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
     <include
-        android:id="@+id/word_of_the_day"
-        layout="@layout/fragment_word_of_day"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/word_of_a_day_height"
-        android:elevation="@dimen/card_elevation"
-        app:layout_constraintBottom_toTopOf="@id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewSearch" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/loading_container"
+        layout="@layout/window_loading"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <LinearLayout
-        android:id="@+id/card_view_history"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/history_background"
-        android:orientation="vertical"
-        android:padding="@dimen/default_spacing"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/default_spacing"
-            android:text="@string/translation"
-            android:textAppearance="@style/translation" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/history_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_history" />
-
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent" />
+</FrameLayout>

@@ -2,6 +2,7 @@ package ru.marslab.ruen.wordrepetition.views
 
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -75,18 +76,18 @@ class CardRepeatingFragment :
         card.imageUrl?.let { loadImage(it) }
         card.translations?.forEach { translation ->
             val chipTranslation =
-                layoutInflater.inflate(R.layout.chip_translation, cgTranslations, false) as Chip
+                layoutInflater.inflate(R.layout.text_chip, binding.root, false) as TextView
             chipTranslation.apply {
                 text = translation.value
             }
-            cgTranslations.addView(chipTranslation)
+            wordContainer.addView(chipTranslation)
         }
         showLoading(false)
     }
 
     private fun setVisibilityTranslation(visible: Boolean = true) = with(binding) {
         val visibility = getVisibility(visible)
-        cgTranslations.visibility = visibility
+        wordContainer.visibility = visibility
         groupRememberBtns.visibility = visibility
         btnShow.visibility = getVisibility(!visible)
     }
@@ -106,12 +107,12 @@ class CardRepeatingFragment :
 
     private fun showLoading(show: Boolean) = with(binding) {
         loadingContainer.loading.apply {
-            visibility = if (show) View.VISIBLE else View.INVISIBLE
+            visibility = if (show) View.VISIBLE else View.GONE
         }
     }
 
     private fun clearView() = with(binding) {
-        cgTranslations.removeAllViews()
+        wordContainer.removeAllViews()
         tvTranscription.text = ""
         tvWord.text = ""
         ivPicture.setImageDrawable(

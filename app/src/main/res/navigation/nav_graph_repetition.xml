@@ -11,30 +11,21 @@
         android:label="@string/fragment_label_cards"
         tools:layout="@layout/fragment_cards">
         <action
-            android:id="@+id/action_cardsFragment_to_cardAddFragment"
-            app:destination="@id/card_add_fragment"
-            app:launchSingleTop="true" />
-        <action
-            android:id="@+id/action_cardsFragment_to_cardRepeatingFragment"
+            android:id="@+id/action_cards_fragment_to_card_repeating_fragment"
             app:destination="@id/card_repeating_fragment"
-            app:launchSingleTop="true" />
+            app:launchSingleTop="false" />
     </fragment>
-    <fragment
-        android:id="@+id/card_add_fragment"
-        android:name="ru.marslab.ruen.wordrepetition.views.CardAddFragment"
-        android:label="@string/fragment_label_creating_card"
-        tools:layout="@layout/fragment_card_add" />
     <fragment
         android:id="@+id/card_repeating_fragment"
         android:name="ru.marslab.ruen.wordrepetition.views.CardRepeatingFragment"
         android:label="@string/fragment_label_repetition"
         tools:layout="@layout/fragment_card_repeating">
+
         <action
-            android:id="@+id/action_cardRepeatingFragment_to_noCardFragment"
+            android:id="@+id/action_card_repeating_fragment_to_no_card_fragment"
             app:destination="@id/no_card_fragment"
-            app:launchSingleTop="true"
-            app:popUpTo="@id/cards_fragment"
-            app:popUpToInclusive="false" />
+            app:launchSingleTop="false"
+            app:popUpTo="@id/nav_graph_repetition" />
     </fragment>
     <fragment
         android:id="@+id/no_card_fragment"

@@ -1,15 +1,12 @@
 package ru.marslab.ruen.wordrepetition.views
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import androidx.viewbinding.ViewBinding
 import dagger.hilt.android.AndroidEntryPoint
-import ru.marslab.ruen.wordrepetition.adapters.RVCardsAdapter
+import ru.marslab.ruen.wordrepetition.views.adapters.RVCardsAdapter
 import ru.marslab.ruen.databinding.FragmentCardsBinding
 import ru.marslab.ruen.view.ViewBindingFragment
 import ru.marslab.ruen.wordrepetition.viewmodels.CardsViewModel
@@ -32,14 +29,6 @@ class CardsFragment : ViewBindingFragment<FragmentCardsBinding>(FragmentCardsBin
         btnStartRepeating.setOnClickListener {
             viewModel.startRepeatingClicked()
         }
-        btnCreateNewCard.setOnClickListener {
-            testStartFragment()
-        }
-    }
-
-    private fun testStartFragment() {
-        val directions = CardsFragmentDirections.actionCardsFragmentToCardAddFragment()
-        findNavController().navigate(directions)
     }
 
     private fun init() {
