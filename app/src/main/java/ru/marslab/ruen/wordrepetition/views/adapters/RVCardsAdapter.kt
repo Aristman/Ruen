@@ -1,4 +1,4 @@
-package ru.marslab.ruen.wordrepetition.adapters
+package ru.marslab.ruen.wordrepetition.views.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

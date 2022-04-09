@@ -1,7 +1,7 @@
 package ru.marslab.ruen.wordrepetition.repositories
 
 import ru.marslab.ruen.wordrepetition.domain.Translation
-import ru.marslab.ruen.wordrepetition.repositories.room.entities.RoomTranslation
+import ru.marslab.ruen.data.room.entities.RoomTranslation
 
 object TranslationMapper {
     fun toRoomTranslation(translation: Translation) =

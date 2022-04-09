@@ -3,32 +3,61 @@ package ru.marslab.ruen.translation.views
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.R
 import ru.marslab.ruen.databinding.FragmentMainBinding
+import ru.marslab.ruen.translation.viewmodels.MainAppState
+import ru.marslab.ruen.translation.viewmodels.MainViewModel
+import ru.marslab.ruen.translation.views.adapters.HistoryRVAdapter
 import ru.marslab.ruen.view.ViewBindingFragment
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainFragment : ViewBindingFragment<FragmentMainBinding>(FragmentMainBinding::inflate) {
+    private val viewModel: MainViewModel by viewModels()
+
+    @Inject
+    lateinit var historyAdapter: HistoryRVAdapter
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel.getLiveDate().observe(viewLifecycleOwner) { handleState(it) }
+        viewModel.init()
         setListeners()
+        setAdapter()
+    }
+
+    private fun setAdapter() = with(binding) {
+        historyList.adapter = historyAdapter
     }
 
     private fun setListeners() = with(binding) {
         btnTranslate.setOnClickListener {
-            val query = searchQuery.text.toString().trim()
-            if (query.isEmpty()) {
-                Toast.makeText(
-                    context,
-                    resources.getString(R.string.write_a_word),
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else {
-                val directions =
-                    MainFragmentDirections.actionMainFragmentToNavigationTranslation(word = query)
-                findNavController().navigate(directions)
-                searchQuery.text = null
-            }
+            viewModel.translateClicked(searchQuery.text.toString())
         }
+    }
+
+    private fun handleState(state: MainAppState) {
+        when (state) {
+            is MainAppState.NoWord -> showMessageWriteWord()
+            is MainAppState.Translation -> navigateToTranslation(state.word)
+            is MainAppState.History -> historyAdapter.updateWordsList(state.words)
+        }
+    }
+
+    private fun navigateToTranslation(query: String) = with(binding) {
+        val directions =
+            MainFragmentDirections.actionMainFragmentToNavigationTranslation(word = query)
+        findNavController().navigate(directions)
+        searchQuery.text = null
+    }
+
+    private fun showMessageWriteWord() {
+        Toast.makeText(
+            context,
+            resources.getString(R.string.write_a_word),
+            Toast.LENGTH_SHORT
+        ).show()
     }
 }

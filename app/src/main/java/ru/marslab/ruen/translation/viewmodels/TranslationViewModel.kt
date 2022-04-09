@@ -9,20 +9,19 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import ru.marslab.ruen.translation.models.Repository
-import ru.marslab.ruen.translation.models.retrofit.beans.Word
+import ru.marslab.ruen.data.retrofit.beans.RetrofitWord
 import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.wordrepetition.domain.Translation
 import ru.marslab.ruen.wordrepetition.utilities.ITextToSpeech
-import ru.marslab.ruen.wordrepetition.utilities.TTS
 import javax.inject.Inject
 
 @HiltViewModel
 class TranslationViewModel @Inject constructor(
     private val repository: Repository,
-    private val tts: ITextToSpeech
+    private val tts: ITextToSpeech,
 ) : ViewModel() {
     private var wordString: String? = null
-    private var storedWord: Word? = null
+    private var storedWord: RetrofitWord? = null
     private val liveData = MutableLiveData<AppState>()
     fun translate(query: String): LiveData<AppState> {
         storedWord = null
@@ -31,7 +30,7 @@ class TranslationViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             val words = repository.getTranslation(query)
             withContext(Dispatchers.Main) {
-                if (words.size == 0) {
+                if (words.isEmpty()) {
                     liveData.postValue(AppState.NotFound)
                     return@withContext
                 }
@@ -84,7 +83,7 @@ class TranslationViewModel @Inject constructor(
 }
 
 sealed class AppState {
-    data class Success(val word: Word) : AppState()
+    data class Success(val word: RetrofitWord) : AppState()
     object NotFound : AppState()
     object Loading : AppState()
     data class CreatedCard(val card: Card) : AppState()

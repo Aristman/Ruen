@@ -2,9 +2,6 @@ package ru.marslab.ruen.translation.views
 
 import android.os.Bundle
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
-import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.viewModels
@@ -13,7 +10,7 @@ import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.R
 import ru.marslab.ruen.databinding.FragmentTranslationBinding
-import ru.marslab.ruen.translation.models.retrofit.beans.Word
+import ru.marslab.ruen.data.retrofit.beans.RetrofitWord
 import ru.marslab.ruen.translation.viewmodels.AppState
 import ru.marslab.ruen.translation.viewmodels.TranslationViewModel
 import ru.marslab.ruen.view.ViewBindingFragment
@@ -23,7 +20,6 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class TranslationFragment :
     ViewBindingFragment<FragmentTranslationBinding>(FragmentTranslationBinding::inflate) {
-
     private val viewModel: TranslationViewModel by viewModels()
     private val args: TranslationFragmentArgs by navArgs()
 
@@ -96,7 +92,7 @@ class TranslationFragment :
         wordContainer.removeAllViews()
     }
 
-    private fun setData(word: Word) = with(binding) {
+    private fun setData(word: RetrofitWord) = with(binding) {
         if (word.meanings.size > 0) {
             val meanings = word.meanings
             val meaning = meanings[0]

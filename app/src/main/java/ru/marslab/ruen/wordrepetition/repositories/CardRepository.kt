@@ -2,8 +2,8 @@ package ru.marslab.ruen.wordrepetition.repositories
 
 import kotlinx.coroutines.flow.map
 import ru.marslab.ruen.wordrepetition.domain.Card
-import ru.marslab.ruen.wordrepetition.repositories.room.RuenDatabase
-import ru.marslab.ruen.wordrepetition.repositories.room.entities.RoomCard
+import ru.marslab.ruen.data.room.RuenDatabase
+import ru.marslab.ruen.data.room.entities.RoomCard
 import java.util.*
 
 class CardRepository(

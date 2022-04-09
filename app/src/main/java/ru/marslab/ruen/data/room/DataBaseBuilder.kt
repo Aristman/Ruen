@@ -1,4 +1,4 @@
-package ru.marslab.ruen.wordrepetition.repositories.room
+package ru.marslab.ruen.data.room
 
 import android.content.Context
 import androidx.room.Room

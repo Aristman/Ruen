@@ -1,7 +1,7 @@
 package ru.marslab.ruen.wordrepetition.repositories
 
 import ru.marslab.ruen.wordrepetition.domain.Card
-import ru.marslab.ruen.wordrepetition.repositories.room.entities.RoomCard
+import ru.marslab.ruen.data.room.entities.RoomCard
 
 object CardMapper {
     fun toRoomCard(card: Card) =

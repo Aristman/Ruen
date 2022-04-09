@@ -1,4 +1,4 @@
-package ru.marslab.ruen.translation.models.retrofit.beans
+package ru.marslab.ruen.data.retrofit.beans
 
 data class Translation(
     val note: String,

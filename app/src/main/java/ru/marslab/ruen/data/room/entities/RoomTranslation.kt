@@ -1,4 +1,4 @@
-package ru.marslab.ruen.wordrepetition.repositories.room.entities
+package ru.marslab.ruen.data.room.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

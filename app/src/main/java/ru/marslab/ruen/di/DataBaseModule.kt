@@ -7,7 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import ru.marslab.ruen.wordrepetition.repositories.room.RuenDatabase
+import ru.marslab.ruen.data.room.RuenDatabase
 import javax.inject.Singleton
 
 @Module

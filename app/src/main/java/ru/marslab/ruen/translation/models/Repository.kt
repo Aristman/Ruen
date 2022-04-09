@@ -1,16 +1,24 @@
 package ru.marslab.ruen.translation.models
 
-import ru.marslab.ruen.translation.models.retrofit.beans.Word
+import ru.marslab.ruen.data.retrofit.beans.RetrofitWord
+import ru.marslab.ruen.translation.beans.Word
 import javax.inject.Inject
 
 class Repository @Inject constructor(
-    private val remoteSource: ISource
+    private val remoteSource: IRemoteSource,
+    private val localSource: ILocalSource
 ) {
-    suspend fun getTranslation(word: String): List<Word> {
+    suspend fun getTranslation(word: String): List<RetrofitWord> {
         return remoteSource.getTranslations(word)
     }
 
-    fun saveWord() {
+    fun getWords() = localSource.getWords()
 
+    suspend fun saveWord(word: Word) {
+        localSource.insertWord(word)
+    }
+
+    suspend fun deleteFirstWords(count: Int) {
+        localSource.deleteFirstWords(count)
     }
 }

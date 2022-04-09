@@ -1,4 +1,4 @@
-package ru.marslab.ruen.wordrepetition.repositories.room.dao
+package ru.marslab.ruen.data.room.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy.REPLACE
 import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
-import ru.marslab.ruen.wordrepetition.repositories.room.entities.RoomCard
+import ru.marslab.ruen.data.room.entities.RoomCard
 import java.util.*
 
 @Dao

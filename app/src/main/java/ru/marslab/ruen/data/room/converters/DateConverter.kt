@@ -1,4 +1,4 @@
-package ru.marslab.ruen.wordrepetition.repositories.room.converters
+package ru.marslab.ruen.data.room.converters
 
 import androidx.room.TypeConverter
 import java.util.*

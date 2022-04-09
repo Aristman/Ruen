@@ -1,11 +1,11 @@
-package ru.marslab.ruen.wordrepetition.repositories.room.dao
+package ru.marslab.ruen.data.room.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy.REPLACE
 import androidx.room.Query
-import ru.marslab.ruen.wordrepetition.repositories.room.entities.RoomTranslation
+import ru.marslab.ruen.data.room.entities.RoomTranslation
 
 @Dao
 interface TranslationDao {

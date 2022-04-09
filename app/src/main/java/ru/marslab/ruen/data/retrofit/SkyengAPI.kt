@@ -1,8 +1,8 @@
-package ru.marslab.ruen.translation.models.retrofit
+package ru.marslab.ruen.data.retrofit
 
 import retrofit2.http.GET
 import retrofit2.http.Query
-import ru.marslab.ruen.translation.models.retrofit.beans.Words
+import ru.marslab.ruen.data.retrofit.beans.Words
 
 interface SkyengAPI {
     @GET("words/search")
