@@ -1,73 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="search">search
+
+    <style name="search">
+        <item name="android:layout_width">178dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_alignStart">@+id/rus</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginStart">62dp</item>
+        <item name="android:layout_marginTop">168dp</item>
+        <item name="android:background">@drawable/search</item>
+        <item name="android:elevation">4dp</item>
         <item name="android:textSize">@dimen/search</item>
         <item name="android:textColor">@color/search</item>
     </style>
 
-    <style name="rus">rus
+    <style name="rus">
+        <item name="android:layout_width">62dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginStart">48dp</item>
+        <item name="android:layout_marginTop">168dp</item>
+        <item name="android:gravity">center_horizontal|center_horizontal|center_vertical</item>
         <item name="android:textSize">@dimen/rus</item>
         <item name="android:textColor">@color/rus</item>
     </style>
 
-    <style name="word_to_translate">word_to_translate
+    <style name="word_to_translate">
+        <item name="android:layout_width">190dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_alignStart">@+id/rus</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginStart">62dp</item>
+        <item name="android:layout_marginTop">168dp</item>
+        <item name="android:background">#0fff0000</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
         <item name="android:textSize">@dimen/word_to_translate</item>
-        <item name="android:textColor">#515455</item>
+        <item name="android:textColor">@color/word_to_translate</item>
     </style>
 
     <style name="Realty">Realty
         <item name="android:textSize">@dimen/Realty</item>
-        <item name="android:textColor">#515455</item>
+        <item name="android:textColor">@color/Realty</item>
     </style>
 
     <style name="_1">1
         <item name="android:textSize">@dimen/_1</item>
-        <item name="android:textColor">#515455</item>
+        <item name="android:textColor">@color/_1</item>
     </style>
 
     <style name="first_description">first_description
         <item name="android:textSize">@dimen/first_description</item>
-        <item name="android:textColor">#515455</item>
+        <item name="android:textColor">@color/first_description</item>
     </style>
 
     <style name="realty">realty
         <item name="android:textSize">@dimen/realty</item>
-        <item name="android:textColor">#515455</item>
+        <item name="android:textColor">@color/realty</item>
     </style>
 
     <style name="transp">tr
         <item name="android:textSize">@dimen/transp</item>
-        <item name="android:textColor">#535551</item>
+        <item name="android:textColor">@color/transp</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginStart">305dp</item>
+        <item name="android:layout_marginTop">290dp</item>
     </style>
 
     <style name="immovables">immovables
         <item name="android:textSize">@dimen/immovables</item>
-        <item name="android:textColor">#515455</item>
+        <item name="android:textColor">@color/immovables</item>
     </style>
 
     <style name="estate">estate
         <item name="android:textSize">@dimen/estate</item>
-        <item name="android:textColor">#515455</item>
+        <item name="android:textColor">@color/estate</item>
     </style>
 
     <style name="property">property
         <item name="android:textSize">@dimen/property</item>
-        <item name="android:textColor">#515455</item>
+        <item name="android:textColor">@color/property</item>
     </style>
 
     <style name="second_description">second_description
         <item name="android:textSize">@dimen/second_description</item>
-        <item name="android:textColor">#515455</item>
+        <item name="android:textColor">@color/second_description</item>
     </style>
 
     <style name="_2">2
         <item name="android:textSize">@dimen/_2</item>
-        <item name="android:textColor">#515455</item>
+        <item name="android:textColor">@color/_2</item>
     </style>
 
     <style name="V">V
         <item name="android:textSize">@dimen/V</item>
-        <item name="android:textColor">#515455</item>
+        <item name="android:textColor">@color/V</item>
+    </style>
+
+    <style name="logo">
+        <item name="android:layout_width">141dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginStart">48dp</item>
+        <item name="android:layout_marginTop">80dp</item>
+        <item name="android:background">@drawable/logo</item>
+    </style>
+
+    <style name="block_translate">
+        <item name="android:background">@drawable/block_translate</item>
+    </style>
+
+    <style name="image_view">
+        <item name="android:layout_width">62dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:layout_marginStart">298dp</item>
+        <item name="android:layout_marginTop">172dp</item>
+    </style>
+
+    <style name="nav_view">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
 </resources>

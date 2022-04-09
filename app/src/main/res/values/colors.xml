@@ -17,7 +17,7 @@
     <color name="primary_color">#626A70</color>
     <color name="secondary_color">#9A9DA0</color>
 
-    <color name="background">#E4E4E4</color>
+    <color name="background">#E5E5E5</color>
     <color name="rus">#8C969E</color>
     <color name="word_to_translate">#515455</color>
     <color name="search">#515455</color>
@@ -31,7 +31,7 @@
     <color name="second_description">#515455</color>
     <color name="_2">#515455</color>
     <color name="V">#515455</color>
-    <color name="block_translate">#FFFFFF</color>
+    <color name="transp">#535551</color>
 
     <color name="gray_half_light">#80FFFFFF</color>
     <color name="gray_light">#CCFFFFFF</color>
