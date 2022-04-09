@@ -156,6 +156,6 @@
         android:importantForAccessibility="no"
         android:src="@drawable/ic_check_mark"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />            android:textAppearance="@style/V" />-->
+        app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

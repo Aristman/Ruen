@@ -93,11 +93,6 @@
         <item name="android:textColor">@color/_2</item>
     </style>
 
-    <style name="V">V
-        <item name="android:textSize">@dimen/V</item>
-        <item name="android:textColor">@color/V</item>
-    </style>
-
     <style name="logo">
         <item name="android:layout_width">141dp</item>
         <item name="android:layout_height">52dp</item>
