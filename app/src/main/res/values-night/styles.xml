@@ -44,9 +44,9 @@
         <item name="android:textColor">@color/Realty</item>
     </style>
 
-    <style name="_1">1
-        <item name="android:textSize">@dimen/_1</item>
-        <item name="android:textColor">@color/_1</item>
+    <style name="translate_var_1">1
+        <item name="android:textSize">@dimen/translate_var_1</item>
+        <item name="android:textColor">@color/translate_var_1</item>
     </style>
 
     <style name="first_description">first_description
@@ -88,14 +88,9 @@
         <item name="android:textColor">@color/second_description</item>
     </style>
 
-    <style name="_2">2
-        <item name="android:textSize">@dimen/_2</item>
-        <item name="android:textColor">@color/_2</item>
-    </style>
-
-    <style name="V">V
-        <item name="android:textSize">@dimen/V</item>
-        <item name="android:textColor">@color/V</item>
+    <style name="translate_var_2">2
+        <item name="android:textSize">@dimen/translate_var_2</item>
+        <item name="android:textColor">@color/translate_var_2</item>
     </style>
 
     <style name="logo">

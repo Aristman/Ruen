@@ -22,7 +22,7 @@
     <dimen name="word_to_translate">18sp</dimen>
     <dimen name="search">18sp</dimen>
     <dimen name="Realty">18sp</dimen>
-    <dimen name="_1">18sp</dimen>
+    <dimen name="translate_var_1">18sp</dimen>
     <dimen name="first_description">14sp</dimen>
     <dimen name="realty">18sp</dimen>
     <dimen name="transp">18sp</dimen>
@@ -30,8 +30,7 @@
     <dimen name="estate">18sp</dimen>
     <dimen name="property">18sp</dimen>
     <dimen name="second_description">14sp</dimen>
-    <dimen name="_2">18sp</dimen>
-    <dimen name="V">18sp</dimen>
+    <dimen name="translate_var_2">18sp</dimen>
     <dimen name="block_translate_height">290dp</dimen>
 
     <dimen name="view_logo_width">48dp</dimen>

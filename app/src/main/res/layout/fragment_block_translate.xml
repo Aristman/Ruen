@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/block_translate_height"
     app:cardCornerRadius="@dimen/radius_big">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:importantForAccessibility="no"
-        android:scaleType="center"
-        android:src="@drawable/block_translate_background" />
+        android:id="@+id/block_translate"
+        style="@style/block_translate"
+        android:contentDescription="@string/block_translate"/>
+<!--    android:background="@drawable/block_translate"/>-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,142 +18,72 @@
 
         <TextView
             android:id="@+id/Realty"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.5"
             android:text="@string/Realty"
-            android:textAppearance="@style/Realty"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"/>
-<!--        android:gravity="center_horizontal|center_horizontal|center_vertical"&ndash;&gt;-->
-<!--        android:layout_width="62dp"-->
-<!--        android:layout_height="40dp"-->
-        <TextView
-            android:id="@+id/first_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.5"
-            android:text="@string/first_description"
-            android:textAppearance="@style/first_description"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="50dp" />
-<!--            android:gravity="center_horizontal|center_horizontal|center_vertical"-->
-<!--            android:text="@string/first_description"-->
-<!--            android:textAppearance="@style/first_description"-->
-<!--        android:layout_width="280dp"-->
-<!--        android:layout_height="40dp"-->
+            style="@style/Realty" />
 
         <TextView
-            android:id="@+id/_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="95dp"
-            android:gravity="center_horizontal|center_horizontal|center_vertical"
-            android:text="@string/_1"
-            android:textAppearance="@style/_1"
-            tools:ignore="MissingConstraints" />
-<!--        android:layout_width="50dp"-->
-<!--        android:layout_height="40dp"-->
+            android:id="@+id/first_description"
+            android:text="@string/first_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/first_description" />
+
+        <TextView
+            android:id="@+id/translate_var_1"
+            android:text="@string/translate_var_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/translate_var_1" />
+
         <TextView
             android:id="@+id/realty"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.5"
             android:text="@string/realty"
-            android:textAppearance="@style/realty"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="95dp"/>
-<!--        android:gravity="center_horizontal|center_horizontal|center_vertical"-->
-<!--        android:layout_width="70dp"-->
-<!--        android:layout_height="40dp"-->
+            style="@style/realty" />
+
         <TextView
             android:id="@+id/immovables"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.5"
             android:text="@string/immovables"
-            android:textAppearance="@style/immovables"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="160dp"
-            android:layout_marginTop="95dp"/>
-<!--        android:layout_width="140dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:gravity="center_horizontal|center_horizontal|center_vertical"-->
+            style="@style/immovables" />
 
         <TextView
             android:id="@+id/estate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.5"
             android:text="@string/estate"
-            android:textAppearance="@style/estate"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="140dp" />
-<!--        android:layout_width="80dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:gravity="center_horizontal|center_horizontal|center_vertical"-->
+            style="@style/estate" />
 
         <TextView
             android:id="@+id/property"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.5"
             android:text="@string/property"
-            android:textAppearance="@style/property"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="110dp"
-            android:layout_marginTop="140dp" />
-<!--        android:layout_width="90dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:gravity="center_horizontal|center_horizontal|center_vertical"-->
+            style="@style/property" />
 
         <TextView
             android:id="@+id/second_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.5"
             android:text="@string/second_description"
-            android:textAppearance="@style/second_description"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="185dp" />
-<!--        android:layout_width="280dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:gravity="center_horizontal|center_horizontal|center_vertical"-->
+            style="@style/second_description" />
 
         <TextView
-            android:id="@+id/_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.5"
-            android:text="@string/_2"
-            android:textAppearance="@style/_2"
+            android:id="@+id/translate_var_2"
+            android:text="@string/translate_var_2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="230dp" />
-<!--        android:layout_width="50dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:gravity="center_horizontal|center_horizontal|center_vertical"-->
+            style="@style/translate_var_2" />
 
     <ImageView
-        android:layout_width="34dp"
-        android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
-        android:src="@drawable/ic_check_mark"
+        android:id="@+id/ic_check_mark"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/ic_check_mark"
+        android:contentDescription="@string/check_mark"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
