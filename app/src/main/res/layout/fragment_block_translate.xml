@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/block_translate_height"
+    app:cardCornerRadius="@dimen/radius_big">
+
+    <ImageView
+        android:id="@+id/block_translate"
+        style="@style/block_translate"
+        android:contentDescription="@string/block_translate"/>
+<!--    android:background="@drawable/block_translate"/>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/default_spacing">
+
+        <TextView
+            android:id="@+id/Realty"
+            android:text="@string/Realty"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Realty" />
+
+        <TextView
+            android:id="@+id/first_description"
+            android:text="@string/first_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/first_description" />
+
+        <TextView
+            android:id="@+id/translate_var_1"
+            android:text="@string/translate_var_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/translate_var_1" />
+
+        <TextView
+            android:id="@+id/realty"
+            android:text="@string/realty"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/realty" />
+
+        <TextView
+            android:id="@+id/immovables"
+            android:text="@string/immovables"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/immovables" />
+
+        <TextView
+            android:id="@+id/estate"
+            android:text="@string/estate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/estate" />
+
+        <TextView
+            android:id="@+id/property"
+            android:text="@string/property"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/property" />
+
+        <TextView
+            android:id="@+id/second_description"
+            android:text="@string/second_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/second_description" />
+
+        <TextView
+            android:id="@+id/translate_var_2"
+            android:text="@string/translate_var_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/translate_var_2" />
+
+    <ImageView
+        android:id="@+id/check_mark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/check_mark"
+        android:contentDescription="@string/check_mark"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

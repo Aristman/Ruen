@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="logo">
+        <item name="android:layout_width">141dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginStart">13dp</item>
+        <item name="android:layout_marginTop">44dp</item>
+        <item name="android:background">@drawable/logo</item>
+    </style>
+
+    <style name="rus">
+        <item name="android:layout_width">62dp</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">111dp</item>
+        <item name="android:gravity">center_horizontal|center_horizontal|center_vertical</item>
+        <item name="android:textSize">@dimen/rus</item>
+        <item name="android:textColor">@color/rus</item>
+    </style>
+
+    <style name="search">
+        <item name="android:layout_width">320dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">107dp</item>
+        <item name="android:background">@drawable/search</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:textColor">@color/search</item>
+    </style>
+
+       <style name="word_to_translate">
+        <item name="android:layout_width">161dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_alignStart">@+id/rus</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginStart">82dp</item>
+        <item name="android:layout_marginTop">107dp</item>
+        <item name="android:background">#0fff0000</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:textSize">@dimen/word_to_translate</item>
+        <item name="android:textColor">@color/word_to_translate</item>
+    </style>
+
+    <style name="block_translate">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:src">@drawable/block_translate_background</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="Realty">
+        <item name="android:textSize">@dimen/Realty</item>
+        <item name="android:textColor">@color/Realty</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:alpha">0.5</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <style name="first_description">
+        <item name="android:textSize">@dimen/first_description</item>
+        <item name="android:textColor">@color/first_description</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:alpha">0.5</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">36dp</item>
+    </style>
+
+    <style name="translate_var_1">
+        <item name="android:textSize">@dimen/translate_var_1</item>
+        <item name="android:textColor">@color/translate_var_1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">59dp</item>
+    </style>
+
+    <style name="transp">tr
+        <item name="android:textColor">@color/transp</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">22dp</item>
+        <item name="android:layout_marginStart">292dp</item>
+        <item name="android:layout_marginTop">200dp</item>
+    </style>
+
+     <style name="realty">
+        <item name="android:textSize">@dimen/realty</item>
+        <item name="android:textColor">@color/realty</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:alpha">0.5</item>
+        <item name="android:layout_marginStart">83dp</item>
+        <item name="android:layout_marginTop">59dp</item>
+    </style>
+
+    <style name="immovables">
+        <item name="android:textSize">@dimen/immovables</item>
+        <item name="android:textColor">@color/immovables</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:alpha">0.5</item>
+        <item name="android:layout_marginStart">164dp</item>
+        <item name="android:layout_marginTop">59dp</item>
+    </style>
+
+    <style name="estate">
+        <item name="android:textSize">@dimen/estate</item>
+        <item name="android:textColor">@color/estate</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:alpha">0.5</item>
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginTop">108dp</item>
+    </style>
+
+    <style name="property">
+        <item name="android:textSize">@dimen/property</item>
+        <item name="android:textColor">@color/property</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:alpha">0.5</item>
+        <item name="android:layout_marginStart">116dp</item>
+        <item name="android:layout_marginTop">108dp</item>
+    </style>
+
+    <style name="second_description">
+        <item name="android:textSize">@dimen/second_description</item>
+        <item name="android:textColor">@color/second_description</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:alpha">0.5</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">145dp</item>
+    </style>
+
+    <style name="translate_var_2">
+        <item name="android:textSize">@dimen/translate_var_2</item>
+        <item name="android:textColor">@color/translate_var_2</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">188dp</item>
+    </style>
+
+    <style name="check_mark">
+        <item name="android:layout_width">33dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@drawable/ic_check_mark</item>
+    </style>
+
+    <style name="arrow_background">
+        <item name="android:layout_width">93dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_marginStart">248dp</item>
+        <item name="android:layout_marginTop">105dp</item>
+    </style>
+
+    <style name="arrow">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:layout_marginStart">284dp</item>
+        <item name="android:layout_marginTop">122dp</item>
+    </style>
+
+    <style name="nav_view">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>
