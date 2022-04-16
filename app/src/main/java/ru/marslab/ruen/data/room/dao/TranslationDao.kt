@@ -10,13 +10,13 @@ import ru.marslab.ruen.data.room.entities.RoomTranslation
 @Dao
 interface TranslationDao {
     @Query("SELECT * FROM translations WHERE card_id=:cardId")
-    suspend fun get(cardId:Long):List<RoomTranslation>
+    suspend fun get(cardId: Long): List<RoomTranslation>
 
     @Insert(onConflict = REPLACE)
-    suspend fun save(translation: RoomTranslation):Long
+    suspend fun save(translation: RoomTranslation): Long
 
     @Insert(onConflict = REPLACE)
-    suspend fun save(translationList: List<RoomTranslation>):List<Long>
+    suspend fun save(translationList: List<RoomTranslation>): List<Long>
 
     @Delete
     suspend fun delete(translation: RoomTranslation)

@@ -25,5 +25,4 @@ class LocalSource(
     override suspend fun getLastCard() = db.cardDao().getLastCard()?.let {
         cardMapper.toCard(it)
     }
-
 }

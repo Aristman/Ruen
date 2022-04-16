@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.appcompat.widget.SwitchCompat
 import ru.marslab.ruen.R
 
-
 class ToggleableSetting(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
     private val textView: TextView
     private val switch: SwitchCompat
@@ -34,7 +33,7 @@ class ToggleableSetting(context: Context, attrs: AttributeSet) : LinearLayout(co
         switch.setOnCheckedChangeListener(listener)
     }
 
-    fun setChecked(value: Boolean){
+    fun setChecked(value: Boolean) {
         switch.isChecked = value
     }
 

@@ -6,12 +6,11 @@ import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.chip.Chip
 import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.R
 import ru.marslab.ruen.databinding.FragmentCardRepeatingBinding
-import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.view.ViewBindingFragment
+import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.wordrepetition.utilities.IImageLoader
 import ru.marslab.ruen.wordrepetition.viewmodels.CardRepeatingViewModel
 import javax.inject.Inject
@@ -103,7 +102,6 @@ class CardRepeatingFragment :
             CardRepeatingFragmentDirections.actionCardRepeatingFragmentToNoCardFragment()
         findNavController().navigate(directions)
     }
-
 
     private fun showLoading(show: Boolean) = with(binding) {
         loadingContainer.loading.apply {

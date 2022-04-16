@@ -8,9 +8,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import ru.marslab.ruen.translation.models.Repository
 import ru.marslab.ruen.data.retrofit.beans.RetrofitWord
 import ru.marslab.ruen.translation.beans.Word
+import ru.marslab.ruen.translation.models.Repository
 import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.wordrepetition.domain.Translation
 import ru.marslab.ruen.wordrepetition.utilities.ITextToSpeech
@@ -35,12 +35,12 @@ class TranslationViewModel @Inject constructor(
                     liveData.postValue(AppState.NotFound)
                     return@withContext
                 }
-                val word = words[0]
+                val word = words.first()
                 storedWord = word
                 liveData.postValue(AppState.Success(word))
                 withContext(Dispatchers.IO) {
                     val translation =
-                        if (word.meanings.isNotEmpty()) word.meanings[0].translation.text else null
+                        if (word.meanings.isNotEmpty()) word.meanings.first().translation.text else null
                     wordString?.let {
                         repository.saveWord(Word(value = wordString!!, translation = translation))
                     }
@@ -65,21 +65,18 @@ class TranslationViewModel @Inject constructor(
             val translations = meanings.map { Translation(value = it.translation.text) }
             var imageUrl: String? = null
             var transcription: String? = null
-            if (meanings.size > 0) {
+            if (meanings.isNotEmpty()) {
                 val meaning = meanings[0]
                 imageUrl = meaning.imageUrl
                 transcription = meaning.transcription
             }
-            wordString?.let { word ->
-                val card = Card(
-                    value = word,
-                    transcription = transcription,
-                    imageUrl = imageUrl,
-                    translations = translations.toMutableList()
-                )
-                liveData.postValue(AppState.CreatedCard(card))
-            }
-
+            val card = Card(
+                value = wordString.orEmpty(),
+                transcription = transcription,
+                imageUrl = imageUrl,
+                translations = translations.toMutableList()
+            )
+            liveData.postValue(AppState.CreatedCard(card))
         }
     }
 
