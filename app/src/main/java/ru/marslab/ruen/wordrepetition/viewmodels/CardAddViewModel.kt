@@ -35,7 +35,7 @@ class CardAddViewModel @Inject constructor(
             liveData.postValue(AppState.Error(NoTranslationProvidedException()))
             return
         }
-        card?.let {
+        card?.let { it ->
             it.translations?.apply {
                 clear()
                 addAll(translations.map { return@map Translation(value = it) })

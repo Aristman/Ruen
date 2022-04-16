@@ -8,7 +8,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import ru.marslab.ruen.typicalsituations.viewmodel.AppState
 import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.wordrepetition.repositories.ICardRepository
 import ru.marslab.ruen.wordrepetition.utilities.ITextToSpeech
@@ -36,7 +35,7 @@ class CardRepeatingViewModel @Inject constructor(
         getCardForRepetition()
     }
 
-    fun getCardForRepetition() {
+    private fun getCardForRepetition() {
         _liveData.postValue(AppState.Loading)
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
@@ -88,9 +87,7 @@ class CardRepeatingViewModel @Inject constructor(
     private fun addDayToDate(date: Date, days: Int) =
         Date.from(date.toInstant().plus(days.toLong(), ChronoUnit.DAYS))
 
-    companion object {
-        private const val TAG = "CardRepeatingViewModel"
-    }
+    companion object;
 
     sealed class AppState {
         class Success(val card: Card) : AppState()

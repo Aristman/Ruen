@@ -4,9 +4,9 @@ import java.time.temporal.ChronoUnit
 import java.util.Date
 
 class DateProvider {
-    fun getCurrentDateWithoutTime() = getDateWithoutTime(Date())
+    fun getCurrentDateWithoutTime(): Date = getDateWithoutTime(Date())
 
-    fun getDateWithoutTime(date: Date) = Date.from(
+    private fun getDateWithoutTime(date: Date): Date = Date.from(
         date.toInstant().truncatedTo(ChronoUnit.DAYS)
     )
 }

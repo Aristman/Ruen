@@ -1,5 +1,6 @@
 package ru.marslab.ruen.wordrepetition.views.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -24,6 +25,7 @@ class RVCardsAdapter @Inject constructor() : RecyclerView.Adapter<RVCardsAdapter
 
     override fun getItemCount() = cardsList.size
 
+    @SuppressLint("NotifyDataSetChanged")
     fun updateCards(cards: List<Card>) {
         cardsList.apply {
             clear()
@@ -35,6 +37,7 @@ class RVCardsAdapter @Inject constructor() : RecyclerView.Adapter<RVCardsAdapter
     class ViewHolder(private val binding: ItemHistoryBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        @SuppressLint("SetTextI18n")
         fun setText(text: String) {
             with(binding) {
                 firstWord.text = text

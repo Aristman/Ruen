@@ -1,5 +1,6 @@
 package ru.marslab.ruen.translation.views
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -93,8 +94,9 @@ class TranslationFragment :
         wordContainer.removeAllViews()
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setData(word: RetrofitWord) = with(binding) {
-        if (word.meanings.size > 0) {
+        if (word.meanings.isNotEmpty()) {
             val meanings = word.meanings
             val meaning = meanings[0]
             imageLoader.load(meaning.imageUrl, ivPicture)
