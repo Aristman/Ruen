@@ -66,21 +66,4 @@
     <dimen name="card_item_margin_vertical">5dp</dimen>
     <dimen name="card_item_corner_radius">5dp</dimen>
     <dimen name="card_item_elevation">1dp</dimen>
-
-    <dimen name="rus">18sp</dimen>
-    <dimen name="word_to_translate">18sp</dimen>
-    <dimen name="Realty">18sp</dimen>
-    <dimen name="translate_var_1">18sp</dimen>
-    <dimen name="first_description">14sp</dimen>
-    <dimen name="realty">18sp</dimen>
-    <dimen name="immovables">18sp</dimen>
-    <dimen name="estate">18sp</dimen>
-    <dimen name="property">18sp</dimen>
-    <dimen name="second_description">14sp</dimen>
-    <dimen name="translate_var_2">18sp</dimen>
-    <dimen name="block_translate_height">281dp</dimen>
-    <dimen name="standard_margin">20dp</dimen>
-    <dimen name="block_translate_margin_top">177dp</dimen>
-    <dimen name="block_translate_margin_bottom">185dp</dimen>
-
 </resources>
