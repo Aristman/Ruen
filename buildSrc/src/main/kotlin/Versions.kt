@@ -7,6 +7,7 @@ object Versions {
     const val glide = "4.12.0"
     const val hilt = "2.38.1"
     const val flexBoxLayout = "3.0.0"
+    const val ktLint = "10.2.1"
 
     object JetpackCompose {
         const val compose = "1.1.1"
