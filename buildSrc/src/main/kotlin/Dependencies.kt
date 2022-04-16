@@ -1,5 +1,3 @@
-import Versions.FlexBoxLayout.flexBoxLayout
-
 object Dependencies {
     object Lifecycle {
         const val viewModel =

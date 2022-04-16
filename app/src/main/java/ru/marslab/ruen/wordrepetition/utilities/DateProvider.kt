@@ -1,7 +1,7 @@
 package ru.marslab.ruen.wordrepetition.utilities
 
 import java.time.temporal.ChronoUnit
-import java.util.*
+import java.util.Date
 
 class DateProvider {
     fun getCurrentDateWithoutTime() = getDateWithoutTime(Date())

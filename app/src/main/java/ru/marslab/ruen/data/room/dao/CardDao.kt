@@ -7,7 +7,7 @@ import androidx.room.OnConflictStrategy.REPLACE
 import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
 import ru.marslab.ruen.data.room.entities.RoomCard
-import java.util.*
+import java.util.Date
 
 @Dao
 interface CardDao {
@@ -16,7 +16,7 @@ interface CardDao {
 
     @Query(
         "SELECT * FROM cards WHERE next_date_repeating<=:date OR next_date_repeating=null " +
-                "ORDER BY next_date_repeating LIMIT 1"
+            "ORDER BY next_date_repeating LIMIT 1"
     )
     suspend fun getCardForRepeating(date: Date): RoomCard?
 

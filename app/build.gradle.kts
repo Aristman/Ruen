@@ -53,26 +53,26 @@ kapt {
 
 dependencies {
 
-    //Lifecycle
+    // Lifecycle
     implementation(Dependencies.Lifecycle.viewModel)
     implementation(Dependencies.Lifecycle.runTime)
     implementation(Dependencies.Lifecycle.liveData)
 
-    //Retrofit
+    // Retrofit
     implementation(Dependencies.Retrofit.retrofit)
     implementation(Dependencies.Retrofit.converter)
     implementation(Dependencies.Retrofit.interceptor)
 
-    //Room
+    // Room
     implementation(Dependencies.Room.runTime)
     kapt(Dependencies.Room.compiler)
     implementation(Dependencies.Room.ktx)
 
-    //Coroutines
+    // Coroutines
     implementation(Dependencies.Coroutines.core)
     implementation(Dependencies.Coroutines.android)
 
-    //Jetpack Compose
+    // Jetpack Compose
     implementation(Dependencies.JetpackCompose.ui)
     implementation(Dependencies.JetpackCompose.uiTooling)
     implementation(Dependencies.JetpackCompose.foundation)
@@ -84,15 +84,15 @@ dependencies {
     implementation(Dependencies.JetpackCompose.accompanistAppcompatTheme)
     implementation(Dependencies.JetpackCompose.navigation)
 
-    //Glide
+    // Glide
     implementation(Dependencies.Glide.glide)
     kapt(Dependencies.Glide.compiler)
 
-    //Hilt
+    // Hilt
     implementation(Dependencies.Hilt.hilt)
     kapt(Dependencies.Hilt.hiltCompiler)
 
-    //Jetpack Core
+    // Jetpack Core
     implementation(Dependencies.JetpackCore.coreKtx)
     implementation(Dependencies.JetpackCore.collectionKtx)
     implementation(Dependencies.JetpackCore.activityKtx)
@@ -103,10 +103,10 @@ dependencies {
     implementation(Dependencies.JetpackCore.navigationFragment)
     implementation(Dependencies.JetpackCore.navigationKtx)
 
-    //FlexBoxLayout
+    // FlexBoxLayout
     implementation(Dependencies.FlexBoxLayout.flexBoxLayout)
 
-    //Tests
+    // Tests
     testImplementation(Dependencies.Tests.jUnit)
     androidTestImplementation(Dependencies.Tests.jUnitExt)
     androidTestImplementation(Dependencies.Tests.espressoCore)

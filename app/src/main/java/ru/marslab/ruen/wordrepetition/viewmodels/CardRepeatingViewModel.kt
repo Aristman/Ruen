@@ -13,7 +13,7 @@ import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.wordrepetition.repositories.ICardRepository
 import ru.marslab.ruen.wordrepetition.utilities.ITextToSpeech
 import java.time.temporal.ChronoUnit
-import java.util.*
+import java.util.Date
 import javax.inject.Inject
 
 @HiltViewModel

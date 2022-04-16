@@ -1,10 +1,10 @@
 package ru.marslab.ruen.wordrepetition.repositories
 
 import kotlinx.coroutines.flow.map
-import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.data.room.RuenDatabase
 import ru.marslab.ruen.data.room.entities.RoomCard
-import java.util.*
+import ru.marslab.ruen.wordrepetition.domain.Card
+import java.util.Date
 
 class CardRepository(
     private val db: RuenDatabase,
@@ -24,7 +24,6 @@ class CardRepository(
 
     override suspend fun get() = db.cardDao().get()
         .map { list -> list.map { cardMapper.toCard(it) } }
-
 
     override suspend fun getCardForRepeating(): Card? {
         val roomCard = db.cardDao().getCardForRepeating(Date())

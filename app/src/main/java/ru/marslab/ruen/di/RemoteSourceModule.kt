@@ -4,9 +4,9 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
+import ru.marslab.ruen.data.retrofit.SkyengAPI
 import ru.marslab.ruen.translation.models.IRemoteSource
 import ru.marslab.ruen.translation.models.RemoteSource
-import ru.marslab.ruen.data.retrofit.SkyengAPI
 
 @Module
 @InstallIn(ViewModelComponent::class)

@@ -3,7 +3,7 @@ package ru.marslab.ruen.wordrepetition.domain
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 import ru.marslab.ruen.wordrepetition.utilities.DateProvider
-import java.util.*
+import java.util.Date
 
 @Parcelize
 data class Card(

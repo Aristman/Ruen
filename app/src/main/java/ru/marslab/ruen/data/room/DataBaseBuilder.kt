@@ -2,7 +2,6 @@ package ru.marslab.ruen.data.room
 
 import android.content.Context
 import androidx.room.Room
-import java.lang.RuntimeException
 
 class DataBaseBuilder(private val context: Context) {
     private var db: RuenDatabase? = null
