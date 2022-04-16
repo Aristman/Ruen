@@ -59,9 +59,9 @@ dependencies {
     implementation(Dependencies.Lifecycle.liveData)
 
     // Retrofit
-    implementation(Dependencies.Retrofit.retrofit)
-    implementation(Dependencies.Retrofit.converter)
-    implementation(Dependencies.Retrofit.interceptor)
+    implementation(Dependencies.Retrofit.core)
+    implementation(Dependencies.Retrofit.gsonConverter)
+    implementation(Dependencies.Retrofit.logger)
 
     // Room
     implementation(Dependencies.Room.runTime)

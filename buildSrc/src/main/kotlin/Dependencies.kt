@@ -1,31 +1,31 @@
 object Dependencies {
     object Lifecycle {
         const val viewModel =
-            "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.Lifecycle.lifeCycle}"
+            "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifeCycle}"
         const val runTime =
-            "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.Lifecycle.lifeCycle}"
+            "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifeCycle}"
         const val liveData =
-            "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.Lifecycle.lifeCycle}"
+            "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifeCycle}"
     }
 
     object Retrofit {
-        const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.Retrofit.retrofit}"
-        const val converter = "com.squareup.retrofit2:converter-gson:${Versions.Retrofit.retrofit}"
-        const val interceptor =
-            "com.squareup.okhttp3:logging-interceptor:${Versions.Retrofit.okhttp3}"
+        const val core = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+        const val gsonConverter =
+            "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+        const val logger = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
     }
 
     object Room {
-        const val runTime = "androidx.room:room-runtime:${Versions.Room.room}"
-        const val compiler = "androidx.room:room-compiler:${Versions.Room.room}"
-        const val ktx = "androidx.room:room-ktx:${Versions.Room.room}"
+        const val runTime = "androidx.room:room-runtime:${Versions.room}"
+        const val compiler = "androidx.room:room-compiler:${Versions.room}"
+        const val ktx = "androidx.room:room-ktx:${Versions.room}"
     }
 
     object Coroutines {
         const val core =
-            "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.Coroutines.coroutines}"
+            "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
         const val android =
-            "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.Coroutines.coroutines}"
+            "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
     }
 
     object JetpackCompose {
@@ -49,13 +49,13 @@ object Dependencies {
     }
 
     object Glide {
-        const val glide = "com.github.bumptech.glide:glide:${Versions.Glide.glide}"
-        const val compiler = "com.github.bumptech.glide:compiler:${Versions.Glide.glide}"
+        const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+        const val compiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
     }
 
     object Hilt {
-        const val hilt = "com.google.dagger:hilt-android:${Versions.Hilt.hilt}"
-        const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.Hilt.hilt}"
+        const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
+        const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.hilt}"
     }
 
     object JetpackCore {
@@ -76,7 +76,7 @@ object Dependencies {
 
     object FlexBoxLayout {
         const val flexBoxLayout =
-            "com.google.android.flexbox:flexbox:${Versions.FlexBoxLayout.flexBoxLayout}"
+            "com.google.android.flexbox:flexbox:${Versions.flexBoxLayout}"
     }
 
     object Tests {
