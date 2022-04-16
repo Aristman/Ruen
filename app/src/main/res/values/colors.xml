@@ -46,20 +46,4 @@
     <color name="gray_50">#1D000000</color>
     <color name="settings_card_background">#E4E4E4</color>
 
-    <color name="background">#E5E5E5</color>
-    <color name="rus">#8C969E</color>
-    <color name="word_to_translate">#515455</color>
-    <color name="search">#BFFFFFFF</color>
-    <color name="Realty">#515455</color>
-    <color name="first_description">#515455</color>
-    <color name="translate_var_1">#515455</color>
-    <color name="realty">#000000</color>
-    <color name="immovables">#000000</color>
-    <color name="estate">#000000</color>
-    <color name="property">#000000</color>
-    <color name="second_description">#8A8A8A</color>
-    <color name="translate_var_2">#515455</color>
-    <color name="transp">#535551</color>
-
-
 </resources>
