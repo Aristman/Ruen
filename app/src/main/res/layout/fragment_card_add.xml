@@ -36,7 +36,7 @@
                     android:id="@+id/tv_word"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/text_view_word_magin_horizontal"
+                    android:layout_marginHorizontal="@dimen/text_view_word_margin_horizontal"
                     android:textSize="@dimen/card_word_text_size"
                     tools:text="@string/word" />
 

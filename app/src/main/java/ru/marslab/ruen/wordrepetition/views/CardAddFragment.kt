@@ -1,5 +1,6 @@
 package ru.marslab.ruen.wordrepetition.views
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -64,7 +65,7 @@ class CardAddFragment :
                     etCustomTranslation.text = null
                     requireContext().getString(R.string.no_translation_provided)
                 } else {
-                    requireContext().getString(R.string.unkown_error)
+                    requireContext().getString(R.string.unknown_error)
                 }
                 Toast.makeText(
                     context,
@@ -76,6 +77,7 @@ class CardAddFragment :
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun handleSuccessState(state: CardAddViewModel.AppState.Init) = with(binding) {
         val card = state.card
         tvWord.text = card.value

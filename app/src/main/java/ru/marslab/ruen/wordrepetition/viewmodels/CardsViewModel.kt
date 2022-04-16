@@ -39,9 +39,7 @@ class CardsViewModel @Inject constructor(
         liveData.postValue(ViewState.CardRepeating)
     }
 
-    companion object {
-        private const val TAG = "CardsViewModel"
-    }
+    companion object;
 
     sealed class ViewState {
         data class Success(val cards: List<Card>) : ViewState()

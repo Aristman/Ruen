@@ -1,5 +1,6 @@
 package ru.marslab.ruen.wordrepetition.views
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -49,7 +50,7 @@ class CardRepeatingFragment :
         viewModel.init()
     }
 
-    private fun handleData(appState: CardRepeatingViewModel.AppState) = with(binding) {
+    private fun handleData(appState: CardRepeatingViewModel.AppState) {
         when (appState) {
             is CardRepeatingViewModel.AppState.Success -> {
                 val card = appState.card
@@ -68,6 +69,7 @@ class CardRepeatingFragment :
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun showCard(card: Card) = with(binding) {
         clearView()
         tvWord.text = card.value

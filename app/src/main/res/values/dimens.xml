@@ -46,7 +46,7 @@
     <dimen name="text_view_custom_translation_padding">10dp</dimen>
     <dimen name="chip_group_translations_margin_horizontal">20dp</dimen>
     <dimen name="text_view_description_margin_horizontal">10dp</dimen>
-    <dimen name="text_view_word_magin_horizontal">10dp</dimen>
+    <dimen name="text_view_word_margin_horizontal">10dp</dimen>
     <dimen name="card_word_margin_vertical">10dp</dimen>
     <dimen name="btn_repetiotion_margin_bottom">10dp</dimen>
     <dimen name="card_background_radius">15dp</dimen>
