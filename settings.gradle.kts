@@ -5,6 +5,7 @@ pluginManagement {
         mavenCentral()
     }
 }
+@kotlin.Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -13,4 +14,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Ruen"
-include ':app'
+include(":app")
