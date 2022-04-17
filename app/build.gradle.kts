@@ -58,6 +58,8 @@ kapt {
 
 dependencies {
 
+    implementation(project(Module.core))
+
     // Lifecycle
     implementation(Dependencies.Lifecycle.viewModel)
     implementation(Dependencies.Lifecycle.runTime)

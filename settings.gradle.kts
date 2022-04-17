@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Ruen"
 include(":app")
+include(":core")
