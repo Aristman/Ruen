@@ -5,36 +5,41 @@ plugins {
     id("kotlin-parcelize")
     id("dagger.hilt.android.plugin")
     id("androidx.navigation.safeargs.kotlin")
+    id("org.jlleitschuh.gradle.ktlint")
 }
 
 android {
-    compileSdk = 32
+    compileSdk = AppConfig.completeSdk
 
     defaultConfig {
-        applicationId = "ru.marslab.ruen"
-        minSdk = 26
-        targetSdk = 32
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = AppConfig.applicationId
+        minSdk = AppConfig.minSdk
+        targetSdk = AppConfig.targetSdk
+        versionCode = Releases.versionCode
+        versionName = Releases.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
-        getByName("release") {
+        release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
+        debug {
+            versionNameSuffix = ".$Releases.testVersionName"
+            applicationIdSuffix = AppConfig.applicationIdDevSuffix
+        }
     }
     compileOptions {
-        sourceCompatibility(JavaVersion.VERSION_1_8)
-        targetCompatibility(JavaVersion.VERSION_1_8)
+        sourceCompatibility = AppConfig.javaVersion
+        targetCompatibility = AppConfig.javaVersion
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = AppConfig.jvmTarget
     }
 
     buildFeatures {
@@ -59,9 +64,9 @@ dependencies {
     implementation(Dependencies.Lifecycle.liveData)
 
     // Retrofit
-    implementation(Dependencies.Retrofit.retrofit)
-    implementation(Dependencies.Retrofit.converter)
-    implementation(Dependencies.Retrofit.interceptor)
+    implementation(Dependencies.Retrofit.core)
+    implementation(Dependencies.Retrofit.gsonConverter)
+    implementation(Dependencies.Retrofit.logger)
 
     // Room
     implementation(Dependencies.Room.runTime)

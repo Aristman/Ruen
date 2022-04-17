@@ -3,7 +3,7 @@ package ru.marslab.ruen.data.room.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.*
+import java.util.Date
 
 @Entity(tableName = "cards")
 data class RoomCard(
