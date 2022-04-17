@@ -7,11 +7,11 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.chip.Chip
 import dagger.hilt.android.AndroidEntryPoint
-import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.R
-import ru.marslab.ruen.wordrepetition.domain.Translation
 import ru.marslab.ruen.databinding.FragmentCardAddBinding
 import ru.marslab.ruen.view.ViewBindingFragment
+import ru.marslab.ruen.wordrepetition.domain.Card
+import ru.marslab.ruen.wordrepetition.domain.Translation
 import ru.marslab.ruen.wordrepetition.exceptions.NoTranslationProvidedException
 import ru.marslab.ruen.wordrepetition.utilities.IImageLoader
 import ru.marslab.ruen.wordrepetition.viewmodels.CardAddViewModel
@@ -54,14 +54,13 @@ class CardAddFragment :
         )
     )
 
-
     private fun handleState(state: CardAddViewModel.AppState) = with(binding) {
         when (state) {
             is CardAddViewModel.AppState.Init -> {
                 handleSuccessState(state)
             }
             is CardAddViewModel.AppState.Error -> {
-                var message = if (state.exception is NoTranslationProvidedException) {
+                val message = if (state.exception is NoTranslationProvidedException) {
                     etCustomTranslation.text = null
                     requireContext().getString(R.string.no_translation_provided)
                 } else {

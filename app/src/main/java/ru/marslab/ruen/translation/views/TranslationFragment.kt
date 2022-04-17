@@ -9,8 +9,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.R
-import ru.marslab.ruen.databinding.FragmentTranslationBinding
 import ru.marslab.ruen.data.retrofit.beans.RetrofitWord
+import ru.marslab.ruen.databinding.FragmentTranslationBinding
 import ru.marslab.ruen.translation.viewmodels.AppState
 import ru.marslab.ruen.translation.viewmodels.TranslationViewModel
 import ru.marslab.ruen.view.ViewBindingFragment
@@ -84,6 +84,7 @@ class TranslationFragment :
                     TranslationFragmentDirections.actionNavigationTranslationToCardAddFragment(state.card)
                 findNavController().navigate(directions)
             }
+            AppState.NoCard -> {}
         }
     }
 

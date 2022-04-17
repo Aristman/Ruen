@@ -48,7 +48,7 @@ class MainViewModel @Inject constructor(
         val card = repository.getLastCard()
         withContext(Dispatchers.Main) {
             val state =
-                if (card == null) MainAppState.CardNull else MainAppState.LastCard(card!!)
+                if (card == null) MainAppState.CardNull else MainAppState.LastCard(card)
             liveData.postValue(state)
         }
     }

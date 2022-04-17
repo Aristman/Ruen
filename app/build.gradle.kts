@@ -5,36 +5,41 @@ plugins {
     id("kotlin-parcelize")
     id("dagger.hilt.android.plugin")
     id("androidx.navigation.safeargs.kotlin")
+    id("org.jlleitschuh.gradle.ktlint")
 }
 
 android {
-    compileSdk = 32
+    compileSdk = AppConfig.completeSdk
 
     defaultConfig {
-        applicationId = "ru.marslab.ruen"
-        minSdk = 26
-        targetSdk = 32
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = AppConfig.applicationId
+        minSdk = AppConfig.minSdk
+        targetSdk = AppConfig.targetSdk
+        versionCode = Releases.versionCode
+        versionName = Releases.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
-        getByName("release") {
+        release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
+        debug {
+            versionNameSuffix = ".$Releases.testVersionName"
+            applicationIdSuffix = AppConfig.applicationIdDevSuffix
+        }
     }
     compileOptions {
-        sourceCompatibility(JavaVersion.VERSION_1_8)
-        targetCompatibility(JavaVersion.VERSION_1_8)
+        sourceCompatibility = AppConfig.javaVersion
+        targetCompatibility = AppConfig.javaVersion
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = AppConfig.jvmTarget
     }
 
     buildFeatures {
@@ -53,26 +58,26 @@ kapt {
 
 dependencies {
 
-    //Lifecycle
+    // Lifecycle
     implementation(Dependencies.Lifecycle.viewModel)
     implementation(Dependencies.Lifecycle.runTime)
     implementation(Dependencies.Lifecycle.liveData)
 
-    //Retrofit
-    implementation(Dependencies.Retrofit.retrofit)
-    implementation(Dependencies.Retrofit.converter)
-    implementation(Dependencies.Retrofit.interceptor)
+    // Retrofit
+    implementation(Dependencies.Retrofit.core)
+    implementation(Dependencies.Retrofit.gsonConverter)
+    implementation(Dependencies.Retrofit.logger)
 
-    //Room
+    // Room
     implementation(Dependencies.Room.runTime)
     kapt(Dependencies.Room.compiler)
     implementation(Dependencies.Room.ktx)
 
-    //Coroutines
+    // Coroutines
     implementation(Dependencies.Coroutines.core)
     implementation(Dependencies.Coroutines.android)
 
-    //Jetpack Compose
+    // Jetpack Compose
     implementation(Dependencies.JetpackCompose.ui)
     implementation(Dependencies.JetpackCompose.uiTooling)
     implementation(Dependencies.JetpackCompose.foundation)
@@ -84,15 +89,15 @@ dependencies {
     implementation(Dependencies.JetpackCompose.accompanistAppcompatTheme)
     implementation(Dependencies.JetpackCompose.navigation)
 
-    //Glide
+    // Glide
     implementation(Dependencies.Glide.glide)
     kapt(Dependencies.Glide.compiler)
 
-    //Hilt
+    // Hilt
     implementation(Dependencies.Hilt.hilt)
     kapt(Dependencies.Hilt.hiltCompiler)
 
-    //Jetpack Core
+    // Jetpack Core
     implementation(Dependencies.JetpackCore.coreKtx)
     implementation(Dependencies.JetpackCore.collectionKtx)
     implementation(Dependencies.JetpackCore.activityKtx)
@@ -103,10 +108,10 @@ dependencies {
     implementation(Dependencies.JetpackCore.navigationFragment)
     implementation(Dependencies.JetpackCore.navigationKtx)
 
-    //FlexBoxLayout
+    // FlexBoxLayout
     implementation(Dependencies.FlexBoxLayout.flexBoxLayout)
 
-    //Tests
+    // Tests
     testImplementation(Dependencies.Tests.jUnit)
     androidTestImplementation(Dependencies.Tests.jUnitExt)
     androidTestImplementation(Dependencies.Tests.espressoCore)

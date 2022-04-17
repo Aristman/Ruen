@@ -27,7 +27,6 @@ class SituationsFragment :
                     )
                 )
             }
-
         })
     private lateinit var viewModel: SituationsViewModel
 
@@ -51,7 +50,6 @@ class SituationsFragment :
             }
             // TODO
             is AppState.Loading -> {
-
             }
             // TODO SwipeRefreshLayout
             is AppState.Error -> {

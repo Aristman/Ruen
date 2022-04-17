@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.marslab.ruen.databinding.ItemHistoryBinding
 import ru.marslab.ruen.wordrepetition.domain.Card
-import ru.marslab.ruen.databinding.RvCardItemBinding
 import javax.inject.Inject
 
 class RVCardsAdapter @Inject constructor() : RecyclerView.Adapter<RVCardsAdapter.ViewHolder>() {
