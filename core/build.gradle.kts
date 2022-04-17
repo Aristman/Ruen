@@ -31,11 +31,16 @@ android {
     kotlinOptions {
         jvmTarget = AppConfig.jvmTarget
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
 
-//    implementation(Dependencies.JetpackCore.coreKtx)
+    implementation(Dependencies.JetpackCore.coreKtx)
+    implementation(Dependencies.JetpackCore.fragmentKtx)
 //    implementation(Dependencies.JetpackCore.appcompat)
 //    implementation(Dependencies.JetpackCore.material)
 

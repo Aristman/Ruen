@@ -8,8 +8,8 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.R
+import ru.marslab.ruen.core.presentation.BaseFragment
 import ru.marslab.ruen.databinding.FragmentCardRepeatingBinding
-import ru.marslab.ruen.view.ViewBindingFragment
 import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.wordrepetition.utilities.IImageLoader
 import ru.marslab.ruen.wordrepetition.viewmodels.CardRepeatingViewModel
@@ -17,7 +17,7 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class CardRepeatingFragment :
-    ViewBindingFragment<FragmentCardRepeatingBinding>(FragmentCardRepeatingBinding::inflate) {
+    BaseFragment<FragmentCardRepeatingBinding>(FragmentCardRepeatingBinding::inflate) {
     @Inject
     lateinit var imageLoader: IImageLoader
     private val viewModel: CardRepeatingViewModel by viewModels()

@@ -1,4 +1,4 @@
-package ru.marslab.core
+package ru.marslab.ruen.core
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
@@ -17,6 +17,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("ru.marslab.core.test", appContext.packageName)
+        assertEquals("ru.marslab.ruen.core.test", appContext.packageName)
     }
 }

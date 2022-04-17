@@ -2,11 +2,12 @@ package ru.marslab.ruen.typicalsituations.view
 
 import android.os.Bundle
 import android.view.View
+import ru.marslab.ruen.core.presentation.BaseFragment
 import ru.marslab.ruen.databinding.FragmentSituationsDetailsBinding
 import ru.marslab.ruen.typicalsituations.model.Situations
-import ru.marslab.ruen.view.ViewBindingFragment
 
-class SituationsDetailsFragment : ViewBindingFragment<FragmentSituationsDetailsBinding>(FragmentSituationsDetailsBinding::inflate) {
+class SituationsDetailsFragment :
+    BaseFragment<FragmentSituationsDetailsBinding>(FragmentSituationsDetailsBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

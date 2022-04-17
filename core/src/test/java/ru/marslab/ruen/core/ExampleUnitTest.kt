@@ -1,4 +1,4 @@
-package ru.marslab.core
+package ru.marslab.ruen.core
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

@@ -7,16 +7,16 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.R
+import ru.marslab.ruen.core.presentation.BaseFragment
 import ru.marslab.ruen.databinding.FragmentMainBinding
 import ru.marslab.ruen.translation.viewmodels.MainAppState
 import ru.marslab.ruen.translation.viewmodels.MainViewModel
 import ru.marslab.ruen.translation.views.adapters.HistoryRVAdapter
-import ru.marslab.ruen.view.ViewBindingFragment
 import ru.marslab.ruen.wordrepetition.domain.Card
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainFragment : ViewBindingFragment<FragmentMainBinding>(FragmentMainBinding::inflate) {
+class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::inflate) {
     private val viewModel: MainViewModel by viewModels()
 
     @Inject

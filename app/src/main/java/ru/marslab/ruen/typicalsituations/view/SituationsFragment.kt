@@ -8,14 +8,14 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import ru.marslab.ruen.R
+import ru.marslab.ruen.core.presentation.BaseFragment
 import ru.marslab.ruen.databinding.FragmentSituationsBinding
 import ru.marslab.ruen.typicalsituations.model.Situations
 import ru.marslab.ruen.typicalsituations.viewmodel.AppState
 import ru.marslab.ruen.typicalsituations.viewmodel.SituationsViewModel
-import ru.marslab.ruen.view.ViewBindingFragment
 
 class SituationsFragment :
-    ViewBindingFragment<FragmentSituationsBinding>(FragmentSituationsBinding::inflate) {
+    BaseFragment<FragmentSituationsBinding>(FragmentSituationsBinding::inflate) {
 
     private val situationsAdapter =
         SituationsAdapter(object : OnItemViewClickListener {
