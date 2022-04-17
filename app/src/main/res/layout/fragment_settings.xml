@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:text="@string/tv_popup_notifications"
-            android:textColor="@color/subheader_color" />
+            android:textColor="@color/subHeader_color" />
 
         <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
             android:id="@+id/dailyWord"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:text="@string/tv_inner_settings"
-            android:textColor="@color/subheader_color" />
+            android:textColor="@color/subHeader_color" />
 
         <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
             android:id="@+id/popUpCardNotification"

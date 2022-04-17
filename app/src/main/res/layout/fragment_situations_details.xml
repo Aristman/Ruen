@@ -18,7 +18,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/cardview_layout_margin"
+        android:layout_margin="@dimen/cardView_layout_margin"
         android:clickable="true"
         android:focusable="true"
         app:cardCornerRadius="@dimen/radius_big"
@@ -57,7 +57,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/cardview_layout_margin"
+        android:layout_margin="@dimen/cardView_layout_margin"
         android:clickable="true"
         android:focusable="true"
         app:cardCornerRadius="@dimen/radius_big"

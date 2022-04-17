@@ -4,9 +4,9 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/background_oval"
-    android:paddingHorizontal="@dimen/textchip_padding_horizontal"
-    android:paddingVertical="@dimen/textchip_padding_vertical"
-    android:layout_margin="@dimen/textchip_margin"
+    android:paddingHorizontal="@dimen/textChip_padding_horizontal"
+    android:paddingVertical="@dimen/textChip_padding_vertical"
+    android:layout_margin="@dimen/textChip_margin"
     android:textColor="?colorPrimary"
     tools:text="sdasasdf">
 

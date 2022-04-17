@@ -9,7 +9,7 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/cardview_layout_margin"
+        android:layout_margin="@dimen/cardView_layout_margin"
         android:backgroundTint="@color/primary_color"
         android:clickable="true"
         android:focusable="true"

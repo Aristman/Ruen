@@ -64,7 +64,7 @@ class CardAddFragment :
                     etCustomTranslation.text = null
                     requireContext().getString(R.string.no_translation_provided)
                 } else {
-                    requireContext().getString(R.string.unkown_error)
+                    requireContext().getString(R.string.unKnown_error)
                 }
                 Toast.makeText(
                     context,

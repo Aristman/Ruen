@@ -1,4 +1,4 @@
-# Ruen
+# RuEn
 
 Учебный финальный проект по курсу "Андроид-разработка" на портале GeekBrains
 
@@ -13,7 +13,7 @@
 3. Base Structure
   - Single Activity
   - Fragments
-  - KTX Libriery
+  - KTX Library
   - Coroutines
   - Kotlin Flow
 4. UI

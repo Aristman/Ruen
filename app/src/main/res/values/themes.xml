@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Ruen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.RuEn" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/gray_150</item>
         <item name="colorPrimaryVariant">@color/gray_200</item>

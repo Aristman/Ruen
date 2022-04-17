@@ -8,7 +8,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import ru.marslab.ruen.typicalsituations.viewmodel.AppState
 import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.wordrepetition.repositories.ICardRepository
 import ru.marslab.ruen.wordrepetition.utilities.ITextToSpeech

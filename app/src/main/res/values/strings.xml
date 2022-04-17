@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ruen</string>
+    <string name="app_name">RuEn</string>
 
     <!--Bottom navigation start-->
     <string name="menu_translate">Translate</string>
@@ -48,7 +48,7 @@
     <string name="fragment_label_creating_card">Creating a card</string>
     <string name="translator">Переводчик</string>
     <string name="no_translation_provided">No translation provided</string>
-    <string name="unkown_error">Unknown error</string>
+    <string name="unKnown_error">Unknown error</string>
     <!--cards screen end-->
 
     <!--fragment_translation-->
