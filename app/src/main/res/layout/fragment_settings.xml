@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:text="@string/tv_popup_notifications"
-            android:textColor="@color/subHeader_color" />
+            android:textColor="@color/sub_header_color" />
 
         <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
             android:id="@+id/dailyWord"
@@ -45,22 +45,22 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:text="@string/tv_inner_settings"
-            android:textColor="@color/subHeader_color" />
+            android:textColor="@color/sub_header_color" />
 
         <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
-            android:id="@+id/popUpCardNotification"
+            android:id="@+id/pop_up_card_notification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:text="@string/tv_card_repetition_popup" />
 
         <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
-            android:id="@+id/activateImages"
+            android:id="@+id/activate_images"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:text="@string/tv_activate_all_images" />
 
         <ru.marslab.ruen.settingsscreen.view.ToggleableSetting
-            android:id="@+id/activateImagesInCards"
+            android:id="@+id/activate_images_in_cards"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:text="@string/tv_activate_cards_images" />
@@ -81,7 +81,7 @@
             android:layout_height="@dimen/small_spacing" />
 
         <androidx.appcompat.widget.AppCompatSeekBar
-            android:id="@+id/fontSize"
+            android:id="@+id/font_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="4"

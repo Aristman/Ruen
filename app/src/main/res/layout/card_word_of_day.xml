@@ -29,7 +29,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/engWord"
+            android:id="@+id/eng_word"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/eng_word_of_the_day"
@@ -40,14 +40,14 @@
             tools:text="Money" />
 
         <TextView
-            android:id="@+id/rusWord"
+            android:id="@+id/rus_word"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@id/engWord"
-            app:layout_constraintStart_toStartOf="@id/engWord"
-            app:layout_constraintTop_toBottomOf="@id/engWord"
+            app:layout_constraintEnd_toEndOf="@id/eng_word"
+            app:layout_constraintStart_toStartOf="@id/eng_word"
+            app:layout_constraintTop_toBottomOf="@id/eng_word"
             tools:text="-Деньги-" />
 
         <ImageView

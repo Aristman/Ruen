@@ -26,7 +26,7 @@
     <color name="switch_thumb_active_t">#78EF5A</color>
     <color name="switch_thumb_active_b">#54AA3E</color>
     <color name="switch_track_active">#67D04C</color>
-    <color name="subHeader_color">#373E41</color>
+    <color name="sub_header_color">#373E41</color>
     <color name="header_color">#667078</color>
     <color name="seekbar_thumb_t">#D7D7D7</color>
     <color name="seekbar_thumb_b">#7D7D7D</color>

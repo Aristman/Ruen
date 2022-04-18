@@ -18,7 +18,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/cardView_layout_margin"
+        android:layout_margin="@dimen/card_view_layout_margin"
         android:clickable="true"
         android:focusable="true"
         app:cardCornerRadius="@dimen/radius_big"
@@ -30,7 +30,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/firstRussianExample"
+                android:id="@+id/first_russian_example"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/text_view_margin_top"
@@ -41,7 +41,7 @@
                 android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/firstEnglishExample"
+                android:id="@+id/first_english_example"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/text_view_margin_top"
@@ -57,7 +57,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/cardView_layout_margin"
+        android:layout_margin="@dimen/card_view_layout_margin"
         android:clickable="true"
         android:focusable="true"
         app:cardCornerRadius="@dimen/radius_big"
@@ -69,7 +69,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/secondRussianExample"
+                android:id="@+id/second_russian_example"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/text_view_margin_top"
@@ -80,7 +80,7 @@
                 android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/secondEnglishExample"
+                android:id="@+id/second_english_example"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/text_view_margin_top"
