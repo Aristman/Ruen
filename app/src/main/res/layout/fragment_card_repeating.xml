@@ -21,7 +21,7 @@
             android:id="@+id/iv_picture"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="@dimen/imageView_cardView_padding"
+            android:padding="@dimen/image_view_card_view_padding"
             app:srcCompat="@drawable/ic_no_photo" />
 
     </androidx.cardview.widget.CardView>
@@ -36,7 +36,8 @@
         app:layout_constraintBottom_toTopOf="@id/btn_remember"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardView_image">
+        app:layout_constraintTop_toBottomOf="@id/card_view_image"
+        tools:ignore="NotSibling">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -78,7 +79,7 @@
             <ScrollView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginVertical="@dimen/translation_wordContainer_margin_vertical"
+                android:layout_marginVertical="@dimen/translation_word_container_margin_vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginHorizontal="@dimen/translation_flexbox_margin_horizontal"

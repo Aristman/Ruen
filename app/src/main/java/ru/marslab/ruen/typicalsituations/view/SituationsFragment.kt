@@ -21,7 +21,7 @@ class SituationsFragment :
         SituationsAdapter(object : OnItemViewClickListener {
             override fun onItemViewClick(situations: Situations) {
                 findNavController().navigate(
-                    R.id.action_navigationSituations_to_situationsDetailsFragment,
+                    R.id.action_navigation_situations_to_situationsDetailsFragment,
                     bundleOf(
                         SituationsDetailsFragment.KEY_SITUATIONS to situations
                     )
