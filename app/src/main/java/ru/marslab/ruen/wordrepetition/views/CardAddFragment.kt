@@ -62,9 +62,9 @@ class CardAddFragment :
                 showToast(
                     if (state.exception is NoTranslationProvidedException) {
                         etCustomTranslation.text = null
-                        requireContext().getString(R.string.no_translation_provided)
+                        getString(R.string.no_translation_provided)
                     } else {
-                        requireContext().getString(R.string.unkown_error)
+                        getString(R.string.unkown_error)
                     }
                 )
             }
