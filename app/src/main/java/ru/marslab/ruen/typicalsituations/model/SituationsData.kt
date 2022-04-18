@@ -2,9 +2,9 @@ package ru.marslab.ruen.typicalsituations.model
 
 import ru.marslab.ruen.R
 
-fun getSituationsData(): List<Situations> {
+fun getSituationsData(): List<Situation> {
     return listOf(
-        Situations(
+        Situation(
             R.drawable.taxicity,
             "Taxi",
             "Вы не знаете, где можно поймать такси?",
@@ -12,7 +12,7 @@ fun getSituationsData(): List<Situations> {
             "Не могли бы вы отвезти меня в центр города?",
             "Could you take me to the city centre?"
         ),
-        Situations(
+        Situation(
             R.drawable.airport,
             "Airport",
             "Сколько времени продлится полет?",
@@ -20,7 +20,7 @@ fun getSituationsData(): List<Situations> {
             "Мне нечего декларировать.",
             "I have nothing to declare."
         ),
-        Situations(
+        Situation(
             R.drawable.shop,
             "Shop",
             "Вы принимаете кредитные карточки?",
@@ -28,7 +28,7 @@ fun getSituationsData(): List<Situations> {
             "Могу я купить это без налога?",
             "Can I buy it tax-free?"
         ),
-        Situations(
+        Situation(
             R.drawable.direction,
             "Direction",
             "Вы не подскажете, как добраться до…?",
@@ -36,7 +36,7 @@ fun getSituationsData(): List<Situations> {
             "Вы можете показать мне на карте?",
             "Can you show me on the map?"
         ),
-        Situations(
+        Situation(
             R.drawable.hotel,
             "Hotel",
             "Я бы хотел забронировать номер.",
@@ -44,7 +44,7 @@ fun getSituationsData(): List<Situations> {
             "Я потерял ключ от номера.",
             "I've lost my room key."
         ),
-        Situations(
+        Situation(
             R.drawable.restaurant,
             "Restaurant",
             "Я бы хотел заказать столик.",
@@ -52,7 +52,7 @@ fun getSituationsData(): List<Situations> {
             "Я бы хотел бокал вина.",
             "I'd like a glass of wine."
         ),
-        Situations(
+        Situation(
             R.drawable.airplane,
             "Airplane",
             "Могу я поменяться с вами местами?",
@@ -60,7 +60,7 @@ fun getSituationsData(): List<Situations> {
             "Можно мне откинуть спинку сидения?",
             "May I recline my seat?"
         ),
-        Situations(
+        Situation(
             R.drawable.bank,
             "Bank",
             "Каков обменный курс валют долларов в фунты?",

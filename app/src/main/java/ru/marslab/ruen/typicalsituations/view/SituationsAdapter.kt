@@ -5,17 +5,17 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.marslab.ruen.databinding.RecyclerviewSituationsCardItemBinding
-import ru.marslab.ruen.typicalsituations.model.Situations
+import ru.marslab.ruen.typicalsituations.model.Situation
 
 class SituationsAdapter(
     private var onItemViewClickListener: OnItemViewClickListener?
 ) : RecyclerView.Adapter<SituationsAdapter.SituationsViewHolder>() {
 
-    private var situationsData: List<Situations> = emptyList()
+    private var situationData: List<Situation> = emptyList()
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setSituation(data: List<Situations>) {
-        situationsData = data
+    fun setSituation(data: List<Situation>) {
+        situationData = data
         notifyDataSetChanged()
     }
 
@@ -32,19 +32,19 @@ class SituationsAdapter(
     }
 
     override fun onBindViewHolder(holder: SituationsViewHolder, position: Int) {
-        holder.bind(situationsData[position])
+        holder.bind(situationData[position])
     }
 
     override fun getItemCount(): Int {
-        return situationsData.size
+        return situationData.size
     }
 
     inner class SituationsViewHolder(private val binding: RecyclerviewSituationsCardItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(situation: Situations) {
+        fun bind(situation: Situation) {
             binding.apply {
-                situationImage.setImageResource(situation.situationImage)
-                cardName.text = situation.situationName
+                situationImage.setImageResource(situation.image)
+                cardName.text = situation.name
                 situationImage.setOnClickListener {
                     onItemViewClickListener?.onItemViewClick(
                         situation
