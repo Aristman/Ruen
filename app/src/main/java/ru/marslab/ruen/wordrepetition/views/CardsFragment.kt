@@ -6,14 +6,14 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
+import ru.marslab.ruen.core.presentation.BaseFragment
 import ru.marslab.ruen.databinding.FragmentCardsBinding
-import ru.marslab.ruen.view.ViewBindingFragment
 import ru.marslab.ruen.wordrepetition.viewmodels.CardsViewModel
 import ru.marslab.ruen.wordrepetition.views.adapters.RVCardsAdapter
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class CardsFragment : ViewBindingFragment<FragmentCardsBinding>(FragmentCardsBinding::inflate) {
+class CardsFragment : BaseFragment<FragmentCardsBinding>(FragmentCardsBinding::inflate) {
     @Inject
     lateinit var adapter: RVCardsAdapter
     private val viewModel: CardsViewModel by viewModels()

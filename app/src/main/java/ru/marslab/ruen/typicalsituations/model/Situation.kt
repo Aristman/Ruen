@@ -4,9 +4,9 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Situations(
-    val situationImage: Int,
-    val situationName: String,
+data class Situation(
+    val image: Int,
+    val name: String,
     val firstRusPhrase: String,
     val firstEngPhrase: String,
     val secondRusPhrase: String,

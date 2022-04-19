@@ -2,14 +2,13 @@ package ru.marslab.ruen.wordrepetition.views
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.chip.Chip
 import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.R
+import ru.marslab.ruen.core.presentation.BaseFragment
 import ru.marslab.ruen.databinding.FragmentCardAddBinding
-import ru.marslab.ruen.view.ViewBindingFragment
 import ru.marslab.ruen.wordrepetition.domain.Card
 import ru.marslab.ruen.wordrepetition.domain.Translation
 import ru.marslab.ruen.wordrepetition.exceptions.NoTranslationProvidedException
@@ -19,7 +18,7 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class CardAddFragment :
-    ViewBindingFragment<FragmentCardAddBinding>(FragmentCardAddBinding::inflate) {
+    BaseFragment<FragmentCardAddBinding>(FragmentCardAddBinding::inflate) {
     private val viewModel: CardAddViewModel by viewModels()
 
     @Inject
@@ -60,17 +59,14 @@ class CardAddFragment :
                 handleSuccessState(state)
             }
             is CardAddViewModel.AppState.Error -> {
-                val message = if (state.exception is NoTranslationProvidedException) {
-                    etCustomTranslation.text = null
-                    requireContext().getString(R.string.no_translation_provided)
-                } else {
-                    requireContext().getString(R.string.unkown_error)
-                }
-                Toast.makeText(
-                    context,
-                    message,
-                    Toast.LENGTH_SHORT
-                ).show()
+                showToast(
+                    if (state.exception is NoTranslationProvidedException) {
+                        etCustomTranslation.text = null
+                        getString(R.string.no_translation_provided)
+                    } else {
+                        getString(R.string.unkown_error)
+                    }
+                )
             }
             is CardAddViewModel.AppState.SavedSuccess -> findNavController().popBackStack()
         }

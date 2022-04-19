@@ -2,27 +2,28 @@ package ru.marslab.ruen.typicalsituations.view
 
 import android.os.Bundle
 import android.view.View
+import ru.marslab.ruen.core.presentation.BaseFragment
 import ru.marslab.ruen.databinding.FragmentSituationsDetailsBinding
-import ru.marslab.ruen.typicalsituations.model.Situations
-import ru.marslab.ruen.view.ViewBindingFragment
+import ru.marslab.ruen.typicalsituations.model.Situation
 
-class SituationsDetailsFragment : ViewBindingFragment<FragmentSituationsDetailsBinding>(FragmentSituationsDetailsBinding::inflate) {
+class SituationsDetailsFragment :
+    BaseFragment<FragmentSituationsDetailsBinding>(FragmentSituationsDetailsBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val situations = arguments?.getParcelable(KEY_SITUATIONS) as? Situations
+        val situations = arguments?.getParcelable(KEY_SITUATIONS) as? Situation
         if (situations != null) {
             setData(situations)
         }
     }
 
-    private fun setData(situationsData: Situations) {
+    private fun setData(situationData: Situation) {
         binding.apply {
-            situation.setImageResource(situationsData.situationImage)
-            firstRussianExample.text = situationsData.firstRusPhrase
-            firstEnglishExample.text = situationsData.firstEngPhrase
-            secondRussianExample.text = situationsData.secondRusPhrase
-            secondEnglishExample.text = situationsData.secondEngPhrase
+            situation.setImageResource(situationData.image)
+            firstRussianExample.text = situationData.firstRusPhrase
+            firstEnglishExample.text = situationData.firstEngPhrase
+            secondRussianExample.text = situationData.secondRusPhrase
+            secondEnglishExample.text = situationData.secondEngPhrase
         }
     }
 

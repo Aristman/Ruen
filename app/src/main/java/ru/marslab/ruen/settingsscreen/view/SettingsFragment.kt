@@ -6,13 +6,13 @@ import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatDelegate
 import dagger.hilt.android.AndroidEntryPoint
 import ru.marslab.ruen.SettingsPreferences
+import ru.marslab.ruen.core.presentation.BaseFragment
 import ru.marslab.ruen.databinding.FragmentSettingsBinding
-import ru.marslab.ruen.view.ViewBindingFragment
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class SettingsFragment :
-    ViewBindingFragment<FragmentSettingsBinding>(FragmentSettingsBinding::inflate) {
+    BaseFragment<FragmentSettingsBinding>(FragmentSettingsBinding::inflate) {
 
     @Inject
     lateinit var settings: SettingsPreferences
