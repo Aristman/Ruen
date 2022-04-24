@@ -41,8 +41,6 @@ dependencies {
 
     implementation(Dependencies.JetpackCore.coreKtx)
     implementation(Dependencies.JetpackCore.fragmentKtx)
-//    implementation(Dependencies.JetpackCore.appcompat)
-//    implementation(Dependencies.JetpackCore.material)
 
     testImplementation(Dependencies.Tests.jUnit)
     androidTestImplementation(Dependencies.Tests.jUnitExt)

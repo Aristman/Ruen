@@ -51,10 +51,7 @@ dependencies {
     implementation(Dependencies.Hilt.hilt)
     kapt(Dependencies.Hilt.hiltCompiler)
 
-//    implementation(Dependencies.JetpackCore.coreKtx)
-//    implementation(Dependencies.JetpackCore.appcompat)
-//    implementation(Dependencies.JetpackCore.material)
     implementation(Dependencies.Tests.jUnit)
     implementation(Dependencies.Tests.jUnitExt)
-//    implementation(Dependencies.Tests.espressoCore)
+    implementation(Dependencies.Tests.espressoCore)
 }
