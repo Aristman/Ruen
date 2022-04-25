@@ -25,24 +25,17 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = AppConfig.javaVersion
-        targetCompatibility = AppConfig.javaVersion
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = AppConfig.jvmTarget
-    }
-
-    buildFeatures {
-        viewBinding = true
     }
 }
 
 dependencies {
 
-    implementation(Dependencies.JetpackCore.coreKtx)
-    implementation(Dependencies.JetpackCore.fragmentKtx)
-
-    testImplementation(Dependencies.Tests.jUnit)
-    androidTestImplementation(Dependencies.Tests.jUnitExt)
-    androidTestImplementation(Dependencies.Tests.espressoCore)
+    implementation(Dependencies.Tests.jUnit)
+    implementation(Dependencies.Tests.jUnitExt)
+    implementation(Dependencies.Tests.espressoCore)
 }

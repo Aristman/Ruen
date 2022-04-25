@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     kotlin("android")
     kotlin("kapt")
     id("kotlin-parcelize")
@@ -12,13 +12,11 @@ android {
     compileSdk = AppConfig.completeSdk
 
     defaultConfig {
-        applicationId = AppConfig.applicationId
         minSdk = AppConfig.minSdk
         targetSdk = AppConfig.targetSdk
-        versionCode = Releases.versionCode
-        versionName = Releases.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -28,10 +26,6 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-        }
-        debug {
-            versionNameSuffix = ".$Releases.testVersionName"
-            applicationIdSuffix = AppConfig.applicationIdDevSuffix
         }
     }
     compileOptions {
@@ -52,31 +46,7 @@ android {
     }
 }
 
-kapt {
-    correctErrorTypes = true
-}
-
 dependencies {
-
-    implementation(project(Module.core))
-    implementation(project(Module.data))
-    implementation(project(Module.domain))
-    implementation(project(Module.presentation))
-
-    // Lifecycle
-    implementation(Dependencies.Lifecycle.viewModel)
-    implementation(Dependencies.Lifecycle.runTime)
-    implementation(Dependencies.Lifecycle.liveData)
-
-    // Retrofit
-    implementation(Dependencies.Retrofit.core)
-    implementation(Dependencies.Retrofit.gsonConverter)
-    implementation(Dependencies.Retrofit.logger)
-
-    // Room
-    implementation(Dependencies.Room.runTime)
-    kapt(Dependencies.Room.compiler)
-    implementation(Dependencies.Room.ktx)
 
     // Coroutines
     implementation(Dependencies.Coroutines.core)
@@ -116,9 +86,7 @@ dependencies {
     // FlexBoxLayout
     implementation(Dependencies.FlexBoxLayout.flexBoxLayout)
 
-    // Tests
-    testImplementation(Dependencies.Tests.jUnit)
-    androidTestImplementation(Dependencies.Tests.jUnitExt)
-    androidTestImplementation(Dependencies.Tests.espressoCore)
-    androidTestImplementation(Dependencies.Tests.composeUiTests)
+    implementation(Dependencies.Tests.jUnit)
+    implementation(Dependencies.Tests.jUnitExt)
+    implementation(Dependencies.Tests.espressoCore)
 }

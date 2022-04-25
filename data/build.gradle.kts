@@ -1,6 +1,8 @@
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    kotlin("android")
+    kotlin("kapt")
+    id("dagger.hilt.android.plugin")
     id("org.jlleitschuh.gradle.ktlint")
 }
 
@@ -31,18 +33,25 @@ android {
     kotlinOptions {
         jvmTarget = AppConfig.jvmTarget
     }
-
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
 
-    implementation(Dependencies.JetpackCore.coreKtx)
-    implementation(Dependencies.JetpackCore.fragmentKtx)
+    // Retrofit
+    implementation(Dependencies.Retrofit.core)
+    implementation(Dependencies.Retrofit.gsonConverter)
+    implementation(Dependencies.Retrofit.logger)
 
-    testImplementation(Dependencies.Tests.jUnit)
-    androidTestImplementation(Dependencies.Tests.jUnitExt)
-    androidTestImplementation(Dependencies.Tests.espressoCore)
+    // Room
+    implementation(Dependencies.Room.runTime)
+    kapt(Dependencies.Room.compiler)
+    implementation(Dependencies.Room.ktx)
+
+    // Hilt
+    implementation(Dependencies.Hilt.hilt)
+    kapt(Dependencies.Hilt.hiltCompiler)
+
+    implementation(Dependencies.Tests.jUnit)
+    implementation(Dependencies.Tests.jUnitExt)
+    implementation(Dependencies.Tests.espressoCore)
 }
